@@ -59,7 +59,7 @@ params:
 
     comments:
         enabled: true
-        provider: disqus
+        provider: utterances
 
         disqusjs:
             shortname:
@@ -69,8 +69,9 @@ params:
             adminLabel:
 
         utterances:
-            repo:
+            repo: Yotom131/yotom131.github.io
             issueTerm: pathname
+            theme: github-light
             label:
 
         beaudar:
