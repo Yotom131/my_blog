@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Yotom的博客</title>
-        <link>https://yotom131.github.io/</link>
+        <link>http://localhost:1313/</link>
         <description>Recent content on Yotom的博客</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>Example Person</copyright>
-        <lastBuildDate>Tue, 02 Apr 2024 14:01:26 +0800</lastBuildDate><atom:link href="https://yotom131.github.io/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Tue, 02 Apr 2024 14:01:26 +0800</lastBuildDate><atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>2024.4.2</title>
-        <link>https://yotom131.github.io/p/2024.4.2/</link>
+        <link>http://localhost:1313/p/2024.4.2/</link>
         <pubDate>Tue, 02 Apr 2024 14:01:26 +0800</pubDate>
         
-        <guid>https://yotom131.github.io/p/2024.4.2/</guid>
+        <guid>http://localhost:1313/p/2024.4.2/</guid>
         <description>&lt;h1 id=&#34;42&#34;&gt;
     &lt;a href=&#34;#42&#34;&gt;#&lt;/a&gt;
     4.2
@@ -161,19 +161,19 @@
         </item>
         <item>
         <title>K8s</title>
-        <link>https://yotom131.github.io/p/k8s/</link>
+        <link>http://localhost:1313/p/k8s/</link>
         <pubDate>Tue, 02 Apr 2024 14:01:26 +0800</pubDate>
         
-        <guid>https://yotom131.github.io/p/k8s/</guid>
+        <guid>http://localhost:1313/p/k8s/</guid>
         <description>&lt;p&gt;123&lt;/p&gt;
 </description>
         </item>
         <item>
         <title>2024.3.26</title>
-        <link>https://yotom131.github.io/p/2024.3.26/</link>
+        <link>http://localhost:1313/p/2024.3.26/</link>
         <pubDate>Tue, 26 Mar 2024 14:01:26 +0800</pubDate>
         
-        <guid>https://yotom131.github.io/p/2024.3.26/</guid>
+        <guid>http://localhost:1313/p/2024.3.26/</guid>
         <description>&lt;h2 id=&#34;326&#34;&gt;
     &lt;a href=&#34;#326&#34;&gt;#&lt;/a&gt;
     3.26
@@ -187,10 +187,10 @@
         </item>
         <item>
         <title>2024.3.25</title>
-        <link>https://yotom131.github.io/p/2024.3.25/</link>
+        <link>http://localhost:1313/p/2024.3.25/</link>
         <pubDate>Mon, 25 Mar 2024 14:01:26 +0800</pubDate>
         
-        <guid>https://yotom131.github.io/p/2024.3.25/</guid>
+        <guid>http://localhost:1313/p/2024.3.25/</guid>
         <description>&lt;h2 id=&#34;325&#34;&gt;
     &lt;a href=&#34;#325&#34;&gt;#&lt;/a&gt;
     3.25
@@ -206,10 +206,10 @@
         </item>
         <item>
         <title>2024.3.24</title>
-        <link>https://yotom131.github.io/p/2024.3.24/</link>
+        <link>http://localhost:1313/p/2024.3.24/</link>
         <pubDate>Sun, 24 Mar 2024 14:01:26 +0800</pubDate>
         
-        <guid>https://yotom131.github.io/p/2024.3.24/</guid>
+        <guid>http://localhost:1313/p/2024.3.24/</guid>
         <description>&lt;h2 id=&#34;324日记&#34;&gt;
     &lt;a href=&#34;#324%e6%97%a5%e8%ae%b0&#34;&gt;#&lt;/a&gt;
     3.24日记
@@ -226,10 +226,10 @@
         </item>
         <item>
         <title>2024.3.23</title>
-        <link>https://yotom131.github.io/p/2024.3.23/</link>
+        <link>http://localhost:1313/p/2024.3.23/</link>
         <pubDate>Sat, 23 Mar 2024 14:01:26 +0800</pubDate>
         
-        <guid>https://yotom131.github.io/p/2024.3.23/</guid>
+        <guid>http://localhost:1313/p/2024.3.23/</guid>
         <description>&lt;h3 id=&#34;323日记&#34;&gt;
     &lt;a href=&#34;#323%e6%97%a5%e8%ae%b0&#34;&gt;#&lt;/a&gt;
     3.23日记
