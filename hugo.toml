@@ -1,0 +1,25 @@
+baseURL = 'https://example.org/'
+languageCode = 'en-us'
+title = 'Yo blog'
+theme = 'stack'
+paginate = 8
+DefaultContentLanguage = 'zh-cn'
+hasCJKLanguage = true
+
+
+[menu]
+  [[menu.main]]
+    identifier = "home"
+    name = "Home"
+    url = "/"
+    weight = 1
+  [[menu.main]]
+    identifier = "tags"
+    name = "Tags"
+    url = "/tags/"
+    weight = 2
+  [[menu.main]]
+    identifier = "about"
+    name = "About"
+    url = "/about/"
+    weight = 3
