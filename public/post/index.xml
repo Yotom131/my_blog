@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Posts on Yotom的博客</title>
-        <link>http://localhost:1313/post/</link>
+        <link>https://yotom131.github.io/post/</link>
         <description>Recent content in Posts on Yotom的博客</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>Example Person</copyright>
-        <lastBuildDate>Wed, 03 Apr 2024 10:46:10 +0800</lastBuildDate><atom:link href="http://localhost:1313/post/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Wed, 03 Apr 2024 10:46:10 +0800</lastBuildDate><atom:link href="https://yotom131.github.io/post/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>C&#43;&#43;内存重叠</title>
-        <link>http://localhost:1313/p/c-%E5%86%85%E5%AD%98%E9%87%8D%E5%8F%A0/</link>
+        <link>https://yotom131.github.io/p/c-%E5%86%85%E5%AD%98%E9%87%8D%E5%8F%A0/</link>
         <pubDate>Wed, 03 Apr 2024 10:46:10 +0800</pubDate>
         
-        <guid>http://localhost:1313/p/c-%E5%86%85%E5%AD%98%E9%87%8D%E5%8F%A0/</guid>
+        <guid>https://yotom131.github.io/p/c-%E5%86%85%E5%AD%98%E9%87%8D%E5%8F%A0/</guid>
         <description>&lt;h1 id=&#34;c内存重叠&#34;&gt;
     &lt;a href=&#34;#c%e5%86%85%e5%ad%98%e9%87%8d%e5%8f%a0&#34;&gt;#&lt;/a&gt;
     C++内存重叠
@@ -22,7 +22,7 @@
     内存重叠的原因
 &lt;/h2&gt;&lt;p&gt;内存重叠的主要原因是指针的使用问题。当使用指针访问内存时，如果指针指向的内存区域与另一个区域有交叉部分，就会产生内存重叠。下图展示了内存拷贝的两种情况：&lt;/p&gt;
 &lt;div style=&#34;text-align: center;&#34;&gt;
-    &lt;img src=&#34;http://localhost:1313/img/memory_1.png&#34; alt=&#34;内存拷贝&#34; style=&#34;max-width: 75%; height: auto;&#34;&gt;
+    &lt;img src=&#34;https://yotom131.github.io/img/memory_1.png&#34; alt=&#34;内存拷贝&#34; style=&#34;max-width: 75%; height: auto;&#34;&gt;
 &lt;/div&gt;
 &lt;p&gt;第一种情况下，拷贝重叠区域不会出现问题，因为拷贝是一个一个放过去，内容可以正常被拷贝。&lt;/p&gt;
 &lt;p&gt;第二种情况下，右边两个字节原有的内容被覆盖了，且没有保存，接下来拷贝的时候已经是被覆盖的内容了。&lt;/p&gt;
@@ -96,7 +96,7 @@
 &lt;/div&gt;&lt;p&gt;&lt;code&gt;remmove&lt;/code&gt;判断如果&lt;code&gt;dest&lt;/code&gt;&amp;gt;=&lt;code&gt;src&lt;/code&gt;的时候（也就是前面图片的情况2），采用倒序拷贝，避免内容被覆盖导致拷贝不完整的问题。&lt;/p&gt;
 &lt;p&gt;原理图如下：&lt;/p&gt;
 &lt;div style=&#34;text-align: center;&#34;&gt;
-    &lt;img src=&#34;http://localhost:1313/img/memory_2.png&#34; alt=&#34;倒序拷贝&#34; style=&#34;max-width: 75%; height: auto;&#34;&gt;
+    &lt;img src=&#34;https://yotom131.github.io/img/memory_2.png&#34; alt=&#34;倒序拷贝&#34; style=&#34;max-width: 75%; height: auto;&#34;&gt;
 &lt;/div&gt;
 &lt;p&gt;&lt;code&gt;memcpy&lt;/code&gt;与&lt;code&gt;strcpy&lt;/code&gt;都有内存重叠的问题，实际可以根据需要使用&lt;code&gt;memmove&lt;/code&gt;&lt;/p&gt;
 &lt;hr&gt;
@@ -108,10 +108,10 @@
         </item>
         <item>
         <title>Hash</title>
-        <link>http://localhost:1313/p/hash/</link>
+        <link>https://yotom131.github.io/p/hash/</link>
         <pubDate>Wed, 03 Apr 2024 08:48:15 +0800</pubDate>
         
-        <guid>http://localhost:1313/p/hash/</guid>
+        <guid>https://yotom131.github.io/p/hash/</guid>
         <description>&lt;h1 id=&#34;hash&#34;&gt;
     &lt;a href=&#34;#hash&#34;&gt;#&lt;/a&gt;
     Hash
@@ -169,7 +169,7 @@
     冲突的由来
 &lt;/h3&gt;&lt;p&gt;由于hash函数输出的关键码位数是固定的，将无线的数据输出为有限的数据，那最终得到的结果一定是有重复的，这种输出的关键码重复的时候，就叫做&lt;strong&gt;hash冲突&lt;/strong&gt;，如下图所示。&lt;/p&gt;
 &lt;div style=&#34;text-align: center;&#34;&gt;
-    &lt;img src=&#34;http://localhost:1313/img/hash_1.png&#34; alt=&#34;哈希冲突&#34; style=&#34;max-width: 60%; height: auto;&#34;&gt;
+    &lt;img src=&#34;https://yotom131.github.io/img/hash_1.png&#34; alt=&#34;哈希冲突&#34; style=&#34;max-width: 60%; height: auto;&#34;&gt;
 &lt;/div&gt;
 &lt;h3 id=&#34;解决冲突的方法&#34;&gt;
     &lt;a href=&#34;#%e8%a7%a3%e5%86%b3%e5%86%b2%e7%aa%81%e7%9a%84%e6%96%b9%e6%b3%95&#34;&gt;#&lt;/a&gt;
@@ -184,7 +184,7 @@
 &lt;/ol&gt;
 &lt;p&gt;当发生哈希冲突时，从当前位置开始，依次向后查找下一个空闲位置，直至查遍全表。&lt;/p&gt;
 &lt;div style=&#34;text-align: center;&#34;&gt;
-    &lt;img src=&#34;http://localhost:1313/img/hash_2.png&#34; alt=&#34;线性测探法&#34; style=&#34;max-width: 60%; height: auto;&#34;&gt;
+    &lt;img src=&#34;https://yotom131.github.io/img/hash_2.png&#34; alt=&#34;线性测探法&#34; style=&#34;max-width: 60%; height: auto;&#34;&gt;
 &lt;/div&gt;
 &lt;p&gt;但在使用线性测探法的时候，查找、插入、删除的时间复杂度和哈希表的装载因子成正比。&lt;strong&gt;并且冲突如果连在一起，很容易产生堆积，查找时会多次重复比较，大大降低查找效率。&lt;/strong&gt;&lt;/p&gt;
 &lt;ol start=&#34;2&#34;&gt;
@@ -212,7 +212,7 @@
 &lt;/ol&gt;
 &lt;p&gt;在hash值重复的情况下，我们也可以考虑将值用链表表示，这样我们在需要查找数据项的时候只需要在对应链表中搜索即可。&lt;strong&gt;HashMap&lt;/strong&gt;在解决储存对象存在hash冲突的时候就是采用链地址法，将hash值相同的对象以链表形式存储。这是一种&lt;strong&gt;封闭地址法&lt;/strong&gt;。&lt;/p&gt;
 &lt;div style=&#34;text-align: center;&#34;&gt;
-    &lt;img src=&#34;http://localhost:1313/img/hash_3.png&#34; alt=&#34;链地址法&#34; style=&#34;max-width: 60%; height: auto;&#34;&gt;
+    &lt;img src=&#34;https://yotom131.github.io/img/hash_3.png&#34; alt=&#34;链地址法&#34; style=&#34;max-width: 60%; height: auto;&#34;&gt;
 &lt;/div&gt;
 &lt;hr&gt;
 &lt;h2 id=&#34;总结&#34;&gt;
@@ -224,10 +224,10 @@
         </item>
         <item>
         <title>2024.4.2</title>
-        <link>http://localhost:1313/p/2024.4.2/</link>
+        <link>https://yotom131.github.io/p/2024.4.2/</link>
         <pubDate>Tue, 02 Apr 2024 14:01:26 +0800</pubDate>
         
-        <guid>http://localhost:1313/p/2024.4.2/</guid>
+        <guid>https://yotom131.github.io/p/2024.4.2/</guid>
         <description>&lt;h1 id=&#34;42&#34;&gt;
     &lt;a href=&#34;#42&#34;&gt;#&lt;/a&gt;
     4.2
@@ -235,8 +235,8 @@
     &lt;a href=&#34;#%e8%85%be%e8%ae%af%e6%b5%8b%e5%bc%80%e4%b8%89%e9%9d%a2%e6%80%bb%e7%bb%93&#34;&gt;#&lt;/a&gt;
     腾讯测开三面总结：
 &lt;/h3&gt;&lt;p&gt;​		4.1的面试凉的很透彻，明明就差最后一步了，哎。计算机基础没打牢固，c++基础没有打牢固，从这两方面入手抓吧。&lt;/p&gt;
-&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;http://localhost:1313/p/c-%E5%86%85%E5%AD%98%E9%87%8D%E5%8F%A0/&#34; &gt;内存重叠部分请点击此处。&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;http://localhost:1313/p/hash/&#34; &gt;hash部分请点击此处。&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://yotom131.github.io/p/c-%E5%86%85%E5%AD%98%E9%87%8D%E5%8F%A0/&#34; &gt;内存重叠部分请点击此处。&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://yotom131.github.io/p/hash/&#34; &gt;hash部分请点击此处。&lt;/a&gt;&lt;/p&gt;
 &lt;h3 id=&#34;c&#34;&gt;
     &lt;a href=&#34;#c&#34;&gt;#&lt;/a&gt;
     C++:
@@ -378,10 +378,10 @@
         </item>
         <item>
         <title>2024.3.26</title>
-        <link>http://localhost:1313/p/2024.3.26/</link>
+        <link>https://yotom131.github.io/p/2024.3.26/</link>
         <pubDate>Tue, 26 Mar 2024 14:01:26 +0800</pubDate>
         
-        <guid>http://localhost:1313/p/2024.3.26/</guid>
+        <guid>https://yotom131.github.io/p/2024.3.26/</guid>
         <description>&lt;h2 id=&#34;326&#34;&gt;
     &lt;a href=&#34;#326&#34;&gt;#&lt;/a&gt;
     3.26
@@ -395,10 +395,10 @@
         </item>
         <item>
         <title>2024.3.25</title>
-        <link>http://localhost:1313/p/2024.3.25/</link>
+        <link>https://yotom131.github.io/p/2024.3.25/</link>
         <pubDate>Mon, 25 Mar 2024 14:01:26 +0800</pubDate>
         
-        <guid>http://localhost:1313/p/2024.3.25/</guid>
+        <guid>https://yotom131.github.io/p/2024.3.25/</guid>
         <description>&lt;h2 id=&#34;325&#34;&gt;
     &lt;a href=&#34;#325&#34;&gt;#&lt;/a&gt;
     3.25
@@ -414,10 +414,10 @@
         </item>
         <item>
         <title>2024.3.24</title>
-        <link>http://localhost:1313/p/2024.3.24/</link>
+        <link>https://yotom131.github.io/p/2024.3.24/</link>
         <pubDate>Sun, 24 Mar 2024 14:01:26 +0800</pubDate>
         
-        <guid>http://localhost:1313/p/2024.3.24/</guid>
+        <guid>https://yotom131.github.io/p/2024.3.24/</guid>
         <description>&lt;h2 id=&#34;324日记&#34;&gt;
     &lt;a href=&#34;#324%e6%97%a5%e8%ae%b0&#34;&gt;#&lt;/a&gt;
     3.24日记
@@ -434,10 +434,10 @@
         </item>
         <item>
         <title>2024.3.23</title>
-        <link>http://localhost:1313/p/2024.3.23/</link>
+        <link>https://yotom131.github.io/p/2024.3.23/</link>
         <pubDate>Sat, 23 Mar 2024 14:01:26 +0800</pubDate>
         
-        <guid>http://localhost:1313/p/2024.3.23/</guid>
+        <guid>https://yotom131.github.io/p/2024.3.23/</guid>
         <description>&lt;h3 id=&#34;323日记&#34;&gt;
     &lt;a href=&#34;#323%e6%97%a5%e8%ae%b0&#34;&gt;#&lt;/a&gt;
     3.23日记
