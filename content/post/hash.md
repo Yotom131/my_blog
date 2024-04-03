@@ -48,7 +48,7 @@ Hash(Key) = Key % capacity
 由于hash函数输出的关键码位数是固定的，将无线的数据输出为有限的数据，那最终得到的结果一定是有重复的，这种输出的关键码重复的时候，就叫做**hash冲突**，如下图所示。
 
 <div style="text-align: center;">
-    <img src="/img/hash_1.png" alt="哈希冲突" style="max-width: 40%; height: auto;">
+    <img src="/img/hash_1.png" alt="哈希冲突" style="max-width: 60%; height: auto;">
 </div>
 
 ### 解决冲突的方法
@@ -60,7 +60,7 @@ Hash(Key) = Key % capacity
 当发生哈希冲突时，从当前位置开始，依次向后查找下一个空闲位置，直至查遍全表。
 
 <div style="text-align: center;">
-    <img src="/img/hash_2.png" alt="线性测探法" style="max-width: 45%; height: auto;">
+    <img src="/img/hash_2.png" alt="线性测探法" style="max-width: 60%; height: auto;">
 </div>
 
 但在使用线性测探法的时候，查找、插入、删除的时间复杂度和哈希表的装载因子成正比。**并且冲突如果连在一起，很容易产生堆积，查找时会多次重复比较，大大降低查找效率。**
@@ -78,9 +78,13 @@ Hash(Key) = Key % capacity
 在hash值重复的情况下，我们也可以考虑将值用链表表示，这样我们在需要查找数据项的时候只需要在对应链表中搜索即可。**HashMap**在解决储存对象存在hash冲突的时候就是采用链地址法，将hash值相同的对象以链表形式存储。这是一种**封闭地址法**。
 
 <div style="text-align: center;">
-    <img src="/img/hash_3.png" alt="链地址法" style="max-width: 45%; height: auto;">
+    <img src="/img/hash_3.png" alt="链地址法" style="max-width: 60%; height: auto;">
 </div>
+
+---
 
 ## 总结
 
 总体而言，哈希是个不可逆的编码过程，以上是一些基本原理，后面涉及到map、unordered_map、dic等键值对的内容时，不单独写博客，希望哈希就此为止，加油！
+
+---

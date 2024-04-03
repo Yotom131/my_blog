@@ -2,17 +2,116 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Posts on Yotom的博客</title>
-        <link>https://yotom131.github.io/post/</link>
+        <link>http://localhost:1313/post/</link>
         <description>Recent content in Posts on Yotom的博客</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>Example Person</copyright>
-        <lastBuildDate>Wed, 03 Apr 2024 08:48:15 +0800</lastBuildDate><atom:link href="https://yotom131.github.io/post/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Wed, 03 Apr 2024 10:46:10 +0800</lastBuildDate><atom:link href="http://localhost:1313/post/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>C&#43;&#43;内存重叠</title>
+        <link>http://localhost:1313/p/c-%E5%86%85%E5%AD%98%E9%87%8D%E5%8F%A0/</link>
+        <pubDate>Wed, 03 Apr 2024 10:46:10 +0800</pubDate>
+        
+        <guid>http://localhost:1313/p/c-%E5%86%85%E5%AD%98%E9%87%8D%E5%8F%A0/</guid>
+        <description>&lt;h1 id=&#34;c内存重叠&#34;&gt;
+    &lt;a href=&#34;#c%e5%86%85%e5%ad%98%e9%87%8d%e5%8f%a0&#34;&gt;#&lt;/a&gt;
+    C++内存重叠
+&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;内存重叠&lt;/strong&gt;是指在内存中存在两个或多个区域，他们的地址范围有交叉部分，内存重叠可能会导致程序出现不可预期的行为，腾讯timi测开的三问面试官问到了我这个问题，当时没有回答上，非常的遗憾，现在有机会整理一下，变得更强！&lt;/p&gt;
+&lt;h2 id=&#34;内存重叠的原因&#34;&gt;
+    &lt;a href=&#34;#%e5%86%85%e5%ad%98%e9%87%8d%e5%8f%a0%e7%9a%84%e5%8e%9f%e5%9b%a0&#34;&gt;#&lt;/a&gt;
+    内存重叠的原因
+&lt;/h2&gt;&lt;p&gt;内存重叠的主要原因是指针的使用问题。当使用指针访问内存时，如果指针指向的内存区域与另一个区域有交叉部分，就会产生内存重叠。下图展示了内存拷贝的两种情况：&lt;/p&gt;
+&lt;div style=&#34;text-align: center;&#34;&gt;
+    &lt;img src=&#34;http://localhost:1313/img/memory_1.png&#34; alt=&#34;内存拷贝&#34; style=&#34;max-width: 75%; height: auto;&#34;&gt;
+&lt;/div&gt;
+&lt;p&gt;第一种情况下，拷贝重叠区域不会出现问题，因为拷贝是一个一个放过去，内容可以正常被拷贝。&lt;/p&gt;
+&lt;p&gt;第二种情况下，右边两个字节原有的内容被覆盖了，且没有保存，接下来拷贝的时候已经是被覆盖的内容了。&lt;/p&gt;
+&lt;p&gt;举个例子，下面代码片段就会导致内存重叠：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-c++&#34; data-lang=&#34;c++&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kt&#34;&gt;char&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;str&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[]&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;Hello World&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kt&#34;&gt;char&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;*&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;p&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;str&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;memcpy&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;p&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;str&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;11&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;在上面代码中，定义了字符数组&lt;code&gt;str&lt;/code&gt;，并使用&lt;code&gt;p&lt;/code&gt;指向&lt;code&gt;str&lt;/code&gt;中第二个字符。接着，我们用&lt;code&gt;memcpy&lt;/code&gt;函数将&lt;code&gt;str&lt;/code&gt;中的11个字符复制到&lt;code&gt;p&lt;/code&gt;指向的区域。由于&lt;code&gt;p&lt;/code&gt;指向的区域与&lt;code&gt;str&lt;/code&gt;有交叉部分，因此就产生了内存重叠。因为&lt;code&gt;memcpy&lt;/code&gt;是直接按位复制拷贝，代码如下，所以会遇到情况二，拷贝的是已经被覆盖的内容。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;如何避免内存重叠&#34;&gt;
+    &lt;a href=&#34;#%e5%a6%82%e4%bd%95%e9%81%bf%e5%85%8d%e5%86%85%e5%ad%98%e9%87%8d%e5%8f%a0&#34;&gt;#&lt;/a&gt;
+    如何避免内存重叠
+&lt;/h2&gt;&lt;p&gt;为了避免内存重叠，尤其要注意：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;尽量避免使用指针，尤其是进行运算和类型转换的时候。&lt;/li&gt;
+&lt;li&gt;在使用指针时，确保指针指向的内存区域与其他区域没有交叉部分。&lt;/li&gt;
+&lt;li&gt;在使用安全的内存操作函数，如&lt;code&gt;memcpy_s&lt;/code&gt;、&lt;code&gt;memmove&lt;/code&gt;等，这些函数可以确保在复制内存是不会产生内存重叠&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;那&lt;code&gt;memmove&lt;/code&gt;如何避免内存重叠的影响呢？以下是&lt;code&gt;memmove&lt;/code&gt;的源码：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;15
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;16
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;17
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;18
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-c++&#34; data-lang=&#34;c++&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kt&#34;&gt;void&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;*&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;memmove&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;void&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;*&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;dest&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;const&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;void&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;*&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;src&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;size_t&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;n&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;kt&#34;&gt;char&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;*&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;d&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;dest&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;k&#34;&gt;const&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;char&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;*&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;s&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;src&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;d&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;s&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;k&#34;&gt;while&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;n&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;--&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            &lt;span class=&#34;o&#34;&gt;*&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;d&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;++&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;*&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;s&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;++&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;else&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;c1&#34;&gt;//采用倒序拷贝
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;        &lt;span class=&#34;kt&#34;&gt;char&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;*&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;lasts&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;char&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;*&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;s&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;n&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;kt&#34;&gt;char&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;*&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;lastd&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;d&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;n&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;k&#34;&gt;while&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;n&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;--&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            &lt;span class=&#34;o&#34;&gt;*&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;lastd&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;--&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;*&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;lasts&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;--&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;dest&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;&lt;code&gt;remmove&lt;/code&gt;判断如果&lt;code&gt;dest&lt;/code&gt;&amp;gt;=&lt;code&gt;src&lt;/code&gt;的时候（也就是前面图片的情况2），采用倒序拷贝，避免内容被覆盖导致拷贝不完整的问题。&lt;/p&gt;
+&lt;p&gt;原理图如下：&lt;/p&gt;
+&lt;div style=&#34;text-align: center;&#34;&gt;
+    &lt;img src=&#34;http://localhost:1313/img/memory_2.png&#34; alt=&#34;倒序拷贝&#34; style=&#34;max-width: 75%; height: auto;&#34;&gt;
+&lt;/div&gt;
+&lt;p&gt;&lt;code&gt;memcpy&lt;/code&gt;与&lt;code&gt;strcpy&lt;/code&gt;都有内存重叠的问题，实际可以根据需要使用&lt;code&gt;memmove&lt;/code&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;总结&#34;&gt;
+    &lt;a href=&#34;#%e6%80%bb%e7%bb%93&#34;&gt;#&lt;/a&gt;
+    总结
+&lt;/h2&gt;&lt;p&gt;三面时候面试官告诉我这是一道思维题，现在想想也是，只用倒序拷贝就能避免粘贴内容被覆盖。但当时满脑子就是想着怎么避开他，诸如存放在别处再拿回来。笔者当时就走不动道了，现在想想一定给面试官留下了“深刻”的印象吧。以上内容既是逻辑题目，也是基础题目，当时抱着试试的想法是走不通的，还是得深入到位，把基础弄扎实，加油吧。&lt;/p&gt;
+</description>
+        </item>
+        <item>
         <title>Hash</title>
-        <link>https://yotom131.github.io/p/hash/</link>
+        <link>http://localhost:1313/p/hash/</link>
         <pubDate>Wed, 03 Apr 2024 08:48:15 +0800</pubDate>
         
-        <guid>https://yotom131.github.io/p/hash/</guid>
+        <guid>http://localhost:1313/p/hash/</guid>
         <description>&lt;h1 id=&#34;hash&#34;&gt;
     &lt;a href=&#34;#hash&#34;&gt;#&lt;/a&gt;
     Hash
@@ -70,7 +169,7 @@
     冲突的由来
 &lt;/h3&gt;&lt;p&gt;由于hash函数输出的关键码位数是固定的，将无线的数据输出为有限的数据，那最终得到的结果一定是有重复的，这种输出的关键码重复的时候，就叫做&lt;strong&gt;hash冲突&lt;/strong&gt;，如下图所示。&lt;/p&gt;
 &lt;div style=&#34;text-align: center;&#34;&gt;
-    &lt;img src=&#34;https://yotom131.github.io/img/hash_1.png&#34; alt=&#34;哈希冲突&#34; style=&#34;max-width: 40%; height: auto;&#34;&gt;
+    &lt;img src=&#34;http://localhost:1313/img/hash_1.png&#34; alt=&#34;哈希冲突&#34; style=&#34;max-width: 60%; height: auto;&#34;&gt;
 &lt;/div&gt;
 &lt;h3 id=&#34;解决冲突的方法&#34;&gt;
     &lt;a href=&#34;#%e8%a7%a3%e5%86%b3%e5%86%b2%e7%aa%81%e7%9a%84%e6%96%b9%e6%b3%95&#34;&gt;#&lt;/a&gt;
@@ -85,7 +184,7 @@
 &lt;/ol&gt;
 &lt;p&gt;当发生哈希冲突时，从当前位置开始，依次向后查找下一个空闲位置，直至查遍全表。&lt;/p&gt;
 &lt;div style=&#34;text-align: center;&#34;&gt;
-    &lt;img src=&#34;https://yotom131.github.io/img/hash_2.png&#34; alt=&#34;线性测探法&#34; style=&#34;max-width: 45%; height: auto;&#34;&gt;
+    &lt;img src=&#34;http://localhost:1313/img/hash_2.png&#34; alt=&#34;线性测探法&#34; style=&#34;max-width: 60%; height: auto;&#34;&gt;
 &lt;/div&gt;
 &lt;p&gt;但在使用线性测探法的时候，查找、插入、删除的时间复杂度和哈希表的装载因子成正比。&lt;strong&gt;并且冲突如果连在一起，很容易产生堆积，查找时会多次重复比较，大大降低查找效率。&lt;/strong&gt;&lt;/p&gt;
 &lt;ol start=&#34;2&#34;&gt;
@@ -113,20 +212,22 @@
 &lt;/ol&gt;
 &lt;p&gt;在hash值重复的情况下，我们也可以考虑将值用链表表示，这样我们在需要查找数据项的时候只需要在对应链表中搜索即可。&lt;strong&gt;HashMap&lt;/strong&gt;在解决储存对象存在hash冲突的时候就是采用链地址法，将hash值相同的对象以链表形式存储。这是一种&lt;strong&gt;封闭地址法&lt;/strong&gt;。&lt;/p&gt;
 &lt;div style=&#34;text-align: center;&#34;&gt;
-    &lt;img src=&#34;https://yotom131.github.io/img/hash_3.png&#34; alt=&#34;链地址法&#34; style=&#34;max-width: 45%; height: auto;&#34;&gt;
+    &lt;img src=&#34;http://localhost:1313/img/hash_3.png&#34; alt=&#34;链地址法&#34; style=&#34;max-width: 60%; height: auto;&#34;&gt;
 &lt;/div&gt;
+&lt;hr&gt;
 &lt;h2 id=&#34;总结&#34;&gt;
     &lt;a href=&#34;#%e6%80%bb%e7%bb%93&#34;&gt;#&lt;/a&gt;
     总结
 &lt;/h2&gt;&lt;p&gt;总体而言，哈希是个不可逆的编码过程，以上是一些基本原理，后面涉及到map、unordered_map、dic等键值对的内容时，不单独写博客，希望哈希就此为止，加油！&lt;/p&gt;
+&lt;hr&gt;
 </description>
         </item>
         <item>
         <title>2024.4.2</title>
-        <link>https://yotom131.github.io/p/2024.4.2/</link>
+        <link>http://localhost:1313/p/2024.4.2/</link>
         <pubDate>Tue, 02 Apr 2024 14:01:26 +0800</pubDate>
         
-        <guid>https://yotom131.github.io/p/2024.4.2/</guid>
+        <guid>http://localhost:1313/p/2024.4.2/</guid>
         <description>&lt;h1 id=&#34;42&#34;&gt;
     &lt;a href=&#34;#42&#34;&gt;#&lt;/a&gt;
     4.2
@@ -134,7 +235,8 @@
     &lt;a href=&#34;#%e8%85%be%e8%ae%af%e6%b5%8b%e5%bc%80%e4%b8%89%e9%9d%a2%e6%80%bb%e7%bb%93&#34;&gt;#&lt;/a&gt;
     腾讯测开三面总结：
 &lt;/h3&gt;&lt;p&gt;​		4.1的面试凉的很透彻，明明就差最后一步了，哎。计算机基础没打牢固，c++基础没有打牢固，从这两方面入手抓吧。&lt;/p&gt;
-&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://yotom131.github.io/p/hash/&#34; &gt;hash部分请点击此处。&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;http://localhost:1313/p/c-%E5%86%85%E5%AD%98%E9%87%8D%E5%8F%A0/&#34; &gt;内存重叠部分请点击此处。&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;http://localhost:1313/p/hash/&#34; &gt;hash部分请点击此处。&lt;/a&gt;&lt;/p&gt;
 &lt;h3 id=&#34;c&#34;&gt;
     &lt;a href=&#34;#c&#34;&gt;#&lt;/a&gt;
     C++:
@@ -275,20 +377,11 @@
 &lt;/div&gt;</description>
         </item>
         <item>
-        <title>K8s</title>
-        <link>https://yotom131.github.io/p/k8s/</link>
-        <pubDate>Tue, 02 Apr 2024 14:01:26 +0800</pubDate>
-        
-        <guid>https://yotom131.github.io/p/k8s/</guid>
-        <description>&lt;p&gt;123&lt;/p&gt;
-</description>
-        </item>
-        <item>
         <title>2024.3.26</title>
-        <link>https://yotom131.github.io/p/2024.3.26/</link>
+        <link>http://localhost:1313/p/2024.3.26/</link>
         <pubDate>Tue, 26 Mar 2024 14:01:26 +0800</pubDate>
         
-        <guid>https://yotom131.github.io/p/2024.3.26/</guid>
+        <guid>http://localhost:1313/p/2024.3.26/</guid>
         <description>&lt;h2 id=&#34;326&#34;&gt;
     &lt;a href=&#34;#326&#34;&gt;#&lt;/a&gt;
     3.26
@@ -302,10 +395,10 @@
         </item>
         <item>
         <title>2024.3.25</title>
-        <link>https://yotom131.github.io/p/2024.3.25/</link>
+        <link>http://localhost:1313/p/2024.3.25/</link>
         <pubDate>Mon, 25 Mar 2024 14:01:26 +0800</pubDate>
         
-        <guid>https://yotom131.github.io/p/2024.3.25/</guid>
+        <guid>http://localhost:1313/p/2024.3.25/</guid>
         <description>&lt;h2 id=&#34;325&#34;&gt;
     &lt;a href=&#34;#325&#34;&gt;#&lt;/a&gt;
     3.25
@@ -321,10 +414,10 @@
         </item>
         <item>
         <title>2024.3.24</title>
-        <link>https://yotom131.github.io/p/2024.3.24/</link>
+        <link>http://localhost:1313/p/2024.3.24/</link>
         <pubDate>Sun, 24 Mar 2024 14:01:26 +0800</pubDate>
         
-        <guid>https://yotom131.github.io/p/2024.3.24/</guid>
+        <guid>http://localhost:1313/p/2024.3.24/</guid>
         <description>&lt;h2 id=&#34;324日记&#34;&gt;
     &lt;a href=&#34;#324%e6%97%a5%e8%ae%b0&#34;&gt;#&lt;/a&gt;
     3.24日记
@@ -341,10 +434,10 @@
         </item>
         <item>
         <title>2024.3.23</title>
-        <link>https://yotom131.github.io/p/2024.3.23/</link>
+        <link>http://localhost:1313/p/2024.3.23/</link>
         <pubDate>Sat, 23 Mar 2024 14:01:26 +0800</pubDate>
         
-        <guid>https://yotom131.github.io/p/2024.3.23/</guid>
+        <guid>http://localhost:1313/p/2024.3.23/</guid>
         <description>&lt;h3 id=&#34;323日记&#34;&gt;
     &lt;a href=&#34;#323%e6%97%a5%e8%ae%b0&#34;&gt;#&lt;/a&gt;
     3.23日记

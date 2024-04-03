@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html lang="zh-cn" dir="ltr">
     <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="# Hash 概念：hashing是一个过程，将元素储存的位置转化成一个密码（关键码），这是一个不可逆的过程。在查找的时候每次通过哈希函数得到关键码后">
-<title>Hash</title>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="# C++内存重叠 内存重叠是指在内存中存在两个或多个区域，他们的地址范围有交叉部分，内存重叠可能会导致程序出现不可预期的行为，腾讯timi测开">
+<title>C&#43;&#43;内存重叠</title>
 
-<link rel='canonical' href='http://localhost:1313/p/hash/'>
+<link rel='canonical' href='http://localhost:1313/p/c-%E5%86%85%E5%AD%98%E9%87%8D%E5%8F%A0/'>
 
-<link rel="stylesheet" href="/scss/style.min.8e60baf4cd3fc55968717a6e39762f4d28ed7ef6007566b6c7970ad0fe907198.css"><meta property='og:title' content="Hash">
-<meta property='og:description' content="# Hash 概念：hashing是一个过程，将元素储存的位置转化成一个密码（关键码），这是一个不可逆的过程。在查找的时候每次通过哈希函数得到关键码后">
-<meta property='og:url' content='http://localhost:1313/p/hash/'>
+<link rel="stylesheet" href="/scss/style.min.8e60baf4cd3fc55968717a6e39762f4d28ed7ef6007566b6c7970ad0fe907198.css"><meta property='og:title' content="C++内存重叠">
+<meta property='og:description' content="# C++内存重叠 内存重叠是指在内存中存在两个或多个区域，他们的地址范围有交叉部分，内存重叠可能会导致程序出现不可预期的行为，腾讯timi测开">
+<meta property='og:url' content='http://localhost:1313/p/c-%E5%86%85%E5%AD%98%E9%87%8D%E5%8F%A0/'>
 <meta property='og:site_name' content='Yotom的博客'>
-<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:published_time' content='2024-04-03T08:48:15&#43;08:00'/><meta property='article:modified_time' content='2024-04-03T08:48:15&#43;08:00'/>
-<meta name="twitter:title" content="Hash">
-<meta name="twitter:description" content="# Hash 概念：hashing是一个过程，将元素储存的位置转化成一个密码（关键码），这是一个不可逆的过程。在查找的时候每次通过哈希函数得到关键码后">
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:published_time' content='2024-04-03T10:46:10&#43;08:00'/><meta property='article:modified_time' content='2024-04-03T10:46:10&#43;08:00'/>
+<meta name="twitter:title" content="C++内存重叠">
+<meta name="twitter:description" content="# C++内存重叠 内存重叠是指在内存中存在两个或多个区域，他们的地址范围有交叉部分，内存重叠可能会导致程序出现不可预期的行为，腾讯timi测开">
     </head>
     <body class="
     article-page
@@ -156,26 +156,8 @@
         <div class="widget--toc">
             <nav id="TableOfContents">
   <ol>
-    <li><a href="#特性">特性</a></li>
-    <li><a href="#常见哈希函数和算法">常见哈希函数和算法</a>
-      <ol>
-        <li><a href="#直接定址法">直接定址法：</a></li>
-        <li><a href="#除留余数法">除留余数法：</a></li>
-      </ol>
-    </li>
-    <li><a href="#hash冲突">hash冲突</a>
-      <ol>
-        <li><a href="#冲突的由来">冲突的由来</a></li>
-        <li><a href="#解决冲突的方法">解决冲突的方法</a>
-          <ol>
-            <li><a href="#线性测探法">线性测探法</a></li>
-            <li><a href="#二次探测法">二次探测法</a></li>
-            <li><a href="#双重哈希法">双重哈希法</a></li>
-            <li><a href="#链地址法">链地址法</a></li>
-          </ol>
-        </li>
-      </ol>
-    </li>
+    <li><a href="#内存重叠的原因">内存重叠的原因</a></li>
+    <li><a href="#如何避免内存重叠">如何避免内存重叠</a></li>
     <li><a href="#总结">总结</a></li>
   </ol>
 </nav>
@@ -196,7 +178,7 @@
 
     <div class="article-title-wrapper">
         <h2 class="article-title">
-            <a href="/p/hash/">Hash</a>
+            <a href="/p/c-%E5%86%85%E5%AD%98%E9%87%8D%E5%8F%A0/">C&#43;&#43;内存重叠</a>
         </h2>
     
         
@@ -248,114 +230,97 @@
     <section class="article-content">
     
     
-    <h1 id="hash">
-    <a href="#hash">#</a>
-    Hash
-</h1><p><strong>概念</strong>：hashing是一个过程，将元素储存的位置转化成一个密码（关键码），这是一个不可逆的过程。在查找的时候每次通过哈希函数得到关键码后可以轻松找到对元素的位置。这样的函数叫做<strong>哈希函数</strong>，最终构造出的结构叫做<strong>哈希表（散列表）</strong>。</p>
+    <h1 id="c内存重叠">
+    <a href="#c%e5%86%85%e5%ad%98%e9%87%8d%e5%8f%a0">#</a>
+    C++内存重叠
+</h1><p><strong>内存重叠</strong>是指在内存中存在两个或多个区域，他们的地址范围有交叉部分，内存重叠可能会导致程序出现不可预期的行为，腾讯timi测开的三问面试官问到了我这个问题，当时没有回答上，非常的遗憾，现在有机会整理一下，变得更强！</p>
+<h2 id="内存重叠的原因">
+    <a href="#%e5%86%85%e5%ad%98%e9%87%8d%e5%8f%a0%e7%9a%84%e5%8e%9f%e5%9b%a0">#</a>
+    内存重叠的原因
+</h2><p>内存重叠的主要原因是指针的使用问题。当使用指针访问内存时，如果指针指向的内存区域与另一个区域有交叉部分，就会产生内存重叠。下图展示了内存拷贝的两种情况：</p>
+<div style="text-align: center;">
+    <img src="/img/memory_1.png" alt="内存拷贝" style="max-width: 75%; height: auto;">
+</div>
+<p>第一种情况下，拷贝重叠区域不会出现问题，因为拷贝是一个一个放过去，内容可以正常被拷贝。</p>
+<p>第二种情况下，右边两个字节原有的内容被覆盖了，且没有保存，接下来拷贝的时候已经是被覆盖的内容了。</p>
+<p>举个例子，下面代码片段就会导致内存重叠：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="line"><span class="cl"><span class="kt">char</span> <span class="n">str</span><span class="p">[]</span> <span class="o">=</span> <span class="s">&#34;Hello World&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="kt">char</span><span class="o">*</span> <span class="n">p</span> <span class="o">=</span> <span class="n">str</span> <span class="o">+</span><span class="mi">1</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="n">memcpy</span><span class="p">(</span><span class="n">p</span><span class="p">,</span> <span class="n">str</span><span class="p">,</span> <span class="mi">11</span><span class="p">);</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>在上面代码中，定义了字符数组<code>str</code>，并使用<code>p</code>指向<code>str</code>中第二个字符。接着，我们用<code>memcpy</code>函数将<code>str</code>中的11个字符复制到<code>p</code>指向的区域。由于<code>p</code>指向的区域与<code>str</code>有交叉部分，因此就产生了内存重叠。因为<code>memcpy</code>是直接按位复制拷贝，代码如下，所以会遇到情况二，拷贝的是已经被覆盖的内容。</p>
 <hr>
-<h2 id="特性">
-    <a href="#%e7%89%b9%e6%80%a7">#</a>
-    特性
-</h2><ul>
-<li>
-<p><strong>不可逆</strong>：hash存在关键码由多个来源转化而来，无法确定哪个关键码是由哪一个来源转换，所以不可逆。</p>
-</li>
-<li>
-<p><strong>运算快</strong>：20G高清电影和5K文本文件复杂度相同，运算量都极小。越巧妙的hash函数碰撞越少，空间利用率越高。</p>
-</li>
-<li>
-<p><strong>结果均匀</strong>：哈希函数计算出来的地址能均匀分布在整个空间中，这是hash函数的设计原则。</p>
-</li>
+<h2 id="如何避免内存重叠">
+    <a href="#%e5%a6%82%e4%bd%95%e9%81%bf%e5%85%8d%e5%86%85%e5%ad%98%e9%87%8d%e5%8f%a0">#</a>
+    如何避免内存重叠
+</h2><p>为了避免内存重叠，尤其要注意：</p>
+<ul>
+<li>尽量避免使用指针，尤其是进行运算和类型转换的时候。</li>
+<li>在使用指针时，确保指针指向的内存区域与其他区域没有交叉部分。</li>
+<li>在使用安全的内存操作函数，如<code>memcpy_s</code>、<code>memmove</code>等，这些函数可以确保在复制内存是不会产生内存重叠</li>
 </ul>
-<hr>
-<h2 id="常见哈希函数和算法">
-    <a href="#%e5%b8%b8%e8%a7%81%e5%93%88%e5%b8%8c%e5%87%bd%e6%95%b0%e5%92%8c%e7%ae%97%e6%b3%95">#</a>
-    常见哈希函数和算法
-</h2><h3 id="直接定址法">
-    <a href="#%e7%9b%b4%e6%8e%a5%e5%ae%9a%e5%9d%80%e6%b3%95">#</a>
-    直接定址法：
-</h3><div class="highlight"><div class="chroma">
+<p>那<code>memmove</code>如何避免内存重叠的影响呢？以下是<code>memmove</code>的源码：</p>
+<div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="line"><span class="cl"><span class="n">Hash</span><span class="p">(</span><span class="n">Key</span><span class="p">)</span> <span class="o">=</span> <span class="n">A</span> <span class="o">*</span> <span class="n">Key</span> <span class="o">+</span> <span class="n">B</span>
+<pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="line"><span class="cl"><span class="kt">void</span> <span class="o">*</span><span class="nf">memmove</span><span class="p">(</span><span class="kt">void</span> <span class="o">*</span><span class="n">dest</span><span class="p">,</span> <span class="k">const</span> <span class="kt">void</span> <span class="o">*</span><span class="n">src</span><span class="p">,</span> <span class="n">size_t</span> <span class="n">n</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="kt">char</span> <span class="o">*</span><span class="n">d</span> <span class="o">=</span> <span class="n">dest</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">const</span> <span class="kt">char</span> <span class="o">*</span><span class="n">s</span> <span class="o">=</span> <span class="n">src</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    <span class="k">if</span><span class="p">(</span><span class="n">d</span> <span class="o">&lt;</span> <span class="n">s</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">while</span> <span class="p">(</span><span class="n">n</span><span class="o">--</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">            <span class="o">*</span><span class="n">d</span><span class="o">++</span> <span class="o">=</span> <span class="o">*</span><span class="n">s</span><span class="o">++</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span><span class="k">else</span><span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">//采用倒序拷贝
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="kt">char</span> <span class="o">*</span><span class="n">lasts</span> <span class="o">=</span> <span class="p">(</span><span class="kt">char</span> <span class="o">*</span><span class="p">)</span><span class="n">s</span> <span class="o">+</span> <span class="p">(</span><span class="n">n</span> <span class="o">-</span> <span class="mi">1</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="kt">char</span> <span class="o">*</span><span class="n">lastd</span> <span class="o">=</span> <span class="n">d</span> <span class="o">+</span> <span class="p">(</span><span class="n">n</span> <span class="o">-</span> <span class="mi">1</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="k">while</span><span class="p">(</span><span class="n">n</span><span class="o">--</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">            <span class="o">*</span><span class="n">lastd</span><span class="o">--</span> <span class="o">=</span> <span class="o">*</span><span class="n">lasts</span><span class="o">--</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">dest</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p>这是最简单的hash函数，直接取直接取关键字本身或者他的线性函数来作为散列地址。</p>
-<h3 id="除留余数法">
-    <a href="#%e9%99%a4%e7%95%99%e4%bd%99%e6%95%b0%e6%b3%95">#</a>
-    除留余数法：
-</h3><div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="line"><span class="cl"><span class="n">Hash</span><span class="p">(</span><span class="n">Key</span><span class="p">)</span> <span class="o">=</span> <span class="n">Key</span> <span class="o">%</span> <span class="n">capacity</span>
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>这几乎是最常用的哈希函数，用一个数来对key取模，一般来说capacity的值为容量本身。</p>
-<p>经典应用的哈希算法主要是<strong>MD5（128位关键码）</strong>、<strong>SHA-256（256位关键码）</strong>、<strong>SHA-512（512位关键码）</strong>。</p>
-<hr>
-<h2 id="hash冲突">
-    <a href="#hash%e5%86%b2%e7%aa%81">#</a>
-    hash冲突
-</h2><h3 id="冲突的由来">
-    <a href="#%e5%86%b2%e7%aa%81%e7%9a%84%e7%94%b1%e6%9d%a5">#</a>
-    冲突的由来
-</h3><p>由于hash函数输出的关键码位数是固定的，将无线的数据输出为有限的数据，那最终得到的结果一定是有重复的，这种输出的关键码重复的时候，就叫做<strong>hash冲突</strong>，如下图所示。</p>
+</div><p><code>remmove</code>判断如果<code>dest</code>&gt;=<code>src</code>的时候（也就是前面图片的情况2），采用倒序拷贝，避免内容被覆盖导致拷贝不完整的问题。</p>
+<p>原理图如下：</p>
 <div style="text-align: center;">
-    <img src="/img/hash_1.png" alt="哈希冲突" style="max-width: 60%; height: auto;">
+    <img src="/img/memory_2.png" alt="倒序拷贝" style="max-width: 75%; height: auto;">
 </div>
-<h3 id="解决冲突的方法">
-    <a href="#%e8%a7%a3%e5%86%b3%e5%86%b2%e7%aa%81%e7%9a%84%e6%96%b9%e6%b3%95">#</a>
-    解决冲突的方法
-</h3><p>解决hash冲突的方法主要是以下：</p>
-<ol>
-<li>
-<h4 id="线性测探法">
-    <a href="#%e7%ba%bf%e6%80%a7%e6%b5%8b%e6%8e%a2%e6%b3%95">#</a>
-    线性测探法
-</h4></li>
-</ol>
-<p>当发生哈希冲突时，从当前位置开始，依次向后查找下一个空闲位置，直至查遍全表。</p>
-<div style="text-align: center;">
-    <img src="/img/hash_2.png" alt="线性测探法" style="max-width: 60%; height: auto;">
-</div>
-<p>但在使用线性测探法的时候，查找、插入、删除的时间复杂度和哈希表的装载因子成正比。<strong>并且冲突如果连在一起，很容易产生堆积，查找时会多次重复比较，大大降低查找效率。</strong></p>
-<ol start="2">
-<li>
-<h4 id="二次探测法">
-    <a href="#%e4%ba%8c%e6%ac%a1%e6%8e%a2%e6%b5%8b%e6%b3%95">#</a>
-    二次探测法
-</h4></li>
-</ol>
-<p>基本思路与线性探测法相同，通过二次函数的规律寻找下一个空闲地址。</p>
-<ol start="3">
-<li>
-<h4 id="双重哈希法">
-    <a href="#%e5%8f%8c%e9%87%8d%e5%93%88%e5%b8%8c%e6%b3%95">#</a>
-    双重哈希法
-</h4></li>
-</ol>
-<p>发生哈希冲突时，使用另一个哈希函数计算出下一个空闲位置。以上三种属于<strong>开放地址法</strong>。</p>
-<ol start="4">
-<li>
-<h4 id="链地址法">
-    <a href="#%e9%93%be%e5%9c%b0%e5%9d%80%e6%b3%95">#</a>
-    链地址法
-</h4></li>
-</ol>
-<p>在hash值重复的情况下，我们也可以考虑将值用链表表示，这样我们在需要查找数据项的时候只需要在对应链表中搜索即可。<strong>HashMap</strong>在解决储存对象存在hash冲突的时候就是采用链地址法，将hash值相同的对象以链表形式存储。这是一种<strong>封闭地址法</strong>。</p>
-<div style="text-align: center;">
-    <img src="/img/hash_3.png" alt="链地址法" style="max-width: 60%; height: auto;">
-</div>
+<p><code>memcpy</code>与<code>strcpy</code>都有内存重叠的问题，实际可以根据需要使用<code>memmove</code></p>
 <hr>
 <h2 id="总结">
     <a href="#%e6%80%bb%e7%bb%93">#</a>
     总结
-</h2><p>总体而言，哈希是个不可逆的编码过程，以上是一些基本原理，后面涉及到map、unordered_map、dic等键值对的内容时，不单独写博客，希望哈希就此为止，加油！</p>
-<hr>
+</h2><p>三面时候面试官告诉我这是一道思维题，现在想想也是，只用倒序拷贝就能避免粘贴内容被覆盖。但当时满脑子就是想着怎么避开他，诸如存放在别处再拿回来。笔者当时就走不动道了，现在想想一定给面试官留下了“深刻”的印象吧。以上内容既是逻辑题目，也是基础题目，当时抱着试试的想法是走不通的，还是得深入到位，把基础弄扎实，加油吧。</p>
 
 </section>
 
