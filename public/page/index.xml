@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Pages on Yotom的博客</title>
+        <link>https://yotom131.github.io/page/</link>
+        <description>Recent content in Pages on Yotom的博客</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>zh-cn</language>
+        <copyright>yotom</copyright><atom:link href="https://yotom131.github.io/page/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>全局搜索</title>
+        <link>https://yotom131.github.io/search/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://yotom131.github.io/search/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>网站说明</title>
+        <link>https://yotom131.github.io/%E7%BD%91%E7%AB%99%E8%AF%B4%E6%98%8E/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://yotom131.github.io/%E7%BD%91%E7%AB%99%E8%AF%B4%E6%98%8E/</guid>
+        <description>&lt;p&gt;这是Yotom的个人博客，用于存放记录自己的日志和在学习过程中的记忆点和技术点，便于我随时观看，同时也欢迎大家光临！个人签名下方的图标可以点击进入我的GPT镜像网站和github个人主页，欢迎光临！&lt;/p&gt;
+&lt;p&gt;评论系统采用github的utterence，可能需要您登录github进行评论，请见谅。&lt;/p&gt;
+&lt;p&gt;联系方式：yotom131（wechat）&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>

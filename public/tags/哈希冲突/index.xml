@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>哈希冲突 on Yotom的博客</title>
+        <link>https://yotom131.github.io/tags/%E5%93%88%E5%B8%8C%E5%86%B2%E7%AA%81/</link>
+        <description>Recent content in 哈希冲突 on Yotom的博客</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>zh-cn</language>
+        <copyright>yotom</copyright>
+        <lastBuildDate>Wed, 03 Apr 2024 08:48:15 +0800</lastBuildDate><atom:link href="https://yotom131.github.io/tags/%E5%93%88%E5%B8%8C%E5%86%B2%E7%AA%81/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Hash</title>
+        <link>https://yotom131.github.io/p/hash/</link>
+        <pubDate>Wed, 03 Apr 2024 08:48:15 +0800</pubDate>
+        
+        <guid>https://yotom131.github.io/p/hash/</guid>
+        <description>&lt;h1 id=&#34;hash&#34;&gt;
+    &lt;a href=&#34;#hash&#34;&gt;#&lt;/a&gt;
+    Hash
+&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;概念&lt;/strong&gt;：hashing是一个过程，将元素储存的位置转化成一个密码（关键码），这是一个不可逆的过程。在查找的时候每次通过哈希函数得到关键码后可以轻松找到对元素的位置。这样的函数叫做&lt;strong&gt;哈希函数&lt;/strong&gt;，最终构造出的结构叫做&lt;strong&gt;哈希表（散列表）&lt;/strong&gt;。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;特性&#34;&gt;
+    &lt;a href=&#34;#%e7%89%b9%e6%80%a7&#34;&gt;#&lt;/a&gt;
+    特性
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;不可逆&lt;/strong&gt;：hash存在关键码由多个来源转化而来，无法确定哪个关键码是由哪一个来源转换，所以不可逆。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;运算快&lt;/strong&gt;：20G高清电影和5K文本文件复杂度相同，运算量都极小。越巧妙的hash函数碰撞越少，空间利用率越高。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;结果均匀&lt;/strong&gt;：哈希函数计算出来的地址能均匀分布在整个空间中，这是hash函数的设计原则。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;常见哈希函数和算法&#34;&gt;
+    &lt;a href=&#34;#%e5%b8%b8%e8%a7%81%e5%93%88%e5%b8%8c%e5%87%bd%e6%95%b0%e5%92%8c%e7%ae%97%e6%b3%95&#34;&gt;#&lt;/a&gt;
+    常见哈希函数和算法
+&lt;/h2&gt;&lt;h3 id=&#34;直接定址法&#34;&gt;
+    &lt;a href=&#34;#%e7%9b%b4%e6%8e%a5%e5%ae%9a%e5%9d%80%e6%b3%95&#34;&gt;#&lt;/a&gt;
+    直接定址法：
+&lt;/h3&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-c++&#34; data-lang=&#34;c++&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;Hash&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Key&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;A&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;*&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Key&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;B&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;这是最简单的hash函数，直接取直接取关键字本身或者他的线性函数来作为散列地址。&lt;/p&gt;
+&lt;h3 id=&#34;除留余数法&#34;&gt;
+    &lt;a href=&#34;#%e9%99%a4%e7%95%99%e4%bd%99%e6%95%b0%e6%b3%95&#34;&gt;#&lt;/a&gt;
+    除留余数法：
+&lt;/h3&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-c++&#34; data-lang=&#34;c++&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;Hash&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Key&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Key&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;%&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;capacity&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;这几乎是最常用的哈希函数，用一个数来对key取模，一般来说capacity的值为容量本身。&lt;/p&gt;
+&lt;p&gt;经典应用的哈希算法主要是&lt;strong&gt;MD5（128位关键码）&lt;/strong&gt;、&lt;strong&gt;SHA-256（256位关键码）&lt;/strong&gt;、&lt;strong&gt;SHA-512（512位关键码）&lt;/strong&gt;。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;hash冲突&#34;&gt;
+    &lt;a href=&#34;#hash%e5%86%b2%e7%aa%81&#34;&gt;#&lt;/a&gt;
+    hash冲突
+&lt;/h2&gt;&lt;h3 id=&#34;冲突的由来&#34;&gt;
+    &lt;a href=&#34;#%e5%86%b2%e7%aa%81%e7%9a%84%e7%94%b1%e6%9d%a5&#34;&gt;#&lt;/a&gt;
+    冲突的由来
+&lt;/h3&gt;&lt;p&gt;由于hash函数输出的关键码位数是固定的，将无线的数据输出为有限的数据，那最终得到的结果一定是有重复的，这种输出的关键码重复的时候，就叫做&lt;strong&gt;hash冲突&lt;/strong&gt;，如下图所示。&lt;/p&gt;
+&lt;div style=&#34;text-align: center;&#34;&gt;
+    &lt;img src=&#34;https://yotom131.github.io/img/hash_1.png&#34; alt=&#34;哈希冲突&#34; style=&#34;max-width: 60%; height: auto;&#34;&gt;
+&lt;/div&gt;
+&lt;h3 id=&#34;解决冲突的方法&#34;&gt;
+    &lt;a href=&#34;#%e8%a7%a3%e5%86%b3%e5%86%b2%e7%aa%81%e7%9a%84%e6%96%b9%e6%b3%95&#34;&gt;#&lt;/a&gt;
+    解决冲突的方法
+&lt;/h3&gt;&lt;p&gt;解决hash冲突的方法主要是以下：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;h4 id=&#34;线性测探法&#34;&gt;
+    &lt;a href=&#34;#%e7%ba%bf%e6%80%a7%e6%b5%8b%e6%8e%a2%e6%b3%95&#34;&gt;#&lt;/a&gt;
+    线性测探法
+&lt;/h4&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;当发生哈希冲突时，从当前位置开始，依次向后查找下一个空闲位置，直至查遍全表。&lt;/p&gt;
+&lt;div style=&#34;text-align: center;&#34;&gt;
+    &lt;img src=&#34;https://yotom131.github.io/img/hash_2.png&#34; alt=&#34;线性测探法&#34; style=&#34;max-width: 60%; height: auto;&#34;&gt;
+&lt;/div&gt;
+&lt;p&gt;但在使用线性测探法的时候，查找、插入、删除的时间复杂度和哈希表的装载因子成正比。&lt;strong&gt;并且冲突如果连在一起，很容易产生堆积，查找时会多次重复比较，大大降低查找效率。&lt;/strong&gt;&lt;/p&gt;
+&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;
+&lt;h4 id=&#34;二次探测法&#34;&gt;
+    &lt;a href=&#34;#%e4%ba%8c%e6%ac%a1%e6%8e%a2%e6%b5%8b%e6%b3%95&#34;&gt;#&lt;/a&gt;
+    二次探测法
+&lt;/h4&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;基本思路与线性探测法相同，通过二次函数的规律寻找下一个空闲地址。&lt;/p&gt;
+&lt;ol start=&#34;3&#34;&gt;
+&lt;li&gt;
+&lt;h4 id=&#34;双重哈希法&#34;&gt;
+    &lt;a href=&#34;#%e5%8f%8c%e9%87%8d%e5%93%88%e5%b8%8c%e6%b3%95&#34;&gt;#&lt;/a&gt;
+    双重哈希法
+&lt;/h4&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;发生哈希冲突时，使用另一个哈希函数计算出下一个空闲位置。以上三种属于&lt;strong&gt;开放地址法&lt;/strong&gt;。&lt;/p&gt;
+&lt;ol start=&#34;4&#34;&gt;
+&lt;li&gt;
+&lt;h4 id=&#34;链地址法&#34;&gt;
+    &lt;a href=&#34;#%e9%93%be%e5%9c%b0%e5%9d%80%e6%b3%95&#34;&gt;#&lt;/a&gt;
+    链地址法
+&lt;/h4&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;在hash值重复的情况下，我们也可以考虑将值用链表表示，这样我们在需要查找数据项的时候只需要在对应链表中搜索即可。&lt;strong&gt;HashMap&lt;/strong&gt;在解决储存对象存在hash冲突的时候就是采用链地址法，将hash值相同的对象以链表形式存储。这是一种&lt;strong&gt;封闭地址法&lt;/strong&gt;。&lt;/p&gt;
+&lt;div style=&#34;text-align: center;&#34;&gt;
+    &lt;img src=&#34;https://yotom131.github.io/img/hash_3.png&#34; alt=&#34;链地址法&#34; style=&#34;max-width: 60%; height: auto;&#34;&gt;
+&lt;/div&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;总结&#34;&gt;
+    &lt;a href=&#34;#%e6%80%bb%e7%bb%93&#34;&gt;#&lt;/a&gt;
+    总结
+&lt;/h2&gt;&lt;p&gt;总体而言，哈希是个不可逆的编码过程，以上是一些基本原理，后面涉及到map、unordered_map、dic等键值对的内容时，不单独写博客，希望哈希就此为止，加油！&lt;/p&gt;
+&lt;hr&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>

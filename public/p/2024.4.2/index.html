@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html lang="zh-cn" dir="ltr">
     <head><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="# 4.2 # 腾讯测开三面总结： \u200b 4.1的面试凉的很透彻，明明就差最后一步了，哎。计算机基础没打牢固，c++基础没有打牢固，从这两方面入手抓吧。 内存">
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="2024.4.2日志">
 <title>2024.4.2</title>
 
 <link rel='canonical' href='https://yotom131.github.io/p/2024.4.2/'>
 
 <link rel="stylesheet" href="/scss/style.min.8e60baf4cd3fc55968717a6e39762f4d28ed7ef6007566b6c7970ad0fe907198.css"><meta property='og:title' content="2024.4.2">
-<meta property='og:description' content="# 4.2 # 腾讯测开三面总结： \u200b 4.1的面试凉的很透彻，明明就差最后一步了，哎。计算机基础没打牢固，c++基础没有打牢固，从这两方面入手抓吧。 内存">
+<meta property='og:description' content="2024.4.2日志">
 <meta property='og:url' content='https://yotom131.github.io/p/2024.4.2/'>
 <meta property='og:site_name' content='Yotom的博客'>
-<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:published_time' content='2024-04-02T14:01:26&#43;08:00'/><meta property='article:modified_time' content='2024-04-02T14:01:26&#43;08:00'/>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='timi测开三面' /><meta property='article:tag' content='指针' /><meta property='article:tag' content='引用' /><meta property='article:tag' content='数据类型' /><meta property='article:tag' content='const' /><meta property='article:published_time' content='2024-04-02T14:01:26&#43;08:00'/><meta property='article:modified_time' content='2024-04-02T14:01:26&#43;08:00'/>
 <meta name="twitter:title" content="2024.4.2">
-<meta name="twitter:description" content="# 4.2 # 腾讯测开三面总结： \u200b 4.1的面试凉的很透彻，明明就差最后一步了，哎。计算机基础没打牢固，c++基础没有打牢固，从这两方面入手抓吧。 内存">
+<meta name="twitter:description" content="2024.4.2日志">
     </head>
     <body class="
     article-page
@@ -105,6 +105,64 @@
         </ol><ol class="menu" id="main-menu">
         
         
+        
+        <li >
+            <a href='/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>博客主页</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/%E7%BD%91%E7%AB%99%E8%AF%B4%E6%98%8E/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="7" r="4" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg>
+
+
+
+                
+                <span>网站说明</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/search/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>全局搜索</span>
+            </a>
+        </li>
+        
         <li class="menu-bottom-section">
             <ol class="menu">
 
@@ -156,14 +214,18 @@
         <div class="widget--toc">
             <nav id="TableOfContents">
   <ol>
-    <li>
+    <li><a href="#42">4.2</a>
       <ol>
-        <li><a href="#腾讯测开三面总结">腾讯测开三面总结：</a></li>
-        <li><a href="#c">C++:</a>
+        <li>
           <ol>
-            <li><a href="#指针和引用">指针和引用：</a></li>
-            <li><a href="#数据类型">数据类型</a></li>
-            <li><a href="#关键字">关键字</a></li>
+            <li><a href="#腾讯测开三面总结">腾讯测开三面总结：</a></li>
+            <li><a href="#c">C++:</a>
+              <ol>
+                <li><a href="#指针和引用">指针和引用：</a></li>
+                <li><a href="#数据类型">数据类型</a></li>
+                <li><a href="#关键字">关键字</a></li>
+              </ol>
+            </li>
           </ol>
         </li>
       </ol>
@@ -184,12 +246,24 @@
 
     <div class="article-details">
     
+    <header class="article-category">
+        
+            <a href="/categories/%E4%B8%AA%E4%BA%BA%E6%97%A5%E5%BF%97/" >
+                个人日志
+            </a>
+        
+    </header>
+    
 
     <div class="article-title-wrapper">
         <h2 class="article-title">
             <a href="/p/2024.4.2/">2024.4.2</a>
         </h2>
     
+        
+        <h3 class="article-subtitle">
+            2024.4.2日志
+        </h3>
         
     </div>
 
@@ -391,6 +465,20 @@
 
     <footer class="article-footer">
     
+    <section class="article-tags">
+        
+            <a href="/tags/timi%E6%B5%8B%E5%BC%80%E4%B8%89%E9%9D%A2/">Timi测开三面</a>
+        
+            <a href="/tags/%E6%8C%87%E9%92%88/">指针</a>
+        
+            <a href="/tags/%E5%BC%95%E7%94%A8/">引用</a>
+        
+            <a href="/tags/%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/">数据类型</a>
+        
+            <a href="/tags/const/">Const</a>
+        
+    </section>
+
 
     
     <section class="article-copyright">
@@ -413,6 +501,67 @@
     
 
     
+
+<aside class="related-content--wrapper">
+    <h2 class="section-title">相关文章</h2>
+    <div class="related-content">
+        <div class="flex article-list--tile">
+            
+                
+<article class="">
+    <a href="/p/2024.3.26/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">2024.3.26</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/p/2024.3.25/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">2024.3.25</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/p/2024.3.24/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">2024.3.24</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/p/2024.3.23/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">2024.3.23</h2>
+        </div>
+    </a>
+</article>
+
+            
+        </div>
+    </div>
+</aside>
 
      
     
@@ -469,7 +618,7 @@
     <section class="copyright">
         &copy; 
         
-        2024 Example Person
+        2024 yotom
     </section>
     
     <section class="powerby">

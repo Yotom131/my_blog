@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html lang="zh-cn" dir="ltr">
     <head><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="# Hash 概念：hashing是一个过程，将元素储存的位置转化成一个密码（关键码），这是一个不可逆的过程。在查找的时候每次通过哈希函数得到关键码后">
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="一个三面中提及的问题">
 <title>Hash</title>
 
 <link rel='canonical' href='https://yotom131.github.io/p/hash/'>
 
 <link rel="stylesheet" href="/scss/style.min.8e60baf4cd3fc55968717a6e39762f4d28ed7ef6007566b6c7970ad0fe907198.css"><meta property='og:title' content="Hash">
-<meta property='og:description' content="# Hash 概念：hashing是一个过程，将元素储存的位置转化成一个密码（关键码），这是一个不可逆的过程。在查找的时候每次通过哈希函数得到关键码后">
+<meta property='og:description' content="一个三面中提及的问题">
 <meta property='og:url' content='https://yotom131.github.io/p/hash/'>
 <meta property='og:site_name' content='Yotom的博客'>
-<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:published_time' content='2024-04-03T08:48:15&#43;08:00'/><meta property='article:modified_time' content='2024-04-03T08:48:15&#43;08:00'/>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='C&#43;&#43;/C' /><meta property='article:tag' content='哈希表' /><meta property='article:tag' content='哈希算法' /><meta property='article:tag' content='哈希冲突' /><meta property='article:tag' content='面试问题' /><meta property='article:tag' content='timi测开三面' /><meta property='article:published_time' content='2024-04-03T08:48:15&#43;08:00'/><meta property='article:modified_time' content='2024-04-03T08:48:15&#43;08:00'/>
 <meta name="twitter:title" content="Hash">
-<meta name="twitter:description" content="# Hash 概念：hashing是一个过程，将元素储存的位置转化成一个密码（关键码），这是一个不可逆的过程。在查找的时候每次通过哈希函数得到关键码后">
+<meta name="twitter:description" content="一个三面中提及的问题">
     </head>
     <body class="
     article-page
@@ -105,6 +105,64 @@
         </ol><ol class="menu" id="main-menu">
         
         
+        
+        <li >
+            <a href='/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>博客主页</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/%E7%BD%91%E7%AB%99%E8%AF%B4%E6%98%8E/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="7" r="4" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg>
+
+
+
+                
+                <span>网站说明</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/search/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>全局搜索</span>
+            </a>
+        </li>
+        
         <li class="menu-bottom-section">
             <ol class="menu">
 
@@ -156,27 +214,31 @@
         <div class="widget--toc">
             <nav id="TableOfContents">
   <ol>
-    <li><a href="#特性">特性</a></li>
-    <li><a href="#常见哈希函数和算法">常见哈希函数和算法</a>
+    <li><a href="#hash">Hash</a>
       <ol>
-        <li><a href="#直接定址法">直接定址法：</a></li>
-        <li><a href="#除留余数法">除留余数法：</a></li>
-      </ol>
-    </li>
-    <li><a href="#hash冲突">hash冲突</a>
-      <ol>
-        <li><a href="#冲突的由来">冲突的由来</a></li>
-        <li><a href="#解决冲突的方法">解决冲突的方法</a>
+        <li><a href="#特性">特性</a></li>
+        <li><a href="#常见哈希函数和算法">常见哈希函数和算法</a>
           <ol>
-            <li><a href="#线性测探法">线性测探法</a></li>
-            <li><a href="#二次探测法">二次探测法</a></li>
-            <li><a href="#双重哈希法">双重哈希法</a></li>
-            <li><a href="#链地址法">链地址法</a></li>
+            <li><a href="#直接定址法">直接定址法：</a></li>
+            <li><a href="#除留余数法">除留余数法：</a></li>
           </ol>
         </li>
+        <li><a href="#hash冲突">hash冲突</a>
+          <ol>
+            <li><a href="#冲突的由来">冲突的由来</a></li>
+            <li><a href="#解决冲突的方法">解决冲突的方法</a>
+              <ol>
+                <li><a href="#线性测探法">线性测探法</a></li>
+                <li><a href="#二次探测法">二次探测法</a></li>
+                <li><a href="#双重哈希法">双重哈希法</a></li>
+                <li><a href="#链地址法">链地址法</a></li>
+              </ol>
+            </li>
+          </ol>
+        </li>
+        <li><a href="#总结">总结</a></li>
       </ol>
     </li>
-    <li><a href="#总结">总结</a></li>
   </ol>
 </nav>
         </div>
@@ -193,12 +255,24 @@
 
     <div class="article-details">
     
+    <header class="article-category">
+        
+            <a href="/categories/%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/" >
+                学习记录
+            </a>
+        
+    </header>
+    
 
     <div class="article-title-wrapper">
         <h2 class="article-title">
             <a href="/p/hash/">Hash</a>
         </h2>
     
+        
+        <h3 class="article-subtitle">
+            一个三面中提及的问题
+        </h3>
         
     </div>
 
@@ -362,6 +436,22 @@
 
     <footer class="article-footer">
     
+    <section class="article-tags">
+        
+            <a href="/tags/c&#43;&#43;/c/">C&#43;&#43;/C</a>
+        
+            <a href="/tags/%E5%93%88%E5%B8%8C%E8%A1%A8/">哈希表</a>
+        
+            <a href="/tags/%E5%93%88%E5%B8%8C%E7%AE%97%E6%B3%95/">哈希算法</a>
+        
+            <a href="/tags/%E5%93%88%E5%B8%8C%E5%86%B2%E7%AA%81/">哈希冲突</a>
+        
+            <a href="/tags/%E9%9D%A2%E8%AF%95%E9%97%AE%E9%A2%98/">面试问题</a>
+        
+            <a href="/tags/timi%E6%B5%8B%E5%BC%80%E4%B8%89%E9%9D%A2/">Timi测开三面</a>
+        
+    </section>
+
 
     
     <section class="article-copyright">
@@ -384,6 +474,28 @@
     
 
     
+
+<aside class="related-content--wrapper">
+    <h2 class="section-title">相关文章</h2>
+    <div class="related-content">
+        <div class="flex article-list--tile">
+            
+                
+<article class="">
+    <a href="/p/c-%E5%86%85%E5%AD%98%E9%87%8D%E5%8F%A0/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">C&#43;&#43;内存重叠</h2>
+        </div>
+    </a>
+</article>
+
+            
+        </div>
+    </div>
+</aside>
 
      
     
@@ -440,7 +552,7 @@
     <section class="copyright">
         &copy; 
         
-        2024 Example Person
+        2024 yotom
     </section>
     
     <section class="powerby">

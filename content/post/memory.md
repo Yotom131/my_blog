@@ -1,7 +1,19 @@
 +++
 title = 'C++内存重叠'
 date = 2024-04-03T10:46:10+08:00
-draft = false
+author = "Yotom"
+description = "另一个三面中提及的问题"
+tags = [
+    "C++/C",
+    "内存",
+    "拷贝",
+    "面试问题",
+    "timi测开三面",
+
+]
+categories = [
+    "学习记录",
+]
 
 +++
 

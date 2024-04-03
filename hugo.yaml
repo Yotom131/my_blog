@@ -3,8 +3,7 @@ languageCode: en-us
 theme: stack
 paginate: 10
 title: Yo's blog
-copyright: Example Person
-author: yotom
+copyright: yotom
 # Theme i18n support
 # Available values: ar, bn, ca, de, el, en, es, fr, hu, id, it, ja, ko, nl, pt-br, th, uk, zh-cn, zh-hk, zh-tw
 DefaultContentLanguage: zh-cn
@@ -152,7 +151,7 @@ params:
                   limit: 10
             - type: tag-cloud
               params:
-                  limit: 10
+                  limit: 30
         page:
             - type: toc
 
@@ -222,9 +221,9 @@ markup:
             ## Set to true if you have HTML content inside Markdown
             unsafe: true
     tableOfContents:
-        endLevel: 4
+        endLevel: 6
         ordered: true
-        startLevel: 2
+        startLevel: 1
     highlight:
         noClasses: false
         codeFences: true

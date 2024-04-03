@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>累加 on Yotom的博客</title>
+        <link>https://yotom131.github.io/tags/%E7%B4%AF%E5%8A%A0/</link>
+        <description>Recent content in 累加 on Yotom的博客</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>zh-cn</language>
+        <copyright>yotom</copyright>
+        <lastBuildDate>Sat, 23 Mar 2024 14:01:26 +0800</lastBuildDate><atom:link href="https://yotom131.github.io/tags/%E7%B4%AF%E5%8A%A0/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>2024.3.23</title>
+        <link>https://yotom131.github.io/p/2024.3.23/</link>
+        <pubDate>Sat, 23 Mar 2024 14:01:26 +0800</pubDate>
+        
+        <guid>https://yotom131.github.io/p/2024.3.23/</guid>
+        <description>&lt;h3 id=&#34;323日记&#34;&gt;
+    &lt;a href=&#34;#323%e6%97%a5%e8%ae%b0&#34;&gt;#&lt;/a&gt;
+    3.23日记
+&lt;/h3&gt;&lt;p&gt;距离腾讯测试开发岗位还有两天不到的时间，现在内心十分紧张，因为技术栈并不多，项目也并没有很匹配。目前主要要求的三个科目是计算机网络、操作系统、算法与数据结构。&lt;/p&gt;
+&lt;p&gt;今天学的内容是：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;快速排序、插入排序、希尔排序。快速排序主要思路是找到一个基准值，将大于他的和小于他的放在值得两边。插入排序就像斗地主一样，从第二张牌开始，每次从右往左跟左边比大小，小就往左边换，直到把最右边的值放在合适的位置。希尔排序主题思路与插入排序是一致的，主要区别在于把值分成了多组，用gap来一组组分好位置，当gap为1时，就是插入排序本身。&lt;/li&gt;
+&lt;li&gt;二叉树的中序遍历。这是力扣的一道题目。重温了vector的使用，和树的结点构造。大体上了解了构造函数的意义，以及中序遍历两种实现思路：递归和迭代。递归每次把左子放入函数，中间存自身，最后放右子即可。迭代则需要一个栈，用来模拟中序遍历的过程，每次空了，就弹出栈顶，记录值，最后返回值即可。&lt;/li&gt;
+&lt;li&gt;两数之和。这是力扣100的第一题，可以经典的两轮遍历做出来。也可以用hash表来做，对于每一个数值，通过auto it = hash.find(target - nums[i])，判断it值是否是hash.end()来看是否找到了合适的值。顺带了解了，map是有序的，unordered_map可以是无序的哈希表来使用。&lt;/li&gt;
+&lt;li&gt;每日一题，力扣2549.统计桌面上不同的数字，这是一个可以用简单枚举法完成的问题，但是因为老是先看答案，我已经丧失了思考的过程，要重新锻炼我的编程能力。学习到通过accumulate函数将vector首位累加，不必再使用for遍历完成。此外这道题侧面告诉我，使用数学公式进行简化会更有效果。只有n==1的情况下输出1，其他情况n-1。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;总体来说，欠缺的东西还很多，离测试开发的面试要求可能还达不到，加油变强吧少年。&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>

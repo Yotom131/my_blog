@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Set on Yotom的博客</title>
+        <link>https://yotom131.github.io/tags/set/</link>
+        <description>Recent content in Set on Yotom的博客</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>zh-cn</language>
+        <copyright>yotom</copyright>
+        <lastBuildDate>Tue, 26 Mar 2024 14:01:26 +0800</lastBuildDate><atom:link href="https://yotom131.github.io/tags/set/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>2024.3.26</title>
+        <link>https://yotom131.github.io/p/2024.3.26/</link>
+        <pubDate>Tue, 26 Mar 2024 14:01:26 +0800</pubDate>
+        
+        <guid>https://yotom131.github.io/p/2024.3.26/</guid>
+        <description>&lt;h2 id=&#34;326&#34;&gt;
+    &lt;a href=&#34;#326&#34;&gt;#&lt;/a&gt;
+    3.26
+&lt;/h2&gt;&lt;p&gt;​		今天一早上就收到了面试通过的消息，老实说十分激动，并且很期待下一次面试，但因为基础一般的原因，不是很清楚下次面试还会不会这样了解项目情况而少了解基础，总之都得练练，刷题方面的话，日常做两道题。&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;昨天的两道哈希表的题目进行了完成，了解到set的insert插入和count统计，并且知道set是存储唯一值的。&lt;/li&gt;
+&lt;li&gt;移动0， 卡了一会，正确思路是把非0数挨个移到前面去，面试后面一天要重新复习。&lt;/li&gt;
+&lt;li&gt;移掉K位数字，没做出来，应该是贪心+单调栈，贪心算法不明白是什么，这是个缺点，今晚尽量明白。&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>

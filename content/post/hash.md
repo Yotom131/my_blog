@@ -1,7 +1,20 @@
 +++
 title = 'Hash'
 date = 2024-04-03T08:48:15+08:00
-draft = false
+author = "Yotom"
+description = "一个三面中提及的问题"
+tags = [
+    "C++/C",
+    "哈希表",
+    "哈希算法",
+    "哈希冲突",
+    "面试问题",
+    "timi测开三面",
+]
+categories = [
+    "学习记录",
+]
+
 +++
 
 # Hash

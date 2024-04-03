@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>遍历 on Yotom的博客</title>
+        <link>https://yotom131.github.io/tags/%E9%81%8D%E5%8E%86/</link>
+        <description>Recent content in 遍历 on Yotom的博客</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>zh-cn</language>
+        <copyright>yotom</copyright>
+        <lastBuildDate>Sun, 24 Mar 2024 14:01:26 +0800</lastBuildDate><atom:link href="https://yotom131.github.io/tags/%E9%81%8D%E5%8E%86/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>2024.3.24</title>
+        <link>https://yotom131.github.io/p/2024.3.24/</link>
+        <pubDate>Sun, 24 Mar 2024 14:01:26 +0800</pubDate>
+        
+        <guid>https://yotom131.github.io/p/2024.3.24/</guid>
+        <description>&lt;h2 id=&#34;324日记&#34;&gt;
+    &lt;a href=&#34;#324%e6%97%a5%e8%ae%b0&#34;&gt;#&lt;/a&gt;
+    3.24日记
+&lt;/h2&gt;&lt;p&gt;​		有一些内容昨天忘了提，首先是hash表查找元素可以通过auto it = hash.find(&amp;ldquo;key&amp;rdquo;)，然后判断it是否是hash.end()来确定是否存在这个键。接着他的遍历方式是for(auto it = hash.bedin(); it!= hash.end(); ++it)，或者for(const auto&amp;amp; pair : myMap) 这样的方式遍历，通过hash-&amp;gt;first, hash-&amp;gt;second这样来访问键值对，通过hash.erase()来删除指定键的元素，通过hash.insert(make_pair(&amp;ldquo;key&amp;rdquo;, val))的方式或者hash.emplace(&amp;ldquo;key&amp;rdquo;, val)的方式来添加元素。&lt;/p&gt;
+&lt;p&gt;​		此外，另一个常用的vector容器，可以用for(int element : vec)这样的方式遍历，也可以用索引值for(size_t i = 0; i &amp;lt; vec.size(); i++)这样的方式来遍历。此外还有迭代器，但那个接触不多，可以先不用。&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;今天第一道题目是hash表的延申，字母异位词分组，目前水平还是太低了，借助GPT倒是完成了，我的思路是把相同字母的值用键值对的方式存起来，哪些字母组对应了一些值的数组，最后通过把键值对的值赋值给二维向量解决。继续加油吧。&lt;/li&gt;
+&lt;li&gt;今天第二道题目是有效的括号，属于栈的应用，题目完美符合栈的特点，粗心的错误是在于stk.push(*it)时候，注意根据类型push不同的符号。&lt;/li&gt;
+&lt;li&gt;今天上午学习了归并排序，并复习了昨天的一些题目，许多题目才一天就有些生疏不知道如何下手了，需要在学习的同时加强巩固。归并的思路是先递归再合并，合并的时候通过双指针指向两组数据的开头，通过对比大小合并，然后将临时数组的值还给原数组，最终完成算法。&lt;/li&gt;
+&lt;li&gt;顺着合并的思路下午学习了合并K和升序链表，学到了许多新的知识，比如创建虚拟表头，然后删除等，最后重新学习了下vector的几个成员函数，front(), at(), size(), empty(), back(), begin(), end()。并且接着学习到了可以通过int* arr = new int 这样的形式给指针分配动态内存。最后学习了递归方法，希望能常看看这些题目.&lt;/li&gt;
+&lt;li&gt;然后是一些DP问题，最少的硬币数目，不同路径，两种dp问题，最优解和计数。&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+        </item>
+        <item>
+        <title>2024.3.23</title>
+        <link>https://yotom131.github.io/p/2024.3.23/</link>
+        <pubDate>Sat, 23 Mar 2024 14:01:26 +0800</pubDate>
+        
+        <guid>https://yotom131.github.io/p/2024.3.23/</guid>
+        <description>&lt;h3 id=&#34;323日记&#34;&gt;
+    &lt;a href=&#34;#323%e6%97%a5%e8%ae%b0&#34;&gt;#&lt;/a&gt;
+    3.23日记
+&lt;/h3&gt;&lt;p&gt;距离腾讯测试开发岗位还有两天不到的时间，现在内心十分紧张，因为技术栈并不多，项目也并没有很匹配。目前主要要求的三个科目是计算机网络、操作系统、算法与数据结构。&lt;/p&gt;
+&lt;p&gt;今天学的内容是：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;快速排序、插入排序、希尔排序。快速排序主要思路是找到一个基准值，将大于他的和小于他的放在值得两边。插入排序就像斗地主一样，从第二张牌开始，每次从右往左跟左边比大小，小就往左边换，直到把最右边的值放在合适的位置。希尔排序主题思路与插入排序是一致的，主要区别在于把值分成了多组，用gap来一组组分好位置，当gap为1时，就是插入排序本身。&lt;/li&gt;
+&lt;li&gt;二叉树的中序遍历。这是力扣的一道题目。重温了vector的使用，和树的结点构造。大体上了解了构造函数的意义，以及中序遍历两种实现思路：递归和迭代。递归每次把左子放入函数，中间存自身，最后放右子即可。迭代则需要一个栈，用来模拟中序遍历的过程，每次空了，就弹出栈顶，记录值，最后返回值即可。&lt;/li&gt;
+&lt;li&gt;两数之和。这是力扣100的第一题，可以经典的两轮遍历做出来。也可以用hash表来做，对于每一个数值，通过auto it = hash.find(target - nums[i])，判断it值是否是hash.end()来看是否找到了合适的值。顺带了解了，map是有序的，unordered_map可以是无序的哈希表来使用。&lt;/li&gt;
+&lt;li&gt;每日一题，力扣2549.统计桌面上不同的数字，这是一个可以用简单枚举法完成的问题，但是因为老是先看答案，我已经丧失了思考的过程，要重新锻炼我的编程能力。学习到通过accumulate函数将vector首位累加，不必再使用for遍历完成。此外这道题侧面告诉我，使用数学公式进行简化会更有效果。只有n==1的情况下输出1，其他情况n-1。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;总体来说，欠缺的东西还很多，离测试开发的面试要求可能还达不到，加油变强吧少年。&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>

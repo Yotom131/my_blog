@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>哈希表 on Yotom的博客</title>
+        <link>https://yotom131.github.io/tags/%E5%93%88%E5%B8%8C%E8%A1%A8/</link>
+        <description>Recent content in 哈希表 on Yotom的博客</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>zh-cn</language>
+        <copyright>yotom</copyright>
+        <lastBuildDate>Wed, 03 Apr 2024 08:48:15 +0800</lastBuildDate><atom:link href="https://yotom131.github.io/tags/%E5%93%88%E5%B8%8C%E8%A1%A8/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Hash</title>
+        <link>https://yotom131.github.io/p/hash/</link>
+        <pubDate>Wed, 03 Apr 2024 08:48:15 +0800</pubDate>
+        
+        <guid>https://yotom131.github.io/p/hash/</guid>
+        <description>&lt;h1 id=&#34;hash&#34;&gt;
+    &lt;a href=&#34;#hash&#34;&gt;#&lt;/a&gt;
+    Hash
+&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;概念&lt;/strong&gt;：hashing是一个过程，将元素储存的位置转化成一个密码（关键码），这是一个不可逆的过程。在查找的时候每次通过哈希函数得到关键码后可以轻松找到对元素的位置。这样的函数叫做&lt;strong&gt;哈希函数&lt;/strong&gt;，最终构造出的结构叫做&lt;strong&gt;哈希表（散列表）&lt;/strong&gt;。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;特性&#34;&gt;
+    &lt;a href=&#34;#%e7%89%b9%e6%80%a7&#34;&gt;#&lt;/a&gt;
+    特性
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;不可逆&lt;/strong&gt;：hash存在关键码由多个来源转化而来，无法确定哪个关键码是由哪一个来源转换，所以不可逆。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;运算快&lt;/strong&gt;：20G高清电影和5K文本文件复杂度相同，运算量都极小。越巧妙的hash函数碰撞越少，空间利用率越高。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;结果均匀&lt;/strong&gt;：哈希函数计算出来的地址能均匀分布在整个空间中，这是hash函数的设计原则。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;常见哈希函数和算法&#34;&gt;
+    &lt;a href=&#34;#%e5%b8%b8%e8%a7%81%e5%93%88%e5%b8%8c%e5%87%bd%e6%95%b0%e5%92%8c%e7%ae%97%e6%b3%95&#34;&gt;#&lt;/a&gt;
+    常见哈希函数和算法
+&lt;/h2&gt;&lt;h3 id=&#34;直接定址法&#34;&gt;
+    &lt;a href=&#34;#%e7%9b%b4%e6%8e%a5%e5%ae%9a%e5%9d%80%e6%b3%95&#34;&gt;#&lt;/a&gt;
+    直接定址法：
+&lt;/h3&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-c++&#34; data-lang=&#34;c++&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;Hash&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Key&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;A&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;*&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Key&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;B&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;这是最简单的hash函数，直接取直接取关键字本身或者他的线性函数来作为散列地址。&lt;/p&gt;
+&lt;h3 id=&#34;除留余数法&#34;&gt;
+    &lt;a href=&#34;#%e9%99%a4%e7%95%99%e4%bd%99%e6%95%b0%e6%b3%95&#34;&gt;#&lt;/a&gt;
+    除留余数法：
+&lt;/h3&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-c++&#34; data-lang=&#34;c++&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;Hash&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Key&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Key&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;%&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;capacity&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;这几乎是最常用的哈希函数，用一个数来对key取模，一般来说capacity的值为容量本身。&lt;/p&gt;
+&lt;p&gt;经典应用的哈希算法主要是&lt;strong&gt;MD5（128位关键码）&lt;/strong&gt;、&lt;strong&gt;SHA-256（256位关键码）&lt;/strong&gt;、&lt;strong&gt;SHA-512（512位关键码）&lt;/strong&gt;。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;hash冲突&#34;&gt;
+    &lt;a href=&#34;#hash%e5%86%b2%e7%aa%81&#34;&gt;#&lt;/a&gt;
+    hash冲突
+&lt;/h2&gt;&lt;h3 id=&#34;冲突的由来&#34;&gt;
+    &lt;a href=&#34;#%e5%86%b2%e7%aa%81%e7%9a%84%e7%94%b1%e6%9d%a5&#34;&gt;#&lt;/a&gt;
+    冲突的由来
+&lt;/h3&gt;&lt;p&gt;由于hash函数输出的关键码位数是固定的，将无线的数据输出为有限的数据，那最终得到的结果一定是有重复的，这种输出的关键码重复的时候，就叫做&lt;strong&gt;hash冲突&lt;/strong&gt;，如下图所示。&lt;/p&gt;
+&lt;div style=&#34;text-align: center;&#34;&gt;
+    &lt;img src=&#34;https://yotom131.github.io/img/hash_1.png&#34; alt=&#34;哈希冲突&#34; style=&#34;max-width: 60%; height: auto;&#34;&gt;
+&lt;/div&gt;
+&lt;h3 id=&#34;解决冲突的方法&#34;&gt;
+    &lt;a href=&#34;#%e8%a7%a3%e5%86%b3%e5%86%b2%e7%aa%81%e7%9a%84%e6%96%b9%e6%b3%95&#34;&gt;#&lt;/a&gt;
+    解决冲突的方法
+&lt;/h3&gt;&lt;p&gt;解决hash冲突的方法主要是以下：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;h4 id=&#34;线性测探法&#34;&gt;
+    &lt;a href=&#34;#%e7%ba%bf%e6%80%a7%e6%b5%8b%e6%8e%a2%e6%b3%95&#34;&gt;#&lt;/a&gt;
+    线性测探法
+&lt;/h4&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;当发生哈希冲突时，从当前位置开始，依次向后查找下一个空闲位置，直至查遍全表。&lt;/p&gt;
+&lt;div style=&#34;text-align: center;&#34;&gt;
+    &lt;img src=&#34;https://yotom131.github.io/img/hash_2.png&#34; alt=&#34;线性测探法&#34; style=&#34;max-width: 60%; height: auto;&#34;&gt;
+&lt;/div&gt;
+&lt;p&gt;但在使用线性测探法的时候，查找、插入、删除的时间复杂度和哈希表的装载因子成正比。&lt;strong&gt;并且冲突如果连在一起，很容易产生堆积，查找时会多次重复比较，大大降低查找效率。&lt;/strong&gt;&lt;/p&gt;
+&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;
+&lt;h4 id=&#34;二次探测法&#34;&gt;
+    &lt;a href=&#34;#%e4%ba%8c%e6%ac%a1%e6%8e%a2%e6%b5%8b%e6%b3%95&#34;&gt;#&lt;/a&gt;
+    二次探测法
+&lt;/h4&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;基本思路与线性探测法相同，通过二次函数的规律寻找下一个空闲地址。&lt;/p&gt;
+&lt;ol start=&#34;3&#34;&gt;
+&lt;li&gt;
+&lt;h4 id=&#34;双重哈希法&#34;&gt;
+    &lt;a href=&#34;#%e5%8f%8c%e9%87%8d%e5%93%88%e5%b8%8c%e6%b3%95&#34;&gt;#&lt;/a&gt;
+    双重哈希法
+&lt;/h4&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;发生哈希冲突时，使用另一个哈希函数计算出下一个空闲位置。以上三种属于&lt;strong&gt;开放地址法&lt;/strong&gt;。&lt;/p&gt;
+&lt;ol start=&#34;4&#34;&gt;
+&lt;li&gt;
+&lt;h4 id=&#34;链地址法&#34;&gt;
+    &lt;a href=&#34;#%e9%93%be%e5%9c%b0%e5%9d%80%e6%b3%95&#34;&gt;#&lt;/a&gt;
+    链地址法
+&lt;/h4&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;在hash值重复的情况下，我们也可以考虑将值用链表表示，这样我们在需要查找数据项的时候只需要在对应链表中搜索即可。&lt;strong&gt;HashMap&lt;/strong&gt;在解决储存对象存在hash冲突的时候就是采用链地址法，将hash值相同的对象以链表形式存储。这是一种&lt;strong&gt;封闭地址法&lt;/strong&gt;。&lt;/p&gt;
+&lt;div style=&#34;text-align: center;&#34;&gt;
+    &lt;img src=&#34;https://yotom131.github.io/img/hash_3.png&#34; alt=&#34;链地址法&#34; style=&#34;max-width: 60%; height: auto;&#34;&gt;
+&lt;/div&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;总结&#34;&gt;
+    &lt;a href=&#34;#%e6%80%bb%e7%bb%93&#34;&gt;#&lt;/a&gt;
+    总结
+&lt;/h2&gt;&lt;p&gt;总体而言，哈希是个不可逆的编码过程，以上是一些基本原理，后面涉及到map、unordered_map、dic等键值对的内容时，不单独写博客，希望哈希就此为止，加油！&lt;/p&gt;
+&lt;hr&gt;
+</description>
+        </item>
+        <item>
+        <title>2024.3.26</title>
+        <link>https://yotom131.github.io/p/2024.3.26/</link>
+        <pubDate>Tue, 26 Mar 2024 14:01:26 +0800</pubDate>
+        
+        <guid>https://yotom131.github.io/p/2024.3.26/</guid>
+        <description>&lt;h2 id=&#34;326&#34;&gt;
+    &lt;a href=&#34;#326&#34;&gt;#&lt;/a&gt;
+    3.26
+&lt;/h2&gt;&lt;p&gt;​		今天一早上就收到了面试通过的消息，老实说十分激动，并且很期待下一次面试，但因为基础一般的原因，不是很清楚下次面试还会不会这样了解项目情况而少了解基础，总之都得练练，刷题方面的话，日常做两道题。&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;昨天的两道哈希表的题目进行了完成，了解到set的insert插入和count统计，并且知道set是存储唯一值的。&lt;/li&gt;
+&lt;li&gt;移动0， 卡了一会，正确思路是把非0数挨个移到前面去，面试后面一天要重新复习。&lt;/li&gt;
+&lt;li&gt;移掉K位数字，没做出来，应该是贪心+单调栈，贪心算法不明白是什么，这是个缺点，今晚尽量明白。&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+        </item>
+        <item>
+        <title>2024.3.25</title>
+        <link>https://yotom131.github.io/p/2024.3.25/</link>
+        <pubDate>Mon, 25 Mar 2024 14:01:26 +0800</pubDate>
+        
+        <guid>https://yotom131.github.io/p/2024.3.25/</guid>
+        <description>&lt;h2 id=&#34;325&#34;&gt;
+    &lt;a href=&#34;#325&#34;&gt;#&lt;/a&gt;
+    3.25
+&lt;/h2&gt;&lt;p&gt;​		今天早上起来最后学习了一会计算机网络相关的知识，重温了一些算法，我对这些算法的记忆还不够深刻，4月初将迎来蓝桥杯，在那个时候需要一定的功底去发展，最好能打一个国奖，这样子对于之后的应聘应该会有很多帮助。&lt;/p&gt;
+&lt;p&gt;​		下午进行了面试，出人意料的是没有考许多八股文，基本上是我自己在阐述。有问到深度学习、transfomer机制这些东西，这些事面试官比较感兴趣的，但我在过程中的表现只能说比较的浅薄，最后捏了一个会的快排，这个让我看见似乎面试官并不会看到我的桌面，后面如果有问题也许可以使用查的方式去完成。但胜任岗位方面需要了解游戏项目的测试自动化、多注意力机制、transformer这些东西，可能会更加地吸引面试官的注意力，就像他们在招聘的时候写着图像处理原理，计算机图形学相关能力。这次面试一直没通知我过，很有可能是在排序中，我并没有表现得那么出色，如果过了，下轮面试在复习好基础后可以着重去了解测试自动化和多注意力机制这方面的东西，不然口头讲述实在是空白无力，而且后面还要面三次。&lt;/p&gt;
+&lt;p&gt;​		如果没有过的话，一方面来说是一场悲报，因为这次面试并不像常规面试一样，而是着重挑了面试官自己想了解的部分，而这些部分我自己属于半懂不懂的状态。后面的反问环节也没有提前准备，只能说下次好好准备吧，这次没过的话其实并不意外，虽然我自己感觉良好，但事实上并没有给出面试官想要的答案。&lt;/p&gt;
+&lt;p&gt;​		今天再刷两道题，然后结束！明天开始多补补计算机网络和操作系统的知识，以免后面考到了。&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;今晚因为打卡睡了一道题目，128.最长连续序列，哈希表来做。&lt;/li&gt;
+&lt;li&gt;第二题也是同理，找到序列中第一个不重复数字的序号，哈希表，明天弄懂。&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+        </item>
+        <item>
+        <title>2024.3.24</title>
+        <link>https://yotom131.github.io/p/2024.3.24/</link>
+        <pubDate>Sun, 24 Mar 2024 14:01:26 +0800</pubDate>
+        
+        <guid>https://yotom131.github.io/p/2024.3.24/</guid>
+        <description>&lt;h2 id=&#34;324日记&#34;&gt;
+    &lt;a href=&#34;#324%e6%97%a5%e8%ae%b0&#34;&gt;#&lt;/a&gt;
+    3.24日记
+&lt;/h2&gt;&lt;p&gt;​		有一些内容昨天忘了提，首先是hash表查找元素可以通过auto it = hash.find(&amp;ldquo;key&amp;rdquo;)，然后判断it是否是hash.end()来确定是否存在这个键。接着他的遍历方式是for(auto it = hash.bedin(); it!= hash.end(); ++it)，或者for(const auto&amp;amp; pair : myMap) 这样的方式遍历，通过hash-&amp;gt;first, hash-&amp;gt;second这样来访问键值对，通过hash.erase()来删除指定键的元素，通过hash.insert(make_pair(&amp;ldquo;key&amp;rdquo;, val))的方式或者hash.emplace(&amp;ldquo;key&amp;rdquo;, val)的方式来添加元素。&lt;/p&gt;
+&lt;p&gt;​		此外，另一个常用的vector容器，可以用for(int element : vec)这样的方式遍历，也可以用索引值for(size_t i = 0; i &amp;lt; vec.size(); i++)这样的方式来遍历。此外还有迭代器，但那个接触不多，可以先不用。&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;今天第一道题目是hash表的延申，字母异位词分组，目前水平还是太低了，借助GPT倒是完成了，我的思路是把相同字母的值用键值对的方式存起来，哪些字母组对应了一些值的数组，最后通过把键值对的值赋值给二维向量解决。继续加油吧。&lt;/li&gt;
+&lt;li&gt;今天第二道题目是有效的括号，属于栈的应用，题目完美符合栈的特点，粗心的错误是在于stk.push(*it)时候，注意根据类型push不同的符号。&lt;/li&gt;
+&lt;li&gt;今天上午学习了归并排序，并复习了昨天的一些题目，许多题目才一天就有些生疏不知道如何下手了，需要在学习的同时加强巩固。归并的思路是先递归再合并，合并的时候通过双指针指向两组数据的开头，通过对比大小合并，然后将临时数组的值还给原数组，最终完成算法。&lt;/li&gt;
+&lt;li&gt;顺着合并的思路下午学习了合并K和升序链表，学到了许多新的知识，比如创建虚拟表头，然后删除等，最后重新学习了下vector的几个成员函数，front(), at(), size(), empty(), back(), begin(), end()。并且接着学习到了可以通过int* arr = new int 这样的形式给指针分配动态内存。最后学习了递归方法，希望能常看看这些题目.&lt;/li&gt;
+&lt;li&gt;然后是一些DP问题，最少的硬币数目，不同路径，两种dp问题，最优解和计数。&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+        </item>
+        <item>
+        <title>2024.3.23</title>
+        <link>https://yotom131.github.io/p/2024.3.23/</link>
+        <pubDate>Sat, 23 Mar 2024 14:01:26 +0800</pubDate>
+        
+        <guid>https://yotom131.github.io/p/2024.3.23/</guid>
+        <description>&lt;h3 id=&#34;323日记&#34;&gt;
+    &lt;a href=&#34;#323%e6%97%a5%e8%ae%b0&#34;&gt;#&lt;/a&gt;
+    3.23日记
+&lt;/h3&gt;&lt;p&gt;距离腾讯测试开发岗位还有两天不到的时间，现在内心十分紧张，因为技术栈并不多，项目也并没有很匹配。目前主要要求的三个科目是计算机网络、操作系统、算法与数据结构。&lt;/p&gt;
+&lt;p&gt;今天学的内容是：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;快速排序、插入排序、希尔排序。快速排序主要思路是找到一个基准值，将大于他的和小于他的放在值得两边。插入排序就像斗地主一样，从第二张牌开始，每次从右往左跟左边比大小，小就往左边换，直到把最右边的值放在合适的位置。希尔排序主题思路与插入排序是一致的，主要区别在于把值分成了多组，用gap来一组组分好位置，当gap为1时，就是插入排序本身。&lt;/li&gt;
+&lt;li&gt;二叉树的中序遍历。这是力扣的一道题目。重温了vector的使用，和树的结点构造。大体上了解了构造函数的意义，以及中序遍历两种实现思路：递归和迭代。递归每次把左子放入函数，中间存自身，最后放右子即可。迭代则需要一个栈，用来模拟中序遍历的过程，每次空了，就弹出栈顶，记录值，最后返回值即可。&lt;/li&gt;
+&lt;li&gt;两数之和。这是力扣100的第一题，可以经典的两轮遍历做出来。也可以用hash表来做，对于每一个数值，通过auto it = hash.find(target - nums[i])，判断it值是否是hash.end()来看是否找到了合适的值。顺带了解了，map是有序的，unordered_map可以是无序的哈希表来使用。&lt;/li&gt;
+&lt;li&gt;每日一题，力扣2549.统计桌面上不同的数字，这是一个可以用简单枚举法完成的问题，但是因为老是先看答案，我已经丧失了思考的过程，要重新锻炼我的编程能力。学习到通过accumulate函数将vector首位累加，不必再使用for遍历完成。此外这道题侧面告诉我，使用数学公式进行简化会更有效果。只有n==1的情况下输出1，其他情况n-1。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;总体来说，欠缺的东西还很多，离测试开发的面试要求可能还达不到，加油变强吧少年。&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>
