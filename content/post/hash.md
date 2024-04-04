@@ -12,6 +12,7 @@ tags = [
     "timi测开三面",
 ]
 categories = [
+    "C/C++",
     "学习记录",
 ]
 

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>八股文 on Yotom的博客</title>
+        <link>https://yotom131.github.io/tags/%E5%85%AB%E8%82%A1%E6%96%87/</link>
+        <description>Recent content in 八股文 on Yotom的博客</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>zh-cn</language>
+        <copyright>yotom</copyright>
+        <lastBuildDate>Thu, 04 Apr 2024 21:10:10 +0800</lastBuildDate><atom:link href="https://yotom131.github.io/tags/%E5%85%AB%E8%82%A1%E6%96%87/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>输入URL并按下回车之后会发生什么？</title>
+        <link>https://yotom131.github.io/p/%E8%BE%93%E5%85%A5url%E5%B9%B6%E6%8C%89%E4%B8%8B%E5%9B%9E%E8%BD%A6%E4%B9%8B%E5%90%8E%E4%BC%9A%E5%8F%91%E7%94%9F%E4%BB%80%E4%B9%88/</link>
+        <pubDate>Thu, 04 Apr 2024 21:10:10 +0800</pubDate>
+        
+        <guid>https://yotom131.github.io/p/%E8%BE%93%E5%85%A5url%E5%B9%B6%E6%8C%89%E4%B8%8B%E5%9B%9E%E8%BD%A6%E4%B9%8B%E5%90%8E%E4%BC%9A%E5%8F%91%E7%94%9F%E4%BB%80%E4%B9%88/</guid>
+        <description>&lt;h1 id=&#34;输入url并按下回车之后会发生什么&#34;&gt;
+    &lt;a href=&#34;#%e8%be%93%e5%85%a5url%e5%b9%b6%e6%8c%89%e4%b8%8b%e5%9b%9e%e8%bd%a6%e4%b9%8b%e5%90%8e%e4%bc%9a%e5%8f%91%e7%94%9f%e4%bb%80%e4%b9%88&#34;&gt;#&lt;/a&gt;
+    输入URL并按下回车之后会发生什么？
+&lt;/h1&gt;&lt;p&gt;这是一道超高频的面试题，可以从这道面试题延伸到计算机网络相关的很多问题。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;第一步输入url并解析&#34;&gt;
+    &lt;a href=&#34;#%e7%ac%ac%e4%b8%80%e6%ad%a5%e8%be%93%e5%85%a5url%e5%b9%b6%e8%a7%a3%e6%9e%90&#34;&gt;#&lt;/a&gt;
+    第一步：输入URL并解析
+&lt;/h2&gt;&lt;p&gt;输入&lt;strong&gt;URL&lt;/strong&gt;后，浏览器会解析出协议、主机、端口、路径等信息，并构建一个HTTP请求（浏览器会根据请求头判断是否有&lt;strong&gt;HTTP缓存&lt;/strong&gt;，并根据是否有缓存来决定是从服务器获取资源还是使用缓存资源）&lt;/p&gt;
+&lt;p&gt;这里可以引申到URL的组成部分。&lt;/p&gt;
+&lt;h2 id=&#34;第二步dns域名解析&#34;&gt;
+    &lt;a href=&#34;#%e7%ac%ac%e4%ba%8c%e6%ad%a5dns%e5%9f%9f%e5%90%8d%e8%a7%a3%e6%9e%90&#34;&gt;#&lt;/a&gt;
+    第二步：DNS域名解析
+&lt;/h2&gt;&lt;p&gt;在发送HTTP请求之前，浏览器需要知道想要访问网页（url）对应的IP地址，这就需要&lt;strong&gt;DNS域名解析&lt;/strong&gt;，来将域名解析成对应的IP地址&lt;/p&gt;
+&lt;h2 id=&#34;第三步建立起tcp连接三次握手&#34;&gt;
+    &lt;a href=&#34;#%e7%ac%ac%e4%b8%89%e6%ad%a5%e5%bb%ba%e7%ab%8b%e8%b5%b7tcp%e8%bf%9e%e6%8e%a5%e4%b8%89%e6%ac%a1%e6%8f%a1%e6%89%8b&#34;&gt;#&lt;/a&gt;
+    第三步：建立起TCP连接（三次握手）
+&lt;/h2&gt;&lt;p&gt;客户端和服务器之间进行HTTP请求和HTTP响应过程中，需要建立起TCP连接，TCP连接需要进行三次握手（后续给出相关内容地址）&lt;/p&gt;
+&lt;p&gt;这里是重中之重，可以延伸很多问题：为什么不是两次？不是四次？如果第一次握手丢失了会怎么样？三次握手的过程可以携带数据吗？&lt;/p&gt;
+&lt;h2 id=&#34;第四步浏览器发送httphttps请求到web服务器&#34;&gt;
+    &lt;a href=&#34;#%e7%ac%ac%e5%9b%9b%e6%ad%a5%e6%b5%8f%e8%a7%88%e5%99%a8%e5%8f%91%e9%80%81httphttps%e8%af%b7%e6%b1%82%e5%88%b0web%e6%9c%8d%e5%8a%a1%e5%99%a8&#34;&gt;#&lt;/a&gt;
+    第四步：浏览器发送HTTP/HTTPS请求到web服务器
+&lt;/h2&gt;&lt;p&gt;这一步也可以延伸到HTTP/HTTPS的区别？请求的方式？请求的状态码？等等相关内容&lt;/p&gt;
+&lt;h2 id=&#34;第五步服务器处理http请求并返回http报文&#34;&gt;
+    &lt;a href=&#34;#%e7%ac%ac%e4%ba%94%e6%ad%a5%e6%9c%8d%e5%8a%a1%e5%99%a8%e5%a4%84%e7%90%86http%e8%af%b7%e6%b1%82%e5%b9%b6%e8%bf%94%e5%9b%9ehttp%e6%8a%a5%e6%96%87&#34;&gt;#&lt;/a&gt;
+    第五步：服务器处理HTTP请求并返回HTTP报文
+&lt;/h2&gt;&lt;p&gt;HTTP响应报文和状态码也是常考内容&lt;/p&gt;
+&lt;p&gt;服务器会接受请求，将其传递给请求处理程序并发送HTTP相应，一般响应报文包含：请求的网页以及状态码、压缩类型、如何缓存的页面、设置的cookie；&lt;/p&gt;
+&lt;h2 id=&#34;第六步浏览器渲染页面&#34;&gt;
+    &lt;a href=&#34;#%e7%ac%ac%e5%85%ad%e6%ad%a5%e6%b5%8f%e8%a7%88%e5%99%a8%e6%b8%b2%e6%9f%93%e9%a1%b5%e9%9d%a2&#34;&gt;#&lt;/a&gt;
+    第六步：浏览器渲染页面
+&lt;/h2&gt;&lt;p&gt;浏览器渲染页面针对于前端同学，是必备技能，会牵扯到回流和重绘的问题。&lt;/p&gt;
+&lt;h2 id=&#34;第七步断开连接四次挥手&#34;&gt;
+    &lt;a href=&#34;#%e7%ac%ac%e4%b8%83%e6%ad%a5%e6%96%ad%e5%bc%80%e8%bf%9e%e6%8e%a5%e5%9b%9b%e6%ac%a1%e6%8c%a5%e6%89%8b&#34;&gt;#&lt;/a&gt;
+    第七步：断开连接（四次挥手）
+&lt;/h2&gt;&lt;p&gt;和三次握手一样，是重要的内容，需要牢固掌握。&lt;/p&gt;
+&lt;p&gt;代码随想录的作图：&lt;/p&gt;
+&lt;div style=&#34;text-align:center;&#34;&gt;
+    &lt;img src=&#34;https://yotom131.github.io/img/url_1.png&#34; alt=&#34;1&#34; style=&#34;max-width: 100%; height: auto;&#34;&gt;
+&lt;/div&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;总结&#34;&gt;
+    &lt;a href=&#34;#%e6%80%bb%e7%bb%93&#34;&gt;#&lt;/a&gt;
+    总结
+&lt;/h1&gt;&lt;p&gt;以上内容为一个框架，之后会更新相关内容的时候会链接到对应帖子。&lt;/p&gt;
+&lt;hr&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>
