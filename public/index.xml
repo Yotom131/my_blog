@@ -7,7 +7,34 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>yotom</copyright>
-        <lastBuildDate>Thu, 04 Apr 2024 21:10:10 +0800</lastBuildDate><atom:link href="https://yotom131.github.io/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Thu, 04 Apr 2024 21:46:46 +0800</lastBuildDate><atom:link href="https://yotom131.github.io/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>2024.4.4</title>
+        <link>https://yotom131.github.io/p/2024.4.4/</link>
+        <pubDate>Thu, 04 Apr 2024 21:46:46 +0800</pubDate>
+        
+        <guid>https://yotom131.github.io/p/2024.4.4/</guid>
+        <description>&lt;h1 id=&#34;44&#34;&gt;
+    &lt;a href=&#34;#44&#34;&gt;#&lt;/a&gt;
+    4.4
+&lt;/h1&gt;&lt;h2 id=&#34;今日事项&#34;&gt;
+    &lt;a href=&#34;#%e4%bb%8a%e6%97%a5%e4%ba%8b%e9%a1%b9&#34;&gt;#&lt;/a&gt;
+    今日事项
+&lt;/h2&gt;&lt;ol&gt;
+&lt;li&gt;重新翻阅C++primer，主要是输入输出的部分，巩固基础&lt;/li&gt;
+&lt;li&gt;对于C++八股文中的关键字部分，做了许多补充，主要是const、static等等&lt;/li&gt;
+&lt;li&gt;借助一道常见的面试题，梳理了计算机网络面试题目框架&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;总结&#34;&gt;
+    &lt;a href=&#34;#%e6%80%bb%e7%bb%93&#34;&gt;#&lt;/a&gt;
+    总结
+&lt;/h2&gt;&lt;p&gt;总体而言，今天的三个部分都比较基础，内容并不算多，但也需要消化。可能是因为清明节到了，我显得比较怠惰，一天下来大多数时间用来研究这个腾讯子公司的方方面面去了，毕竟下周一就要和HR面试了。不是很清楚是不是这一面就可以确定入职，如果是的话那就是足够幸运。&lt;/p&gt;
+&lt;p&gt;今天问了下后面的流程，HR只告诉我上海和深圳的工作地点，都不是在很好的地方，但开发游戏是我很心动的领域。如果能够HR一面就拿到offer，只要薪资不要太低，能承担起我的房租和日常开销，并可能存下一笔钱，那我将光速入职hhh&lt;/p&gt;
+&lt;p&gt;总体而言，可能是因为HR直接加我微信了，我没有很大的心思花大量时间看八股文和刷题了，当然也可能是因为清明假期有点心不在焉。但总之如果后面不止HR这一面的话我应该会吃大亏，还是应该适当准备一下腾讯云部门的面试，虽然听说HC好像不多了，不知道我还有没有机会（但真的很想从事游戏方面）。祈祷一下吧，只要待遇还可以，我光速入职！咏鹅十遍！&lt;/p&gt;
+&lt;hr&gt;
+</description>
+        </item>
+        <item>
         <title>输入URL并按下回车之后会发生什么？</title>
         <link>https://yotom131.github.io/p/%E8%BE%93%E5%85%A5url%E5%B9%B6%E6%8C%89%E4%B8%8B%E5%9B%9E%E8%BD%A6%E4%B9%8B%E5%90%8E%E4%BC%9A%E5%8F%91%E7%94%9F%E4%BB%80%E4%B9%88/</link>
         <pubDate>Thu, 04 Apr 2024 21:10:10 +0800</pubDate>
@@ -828,19 +855,19 @@
         <description>&lt;h1 id=&#34;42&#34;&gt;
     &lt;a href=&#34;#42&#34;&gt;#&lt;/a&gt;
     4.2
-&lt;/h1&gt;&lt;h3 id=&#34;腾讯测开三面总结&#34;&gt;
+&lt;/h1&gt;&lt;h2 id=&#34;腾讯测开三面总结&#34;&gt;
     &lt;a href=&#34;#%e8%85%be%e8%ae%af%e6%b5%8b%e5%bc%80%e4%b8%89%e9%9d%a2%e6%80%bb%e7%bb%93&#34;&gt;#&lt;/a&gt;
     腾讯测开三面总结：
-&lt;/h3&gt;&lt;p&gt;​		4.1的面试凉的很透彻，明明就差最后一步了，哎。计算机基础没打牢固，c++基础没有打牢固，从这两方面入手抓吧。&lt;/p&gt;
+&lt;/h2&gt;&lt;p&gt;​		4.1的面试凉的很透彻，明明就差最后一步了，哎。计算机基础没打牢固，c++基础没有打牢固，从这两方面入手抓吧。&lt;/p&gt;
 &lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://yotom131.github.io/p/c-%E5%86%85%E5%AD%98%E9%87%8D%E5%8F%A0/&#34; &gt;内存重叠部分请点击此处。&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://yotom131.github.io/p/hash/&#34; &gt;hash部分请点击此处。&lt;/a&gt;&lt;/p&gt;
-&lt;h3 id=&#34;c&#34;&gt;
+&lt;h2 id=&#34;c&#34;&gt;
     &lt;a href=&#34;#c&#34;&gt;#&lt;/a&gt;
     C++:
-&lt;/h3&gt;&lt;h4 id=&#34;指针和引用&#34;&gt;
+&lt;/h2&gt;&lt;h3 id=&#34;指针和引用&#34;&gt;
     &lt;a href=&#34;#%e6%8c%87%e9%92%88%e5%92%8c%e5%bc%95%e7%94%a8&#34;&gt;#&lt;/a&gt;
     指针和引用：
-&lt;/h4&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;/h3&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
 &lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
@@ -881,10 +908,10 @@
 &lt;p&gt;&lt;strong&gt;用途：&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;指针通常用于动态内存分配、数组操作、函数参数传递。&lt;/p&gt;
 &lt;p&gt;引用通常用于函数参数传递、操作符重载以及创建别名。&lt;/p&gt;
-&lt;h4 id=&#34;数据类型&#34;&gt;
+&lt;h3 id=&#34;数据类型&#34;&gt;
     &lt;a href=&#34;#%e6%95%b0%e6%8d%ae%e7%b1%bb%e5%9e%8b&#34;&gt;#&lt;/a&gt;
     数据类型
-&lt;/h4&gt;&lt;p&gt;&lt;strong&gt;整形：short int long和long long&lt;/strong&gt;&lt;/p&gt;
+&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;整形：short int long和long long&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;c++数据长度标准：&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;short至少16位，通常为16位。&lt;/li&gt;
@@ -909,10 +936,10 @@
 &lt;/ul&gt;
 &lt;p&gt;&lt;strong&gt;无符号类型&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;不储存负数值的整形，可以增大变量存储的最大值，数据长度一致。&lt;/p&gt;
-&lt;h4 id=&#34;关键字&#34;&gt;
+&lt;h3 id=&#34;关键字&#34;&gt;
     &lt;a href=&#34;#%e5%85%b3%e9%94%ae%e5%ad%97&#34;&gt;#&lt;/a&gt;
     关键字
-&lt;/h4&gt;&lt;p&gt;&lt;strong&gt;const关键字&lt;/strong&gt;&lt;/p&gt;
+&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;const关键字&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;被const修饰的值不能改变，只读变量。必须在定义的时候就给他赋初值。&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;1. 常量指针（底层const）&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;定义一个指针，指向一个只读的对象，不能通过常量指针来改变这个对象的值。常量指针强调的是指针所指对象的不可改变性。&lt;/p&gt;

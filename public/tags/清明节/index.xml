@@ -7,7 +7,34 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>yotom</copyright>
-        <lastBuildDate>Wed, 03 Apr 2024 22:46:46 +0800</lastBuildDate><atom:link href="https://yotom131.github.io/tags/%E6%B8%85%E6%98%8E%E8%8A%82/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Thu, 04 Apr 2024 21:46:46 +0800</lastBuildDate><atom:link href="https://yotom131.github.io/tags/%E6%B8%85%E6%98%8E%E8%8A%82/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>2024.4.4</title>
+        <link>https://yotom131.github.io/p/2024.4.4/</link>
+        <pubDate>Thu, 04 Apr 2024 21:46:46 +0800</pubDate>
+        
+        <guid>https://yotom131.github.io/p/2024.4.4/</guid>
+        <description>&lt;h1 id=&#34;44&#34;&gt;
+    &lt;a href=&#34;#44&#34;&gt;#&lt;/a&gt;
+    4.4
+&lt;/h1&gt;&lt;h2 id=&#34;今日事项&#34;&gt;
+    &lt;a href=&#34;#%e4%bb%8a%e6%97%a5%e4%ba%8b%e9%a1%b9&#34;&gt;#&lt;/a&gt;
+    今日事项
+&lt;/h2&gt;&lt;ol&gt;
+&lt;li&gt;重新翻阅C++primer，主要是输入输出的部分，巩固基础&lt;/li&gt;
+&lt;li&gt;对于C++八股文中的关键字部分，做了许多补充，主要是const、static等等&lt;/li&gt;
+&lt;li&gt;借助一道常见的面试题，梳理了计算机网络面试题目框架&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;总结&#34;&gt;
+    &lt;a href=&#34;#%e6%80%bb%e7%bb%93&#34;&gt;#&lt;/a&gt;
+    总结
+&lt;/h2&gt;&lt;p&gt;总体而言，今天的三个部分都比较基础，内容并不算多，但也需要消化。可能是因为清明节到了，我显得比较怠惰，一天下来大多数时间用来研究这个腾讯子公司的方方面面去了，毕竟下周一就要和HR面试了。不是很清楚是不是这一面就可以确定入职，如果是的话那就是足够幸运。&lt;/p&gt;
+&lt;p&gt;今天问了下后面的流程，HR只告诉我上海和深圳的工作地点，都不是在很好的地方，但开发游戏是我很心动的领域。如果能够HR一面就拿到offer，只要薪资不要太低，能承担起我的房租和日常开销，并可能存下一笔钱，那我将光速入职hhh&lt;/p&gt;
+&lt;p&gt;总体而言，可能是因为HR直接加我微信了，我没有很大的心思花大量时间看八股文和刷题了，当然也可能是因为清明假期有点心不在焉。但总之如果后面不止HR这一面的话我应该会吃大亏，还是应该适当准备一下腾讯云部门的面试，虽然听说HC好像不多了，不知道我还有没有机会（但真的很想从事游戏方面）。祈祷一下吧，只要待遇还可以，我光速入职！咏鹅十遍！&lt;/p&gt;
+&lt;hr&gt;
+</description>
+        </item>
+        <item>
         <title>2024.4.3</title>
         <link>https://yotom131.github.io/p/2024.4.3/</link>
         <pubDate>Wed, 03 Apr 2024 22:46:46 +0800</pubDate>

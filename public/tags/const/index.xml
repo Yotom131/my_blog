@@ -16,19 +16,19 @@
         <description>&lt;h1 id=&#34;42&#34;&gt;
     &lt;a href=&#34;#42&#34;&gt;#&lt;/a&gt;
     4.2
-&lt;/h1&gt;&lt;h3 id=&#34;腾讯测开三面总结&#34;&gt;
+&lt;/h1&gt;&lt;h2 id=&#34;腾讯测开三面总结&#34;&gt;
     &lt;a href=&#34;#%e8%85%be%e8%ae%af%e6%b5%8b%e5%bc%80%e4%b8%89%e9%9d%a2%e6%80%bb%e7%bb%93&#34;&gt;#&lt;/a&gt;
     腾讯测开三面总结：
-&lt;/h3&gt;&lt;p&gt;​		4.1的面试凉的很透彻，明明就差最后一步了，哎。计算机基础没打牢固，c++基础没有打牢固，从这两方面入手抓吧。&lt;/p&gt;
+&lt;/h2&gt;&lt;p&gt;​		4.1的面试凉的很透彻，明明就差最后一步了，哎。计算机基础没打牢固，c++基础没有打牢固，从这两方面入手抓吧。&lt;/p&gt;
 &lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://yotom131.github.io/p/c-%E5%86%85%E5%AD%98%E9%87%8D%E5%8F%A0/&#34; &gt;内存重叠部分请点击此处。&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://yotom131.github.io/p/hash/&#34; &gt;hash部分请点击此处。&lt;/a&gt;&lt;/p&gt;
-&lt;h3 id=&#34;c&#34;&gt;
+&lt;h2 id=&#34;c&#34;&gt;
     &lt;a href=&#34;#c&#34;&gt;#&lt;/a&gt;
     C++:
-&lt;/h3&gt;&lt;h4 id=&#34;指针和引用&#34;&gt;
+&lt;/h2&gt;&lt;h3 id=&#34;指针和引用&#34;&gt;
     &lt;a href=&#34;#%e6%8c%87%e9%92%88%e5%92%8c%e5%bc%95%e7%94%a8&#34;&gt;#&lt;/a&gt;
     指针和引用：
-&lt;/h4&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;/h3&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
 &lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
@@ -69,10 +69,10 @@
 &lt;p&gt;&lt;strong&gt;用途：&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;指针通常用于动态内存分配、数组操作、函数参数传递。&lt;/p&gt;
 &lt;p&gt;引用通常用于函数参数传递、操作符重载以及创建别名。&lt;/p&gt;
-&lt;h4 id=&#34;数据类型&#34;&gt;
+&lt;h3 id=&#34;数据类型&#34;&gt;
     &lt;a href=&#34;#%e6%95%b0%e6%8d%ae%e7%b1%bb%e5%9e%8b&#34;&gt;#&lt;/a&gt;
     数据类型
-&lt;/h4&gt;&lt;p&gt;&lt;strong&gt;整形：short int long和long long&lt;/strong&gt;&lt;/p&gt;
+&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;整形：short int long和long long&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;c++数据长度标准：&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;short至少16位，通常为16位。&lt;/li&gt;
@@ -97,10 +97,10 @@
 &lt;/ul&gt;
 &lt;p&gt;&lt;strong&gt;无符号类型&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;不储存负数值的整形，可以增大变量存储的最大值，数据长度一致。&lt;/p&gt;
-&lt;h4 id=&#34;关键字&#34;&gt;
+&lt;h3 id=&#34;关键字&#34;&gt;
     &lt;a href=&#34;#%e5%85%b3%e9%94%ae%e5%ad%97&#34;&gt;#&lt;/a&gt;
     关键字
-&lt;/h4&gt;&lt;p&gt;&lt;strong&gt;const关键字&lt;/strong&gt;&lt;/p&gt;
+&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;const关键字&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;被const修饰的值不能改变，只读变量。必须在定义的时候就给他赋初值。&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;1. 常量指针（底层const）&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;定义一个指针，指向一个只读的对象，不能通过常量指针来改变这个对象的值。常量指针强调的是指针所指对象的不可改变性。&lt;/p&gt;
