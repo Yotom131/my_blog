@@ -1,6 +1,6 @@
 +++
 
-title = 'hot100 11.盛最多水的容器'
+title = '11.盛最多水的容器'
 date = 2024-04-04T22:35:10+08:00
 author = "Yotom"
 description = "力扣hot100的一道题目"

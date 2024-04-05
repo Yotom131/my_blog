@@ -26,7 +26,8 @@
 &lt;h2 id=&#34;第二步dns域名解析&#34;&gt;
     &lt;a href=&#34;#%e7%ac%ac%e4%ba%8c%e6%ad%a5dns%e5%9f%9f%e5%90%8d%e8%a7%a3%e6%9e%90&#34;&gt;#&lt;/a&gt;
     第二步：DNS域名解析
-&lt;/h2&gt;&lt;p&gt;在发送HTTP请求之前，浏览器需要知道想要访问网页（url）对应的IP地址，这就需要&lt;strong&gt;DNS域名解析&lt;/strong&gt;，来将域名解析成对应的IP地址&lt;/p&gt;
+&lt;/h2&gt;&lt;p&gt;在发送HTTP请求之前，浏览器需要知道想要访问网页（url）对应的IP地址，这就需要&lt;strong&gt;DNS域名解析&lt;/strong&gt;，来将域名解析成对应的IP地址。&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://yotom131.github.io/p/dns/&#34; &gt;DNS相关内容&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id=&#34;第三步建立起tcp连接三次握手&#34;&gt;
     &lt;a href=&#34;#%e7%ac%ac%e4%b8%89%e6%ad%a5%e5%bb%ba%e7%ab%8b%e8%b5%b7tcp%e8%bf%9e%e6%8e%a5%e4%b8%89%e6%ac%a1%e6%8f%a1%e6%89%8b&#34;&gt;#&lt;/a&gt;
     第三步：建立起TCP连接（三次握手）

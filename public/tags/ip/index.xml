@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>IP on Yotom的博客</title>
+        <link>https://yotom131.github.io/tags/ip/</link>
+        <description>Recent content in IP on Yotom的博客</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>zh-cn</language>
+        <copyright>yotom</copyright>
+        <lastBuildDate>Fri, 05 Apr 2024 13:34:10 +0800</lastBuildDate><atom:link href="https://yotom131.github.io/tags/ip/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>DNS</title>
+        <link>https://yotom131.github.io/p/dns/</link>
+        <pubDate>Fri, 05 Apr 2024 13:34:10 +0800</pubDate>
+        
+        <guid>https://yotom131.github.io/p/dns/</guid>
+        <description>&lt;h1 id=&#34;dns&#34;&gt;
+    &lt;a href=&#34;#dns&#34;&gt;#&lt;/a&gt;
+    DNS
+&lt;/h1&gt;&lt;h2 id=&#34;dns是什么&#34;&gt;
+    &lt;a href=&#34;#dns%e6%98%af%e4%bb%80%e4%b9%88&#34;&gt;#&lt;/a&gt;
+    DNS是什么？
+&lt;/h2&gt;&lt;p&gt;&lt;code&gt;DNS(Domain Name System)&lt;/code&gt;是一种用于将域名（例如www.yotom.site）转换为IP地址（例如&lt;code&gt;192.168.1.1&lt;/code&gt;）的&lt;strong&gt;分布式&lt;/strong&gt;系统。&lt;/p&gt;
+&lt;p&gt;在互联网上，计算机和其他网络设备使用IP地址来互相识别和通信。然而，IP地址是一串数字，不太方便人们的使用和记忆，所以就使用了域名来替代复杂的IP地址。&lt;/p&gt;
+&lt;div style=&#34;text-align:center&#34;&gt;
+    &lt;img src=&#34;https://yotom131.github.io/img/dns_1.png&#34; alt=&#34;1&#34; style=&#34;max-width: 75%; height: auto&#34;&gt;
+&lt;/div&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;dns服务器为什么不采用集中式&#34;&gt;
+    &lt;a href=&#34;#dns%e6%9c%8d%e5%8a%a1%e5%99%a8%e4%b8%ba%e4%bb%80%e4%b9%88%e4%b8%8d%e9%87%87%e7%94%a8%e9%9b%86%e4%b8%ad%e5%bc%8f&#34;&gt;#&lt;/a&gt;
+    DNS服务器为什么不采用集中式？
+&lt;/h2&gt;&lt;h3 id=&#34;单点故障&#34;&gt;
+    &lt;a href=&#34;#%e5%8d%95%e7%82%b9%e6%95%85%e9%9a%9c&#34;&gt;#&lt;/a&gt;
+    单点故障
+&lt;/h3&gt;&lt;p&gt;如果DNS服务器崩溃，那么整个网络随之瘫痪。通信容量，单个DNS服务器不得不处理所有的DNS查询，这种查询级别可能是上百万上千万级别，一台服务器很难满足。&lt;/p&gt;
+&lt;h3 id=&#34;远距离集中式数据库&#34;&gt;
+    &lt;a href=&#34;#%e8%bf%9c%e8%b7%9d%e7%a6%bb%e9%9b%86%e4%b8%ad%e5%bc%8f%e6%95%b0%e6%8d%ae%e5%ba%93&#34;&gt;#&lt;/a&gt;
+    远距离集中式数据库
+&lt;/h3&gt;&lt;p&gt;单个DNS服务器不可能邻近所有的用户，假设在美国的DNS服务器不可能临近让澳大利亚的查询使用，其中查询请求势必会经过低俗和拥堵的链路，造成严重的时延。&lt;/p&gt;
+&lt;h3 id=&#34;维护&#34;&gt;
+    &lt;a href=&#34;#%e7%bb%b4%e6%8a%a4&#34;&gt;#&lt;/a&gt;
+    维护
+&lt;/h3&gt;&lt;p&gt;维护成本巨大，而且还需要频繁更新。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;域名的层级关系&#34;&gt;
+    &lt;a href=&#34;#%e5%9f%9f%e5%90%8d%e7%9a%84%e5%b1%82%e7%ba%a7%e5%85%b3%e7%b3%bb&#34;&gt;#&lt;/a&gt;
+    域名的层级关系
+&lt;/h2&gt;&lt;p&gt;DNS中的域名都是用句点来分隔开的，比如www.yotom.site，这里的句点代表了不同层次的界限。&lt;/p&gt;
+&lt;p&gt;在域名中，&lt;strong&gt;越往右的位置表示其层级越高&lt;/strong&gt;。&lt;/p&gt;
+&lt;div style=&#34;text-align:center&#34;&gt;
+    &lt;img src=&#34;https://yotom131.github.io/img/dns_2.png&#34; alt=&#34;2&#34; style=&#34;max-width: 75%; height: auto&#34;&gt;
+&lt;/div&gt;
+---
+&lt;h2 id=&#34;dns解析过程&#34;&gt;
+    &lt;a href=&#34;#dns%e8%a7%a3%e6%9e%90%e8%bf%87%e7%a8%8b&#34;&gt;#&lt;/a&gt;
+    DNS解析过程
+&lt;/h2&gt;&lt;ol&gt;
+&lt;li&gt;先查询浏览器缓存是否有域名对应的IP地址。&lt;/li&gt;
+&lt;li&gt;如果浏览器缓存中没有，会去计算机本地的Host文件中查询是否有对应的缓存。&lt;/li&gt;
+&lt;li&gt;如果Host文件中也没有，则会向&lt;strong&gt;本地DNS服务器&lt;/strong&gt;（这通常由你的互联网服务提供商（ISP）提供，比如中国移动、联通、电信）发送一个DNS查询请求。&lt;/li&gt;
+&lt;li&gt;如果本地DNS解析器有该域名的ip地址，就会直接返回。如果没有缓存该域名的解析记录，他会向&lt;strong&gt;根DNS服务器&lt;/strong&gt;发出查询请求。根DNS服务器并不负责解析域名，但他能告诉本地DNS解析器应该向哪个顶级域（.com/.net/.org）的DNS服务器继续查询。&lt;/li&gt;
+&lt;li&gt;本地DNS解析器接着向指定的&lt;strong&gt;顶级域名DNS服务器&lt;/strong&gt;发出查询请求。顶级域DNS服务器也不负责具体的域名解析，但他能告诉本地DNS解析器应该往哪个权威DNS服务器查询下一步的信息。&lt;/li&gt;
+&lt;li&gt;本地DNS解析器最后向&lt;strong&gt;权威DNS服务器&lt;/strong&gt;发送查询请求。权威DNS服务器是负责存储特定域名和IP地址映射的服务器。当权威DNS服务器收到查询请求时，他会查询“example.com”域名对应的IP地址，并将结果返回给本地DNS解析器。&lt;/li&gt;
+&lt;li&gt;本地DNS解析器将收到的IP地址返回给浏览器，并且还会将域名解析结果缓存在本地，以便于下次访问时更快地响应。&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;浏览器发起连接&lt;/em&gt;：本地DNS解析器已经将IP地址返回给您的计算机，您的浏览器可以使用该IP地址与目标服务器建立连接，开始获取网页内容。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div style=&#34;text-align:center&#34;&gt;
+    &lt;img src=&#34;https://yotom131.github.io/img/dns_3.png&#34; alt=&#34;3&#34; style=&#34;max-width:75%; height: auto;&#34;&gt;
+    &lt;img src=&#34;https://yotom131.github.io/img/dns_4.png&#34; alt=&#34;4&#34; style=&#34;max-width:75%; height: auto;&#34;&gt;
+    &lt;img src=&#34;https://yotom131.github.io/img/dns_5.png&#34; alt=&#34;5&#34; style=&#34;max-width:100%; height: auto;&#34;&gt;
+&lt;/div&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;递归查询和迭代查询&#34;&gt;
+    &lt;a href=&#34;#%e9%80%92%e5%bd%92%e6%9f%a5%e8%af%a2%e5%92%8c%e8%bf%ad%e4%bb%a3%e6%9f%a5%e8%af%a2&#34;&gt;#&lt;/a&gt;
+    递归查询和迭代查询
+&lt;/h2&gt;&lt;p&gt;递归查询和迭代查询是在DNS解析过程中用于获取域名信息的两种不同方法。&lt;/p&gt;
+&lt;h3 id=&#34;递归查询&#34;&gt;
+    &lt;a href=&#34;#%e9%80%92%e5%bd%92%e6%9f%a5%e8%af%a2&#34;&gt;#&lt;/a&gt;
+    递归查询
+&lt;/h3&gt;&lt;p&gt;在递归查询中，DNS客户端（通常是本地DNS解析器）向上层DNS服务器（如根域名服务器、顶级域名服务器）发送查询请求，并要求这些服务器直接提供完整的解析结果。递归查询的特点是，DNS客户端只需要发送一个查询请求，然后等待完整的解析结果。上层DNS服务器会自行查询下一级的服务器，并将最终结果返回给DNS客户端。&lt;/p&gt;
+&lt;h3 id=&#34;迭代查询&#34;&gt;
+    &lt;a href=&#34;#%e8%bf%ad%e4%bb%a3%e6%9f%a5%e8%af%a2&#34;&gt;#&lt;/a&gt;
+    迭代查询
+&lt;/h3&gt;&lt;p&gt;在迭代查询中，DNS客户端向上层DNS服务器发起查询请求，但不要求直接提供完整的解析结果。相反，DNS客户端只是询问上层服务器一个更高级的域名服务器的地址，然后再自行向那个更高级的服务器发起查询请求，以此类推，直到获取完整的解析结果为止。&lt;/p&gt;
+&lt;p&gt;递归查询适合普通用户和客户端，而迭代查询适用于DNS服务器之间的通信。&lt;/p&gt;
+&lt;hr&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>
