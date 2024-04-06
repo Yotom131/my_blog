@@ -7,7 +7,37 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>yotom</copyright>
-        <lastBuildDate>Fri, 05 Apr 2024 22:31:46 +0800</lastBuildDate><atom:link href="https://yotom131.github.io/tags/%E8%85%BE%E8%AE%AF%E4%BA%91%E6%B5%8B%E5%BC%80%E4%B8%80%E9%9D%A2/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Sat, 06 Apr 2024 22:48:46 +0800</lastBuildDate><atom:link href="https://yotom131.github.io/tags/%E8%85%BE%E8%AE%AF%E4%BA%91%E6%B5%8B%E5%BC%80%E4%B8%80%E9%9D%A2/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>2024.4.6</title>
+        <link>https://yotom131.github.io/p/2024.4.6/</link>
+        <pubDate>Sat, 06 Apr 2024 22:48:46 +0800</pubDate>
+        
+        <guid>https://yotom131.github.io/p/2024.4.6/</guid>
+        <description>&lt;h1 id=&#34;46&#34;&gt;
+    &lt;a href=&#34;#46&#34;&gt;#&lt;/a&gt;
+    4.6
+&lt;/h1&gt;&lt;h2 id=&#34;今日事项&#34;&gt;
+    &lt;a href=&#34;#%e4%bb%8a%e6%97%a5%e4%ba%8b%e9%a1%b9&#34;&gt;#&lt;/a&gt;
+    今日事项
+&lt;/h2&gt;&lt;ol&gt;
+&lt;li&gt;梳理了一遍7种排序&lt;/li&gt;
+&lt;li&gt;对网络编程有了更进一步的了解&lt;/li&gt;
+&lt;li&gt;配置了golang的环境、系统变量&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;总结&#34;&gt;
+    &lt;a href=&#34;#%e6%80%bb%e7%bb%93&#34;&gt;#&lt;/a&gt;
+    总结
+&lt;/h2&gt;&lt;p&gt;今天梳理了冒泡、选择、插入、希尔、快速、归并、堆共7种排序的算法，算是重新巩固了一下基础。&lt;/p&gt;
+&lt;p&gt;网络编程方面则是有了一些新的了解，包括套接字、epoll这些以前未曾了解的东西。也大概分清楚了计算机网络这门课和网络编程不说毫无关系，那也是没啥相关的。&lt;/p&gt;
+&lt;p&gt;另一方面呢是关注到golang的应用在大厂中其实还算挺广泛，我没有系统学过C++底层的东西和网络编程，python也只是会应用一些工程上的库，并不算精通，这二者于我而言毫无竞争优势可言。另一方面我的项目总是目标识别方面的，而这个由于YOLO的存在，已经烂大街了。。。所以目前打算用golang开辟一条赛道，做个云方面的项目充实下简历（当然这一切是建立在能够直接入职的情况下）&lt;/p&gt;
+&lt;p&gt;关于面试，我其实已经倾向于决定去子公司了，因为这个流程拉的有点长了，从3月初出来准备找实习，到现在已经过去了一个月（虽然只有半个月是真的在找实习）。但马上五一快到了，我比较期待4.8和腾讯HR直接聊聊子公司的待遇，看看能否尽快入职。&lt;/p&gt;
+&lt;p&gt;祈祷吧，我相信执掌幸运的女神会再次眷顾我。&lt;/p&gt;
+&lt;p&gt;我已准备好抓住这次好运的决心。&lt;/p&gt;
+&lt;hr&gt;
+</description>
+        </item>
+        <item>
         <title>2024.4.5</title>
         <link>https://yotom131.github.io/p/2024.4.5/</link>
         <pubDate>Fri, 05 Apr 2024 22:31:46 +0800</pubDate>
