@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html lang="zh-cn" dir="ltr">
     <head><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="2024.4.2日志">
-<title>2024.4.2</title>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="2024.4.8日志">
+<title>2024.4.8</title>
 
-<link rel='canonical' href='https://yotom131.github.io/p/2024.4.2/'>
+<link rel='canonical' href='https://yotom131.github.io/p/2024.4.8/'>
 
-<link rel="stylesheet" href="/scss/style.min.8e60baf4cd3fc55968717a6e39762f4d28ed7ef6007566b6c7970ad0fe907198.css"><meta property='og:title' content="2024.4.2">
-<meta property='og:description' content="2024.4.2日志">
-<meta property='og:url' content='https://yotom131.github.io/p/2024.4.2/'>
+<link rel="stylesheet" href="/scss/style.min.8e60baf4cd3fc55968717a6e39762f4d28ed7ef6007566b6c7970ad0fe907198.css"><meta property='og:title' content="2024.4.8">
+<meta property='og:description' content="2024.4.8日志">
+<meta property='og:url' content='https://yotom131.github.io/p/2024.4.8/'>
 <meta property='og:site_name' content='Yotom的博客'>
-<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='timi测开三面' /><meta property='article:tag' content='指针' /><meta property='article:tag' content='引用' /><meta property='article:tag' content='数据类型' /><meta property='article:tag' content='const' /><meta property='article:published_time' content='2024-04-02T14:01:26&#43;08:00'/><meta property='article:modified_time' content='2024-04-02T14:01:26&#43;08:00'/>
-<meta name="twitter:title" content="2024.4.2">
-<meta name="twitter:description" content="2024.4.2日志">
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='腾讯云测开二面' /><meta property='article:tag' content='规划' /><meta property='article:tag' content='腾娱互动' /><meta property='article:published_time' content='2024-04-07T23:14:46&#43;08:00'/><meta property='article:modified_time' content='2024-04-07T23:14:46&#43;08:00'/>
+<meta name="twitter:title" content="2024.4.8">
+<meta name="twitter:description" content="2024.4.8日志">
     </head>
     <body class="
     article-page
@@ -214,16 +214,10 @@
         <div class="widget--toc">
             <nav id="TableOfContents">
   <ol>
-    <li><a href="#42">4.2</a>
+    <li><a href="#48">4.8</a>
       <ol>
-        <li><a href="#腾讯测开三面总结">腾讯测开三面总结：</a></li>
-        <li><a href="#c">C++:</a>
-          <ol>
-            <li><a href="#指针和引用">指针和引用：</a></li>
-            <li><a href="#数据类型">数据类型</a></li>
-            <li><a href="#关键字">关键字</a></li>
-          </ol>
-        </li>
+        <li><a href="#今日事项">今日事项</a></li>
+        <li><a href="#总结">总结</a></li>
       </ol>
     </li>
   </ol>
@@ -257,12 +251,12 @@
 
     <div class="article-title-wrapper">
         <h2 class="article-title">
-            <a href="/p/2024.4.2/">2024.4.2</a>
+            <a href="/p/2024.4.8/">2024.4.8</a>
         </h2>
     
         
         <h3 class="article-subtitle">
-            2024.4.2日志
+            2024.4.8日志
         </h3>
         
     </div>
@@ -283,7 +277,7 @@
   <path d="M3 11h16" />
   <path d="M18 16.496v1.504l1 1" />
 </svg>
-                <time class="article-time--published">Apr 02, 2024</time>
+                <time class="article-time--published">Apr 07, 2024</time>
             </div>
         
 
@@ -298,7 +292,7 @@
 
 
                 <time class="article-time--reading">
-                    阅读时长: 3 分钟
+                    阅读时长: 1 分钟
                 </time>
             </div>
         
@@ -313,153 +307,27 @@
     <section class="article-content">
     
     
-    <h1 id="42">
-    <a href="#42">#</a>
-    4.2
-</h1><h2 id="腾讯测开三面总结">
-    <a href="#%e8%85%be%e8%ae%af%e6%b5%8b%e5%bc%80%e4%b8%89%e9%9d%a2%e6%80%bb%e7%bb%93">#</a>
-    腾讯测开三面总结：
-</h2><p>​		4.1的面试凉的很透彻，明明就差最后一步了，哎。计算机基础没打牢固，c++基础没有打牢固，从这两方面入手抓吧。</p>
-<p><a class="link" href="/p/c-%E5%86%85%E5%AD%98%E9%87%8D%E5%8F%A0/" >内存重叠部分请点击此处。</a></p>
-<p><a class="link" href="/p/hash/" >hash部分请点击此处。</a></p>
-<h2 id="c">
-    <a href="#c">#</a>
-    C++:
-</h2><h3 id="指针和引用">
-    <a href="#%e6%8c%87%e9%92%88%e5%92%8c%e5%bc%95%e7%94%a8">#</a>
-    指针和引用：
-</h3><div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="line"><span class="cl"><span class="c1">//定义和声明
-</span></span></span><span class="line"><span class="cl"><span class="c1">//此处是指针
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kt">int</span> <span class="n">x</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="kt">int</span> <span class="o">*</span><span class="n">ptr</span> <span class="o">=</span> <span class="o">&amp;</span><span class="n">x</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="c1">//此处是引用，相当于别称
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kt">int</span> <span class="n">y</span> <span class="o">=</span> <span class="mi">20</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="kt">int</span> <span class="o">&amp;</span><span class="n">ref</span> <span class="o">=</span> <span class="n">y</span><span class="p">;</span><span class="c1">//引用相当于别称
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
-</span></span><span class="line"><span class="cl"><span class="c1">//使用和操作
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kt">int</span> <span class="n">value</span> <span class="o">=</span> <span class="o">*</span><span class="n">ptr</span><span class="p">;</span><span class="c1">//获取指针指向的值
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kt">int</span> <span class="n">address</span> <span class="o">=</span> <span class="o">&amp;</span><span class="n">x</span><span class="p">;</span><span class="c1">//获取x的地址
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
-</span></span><span class="line"><span class="cl"><span class="kt">int</span> <span class="n">newValue</span> <span class="o">=</span> <span class="n">ref</span><span class="p">;</span><span class="c1">//获取引用的值
-</span></span></span></code></pre></td></tr></table>
-</div>
-</div><p><strong>空值和空引用：</strong></p>
-<p>指针可以为空（nullptr）。</p>
-<p>引用则必须在声明时初始化，且不能后续改变引用对象，因此没有空引用的概念。</p>
-<p><strong>可变性：</strong></p>
-<p>指针可以改变指向至不同的内存地址。</p>
-<p>引用一旦被初始化，将一直引用同一个对象，不能改变，值可以跟着引用对象改变。</p>
-<p><strong>用途：</strong></p>
-<p>指针通常用于动态内存分配、数组操作、函数参数传递。</p>
-<p>引用通常用于函数参数传递、操作符重载以及创建别名。</p>
-<h3 id="数据类型">
-    <a href="#%e6%95%b0%e6%8d%ae%e7%b1%bb%e5%9e%8b">#</a>
-    数据类型
-</h3><p><strong>整形：short int long和long long</strong></p>
-<p>c++数据长度标准：</p>
-<ul>
-<li>short至少16位，通常为16位。</li>
-<li>int至少和short一样长，通常为32位。</li>
-<li>long至少32位，且至少和int一样长，通常为32位。</li>
-<li>long long至少64位，且至少和long一样长，通常为64位。</li>
-</ul>
-<p>在使用8位字节的系统中，1 byte = 8 bit</p>
-<p>可以根据sizeof()来判断数据类型的长度：</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="line"><span class="cl"><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;int is &#34;</span> <span class="o">&lt;&lt;</span> <span class="k">sizeof</span><span class="p">(</span><span class="kt">int</span><span class="p">)</span> <span class="o">&lt;&lt;</span> <span class="s">&#34; bytes. </span><span class="se">\n</span><span class="s">&#34;</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;short is &#34;</span> <span class="o">&lt;&lt;</span> <span class="k">sizeof</span><span class="p">(</span><span class="kt">short</span><span class="p">)</span> <span class="o">&lt;&lt;</span> <span class="s">&#34; bytes. </span><span class="se">\n</span><span class="s">&#34;</span><span class="p">;</span>
-</span></span></code></pre></td></tr></table>
-</div>
-</div><ul>
-<li>头文件climits定义了符号常量：例如INT_MAX代表int最大值，INT_MIN代表int最小值</li>
-</ul>
-<p><strong>无符号类型</strong></p>
-<p>不储存负数值的整形，可以增大变量存储的最大值，数据长度一致。</p>
-<h3 id="关键字">
-    <a href="#%e5%85%b3%e9%94%ae%e5%ad%97">#</a>
-    关键字
-</h3><p><strong>const关键字</strong></p>
-<p>被const修饰的值不能改变，只读变量。必须在定义的时候就给他赋初值。</p>
-<p><strong>1. 常量指针（底层const）</strong></p>
-<p>定义一个指针，指向一个只读的对象，不能通过常量指针来改变这个对象的值。常量指针强调的是指针所指对象的不可改变性。</p>
-<p>特点：*靠近变量名。</p>
-<p>形式：</p>
-<ul>
-<li>const 数据类型 *指针变量 = 变量名</li>
-<li>数据类型 const *指针变量 = 变量名</li>
-</ul>
-<p>例如：</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span><span class="lnt">7
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="line"><span class="cl"><span class="kt">int</span> <span class="n">temp</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="k">const</span> <span class="kt">int</span><span class="o">*</span> <span class="n">a</span> <span class="o">=</span> <span class="o">&amp;</span><span class="n">temp</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="kt">int</span> <span class="k">const</span> <span class="o">*</span><span class="n">a</span> <span class="o">=</span> <span class="o">&amp;</span><span class="n">temp</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="c1">//更改:
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="o">*</span><span class="n">a</span> <span class="o">=</span> <span class="mi">9</span><span class="p">;</span><span class="c1">//错误：只读对象
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="n">temp</span> <span class="o">=</span> <span class="mi">9</span><span class="p">;</span><span class="c1">//正确
-</span></span></span></code></pre></td></tr></table>
-</div>
-</div><p><strong>2. 指针常量（顶层const）</strong></p>
-<p>定义一个指针，值只能在定义的时候初始化，其他地方不能改变。强调指针的不可改变性。</p>
-<p>特点：*靠近变量类型。</p>
-<p>形式：</p>
-<ul>
-<li>数据类型 * const 指针变量 = 变量名</li>
-</ul>
-<p>例如：</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span><span class="lnt">7
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="line"><span class="cl"><span class="kt">int</span> <span class="n">temp</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="kt">int</span> <span class="n">temp1</span> <span class="o">=</span> <span class="mi">12</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="kt">int</span><span class="o">*</span> <span class="k">const</span> <span class="n">p</span> <span class="o">=</span> <span class="o">&amp;</span><span class="n">temp</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="c1">//更改：
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="n">p</span> <span class="o">=</span> <span class="o">&amp;</span><span class="n">temp1</span><span class="p">;</span><span class="c1">//错误
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="o">*</span><span class="n">p</span> <span class="o">=</span> <span class="mi">9</span><span class="p">;</span><span class="c1">//正确
-</span></span></span></code></pre></td></tr></table>
-</div>
-</div>
+    <h1 id="48">
+    <a href="#48">#</a>
+    4.8
+</h1><h2 id="今日事项">
+    <a href="#%e4%bb%8a%e6%97%a5%e4%ba%8b%e9%a1%b9">#</a>
+    今日事项
+</h2><ol>
+<li>腾娱乐互动HR面</li>
+<li>调整方向</li>
+</ol>
+<hr>
+<h2 id="总结">
+    <a href="#%e6%80%bb%e7%bb%93">#</a>
+    总结
+</h2><p>今天和腾讯子公司的HR面试了，初步了解了业务。大多数都是我比较喜欢的一个方向，但唯独薪资福利比较低，家里人担心我过去后还需要他们贴钱实习，非常不放心，害怕我被骗了。</p>
+<p>当然我是想从事游戏方面的，但没有任何补贴+薪资低这一点确实太劝退我了，毕竟我是从北京过去，需要大交通和房租，如果这点无法解决，即使入职了我也会挺后悔吧？</p>
+<p>和HR面试完后提了一下要求，HR人挺好的，但可能是我的要求比较突然，他一时无法给我答复，我也挺焦灼的。</p>
+<p>另一方面，我打算重新规划一下路线，之前是抱着倾向于子公司的决定，但目前看来事情可能黄了（HR最后没回我话)，所以打算从软件测试方面下手，先掌握一些技术再说，不过相逢一场，祝他能找到合适的对象吧（双关，指恋爱和事业）。</p>
+<p>还是尽量能找到一个经济能够独立的实习，不要总是找家里人拿钱，这不是我出来实习的初衷吗？总之还是需要合适地调整方向吧，毕竟大多数人在有限的人生里是做不到事事如意的，我只能说做好一些准备，以应付不如意吧。</p>
+<hr>
+
 </section>
 
 
@@ -467,15 +335,11 @@
     
     <section class="article-tags">
         
-            <a href="/tags/timi%E6%B5%8B%E5%BC%80%E4%B8%89%E9%9D%A2/">Timi测开三面</a>
+            <a href="/tags/%E8%85%BE%E8%AE%AF%E4%BA%91%E6%B5%8B%E5%BC%80%E4%BA%8C%E9%9D%A2/">腾讯云测开二面</a>
         
-            <a href="/tags/%E6%8C%87%E9%92%88/">指针</a>
+            <a href="/tags/%E8%A7%84%E5%88%92/">规划</a>
         
-            <a href="/tags/%E5%BC%95%E7%94%A8/">引用</a>
-        
-            <a href="/tags/%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/">数据类型</a>
-        
-            <a href="/tags/const/">Const</a>
+            <a href="/tags/%E8%85%BE%E5%A8%B1%E4%BA%92%E5%8A%A8/">腾娱互动</a>
         
     </section>
 
@@ -506,19 +370,6 @@
     <h2 class="section-title">相关文章</h2>
     <div class="related-content">
         <div class="flex article-list--tile">
-            
-                
-<article class="">
-    <a href="/p/2024.4.8/">
-        
-        
-
-        <div class="article-details">
-            <h2 class="article-title">2024.4.8</h2>
-        </div>
-    </a>
-</article>
-
             
                 
 <article class="">
@@ -567,6 +418,19 @@
 
         <div class="article-details">
             <h2 class="article-title">2024.4.4</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/p/2024.4.3/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">2024.4.3</h2>
         </div>
     </a>
 </article>
