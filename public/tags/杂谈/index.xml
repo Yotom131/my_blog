@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>杂谈 on Yotom的博客</title>
+        <link>https://yotom131.github.io/tags/%E6%9D%82%E8%B0%88/</link>
+        <description>Recent content in 杂谈 on Yotom的博客</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>zh-cn</language>
+        <copyright>yotom</copyright>
+        <lastBuildDate>Tue, 09 Apr 2024 12:36:10 +0800</lastBuildDate><atom:link href="https://yotom131.github.io/tags/%E6%9D%82%E8%B0%88/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>软件测试杂谈</title>
+        <link>https://yotom131.github.io/p/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95%E6%9D%82%E8%B0%88/</link>
+        <pubDate>Tue, 09 Apr 2024 12:36:10 +0800</pubDate>
+        
+        <guid>https://yotom131.github.io/p/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95%E6%9D%82%E8%B0%88/</guid>
+        <description>&lt;h1 id=&#34;测试杂谈&#34;&gt;
+    &lt;a href=&#34;#%e6%b5%8b%e8%af%95%e6%9d%82%e8%b0%88&#34;&gt;#&lt;/a&gt;
+    测试杂谈
+&lt;/h1&gt;&lt;h2 id=&#34;测试是什么&#34;&gt;
+    &lt;a href=&#34;#%e6%b5%8b%e8%af%95%e6%98%af%e4%bb%80%e4%b9%88&#34;&gt;#&lt;/a&gt;
+    测试是什么？
+&lt;/h2&gt;&lt;p&gt;一般把IT技术流程化的话，人员工作分为三类：开发、测试、运维。&lt;/p&gt;
+&lt;p&gt;测试在这个IT技术类中担任的作用就是作为软件质量检测的人员。&lt;/p&gt;
+&lt;p&gt;一般可以根据测试水平的高低把工作分为三个层次：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;人工软件测试（主要是功能测试）&lt;/li&gt;
+&lt;li&gt;自动化测试&lt;/li&gt;
+&lt;li&gt;测试开发（可能涉及到性能测试）&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;三个层次越往下的测试工作效率越高，技术门槛也会越高。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;软件测试需要的技能&#34;&gt;
+    &lt;a href=&#34;#%e8%bd%af%e4%bb%b6%e6%b5%8b%e8%af%95%e9%9c%80%e8%a6%81%e7%9a%84%e6%8a%80%e8%83%bd&#34;&gt;#&lt;/a&gt;
+    软件测试需要的技能
+&lt;/h2&gt;&lt;h3 id=&#34;软件测试&#34;&gt;
+    &lt;a href=&#34;#%e8%bd%af%e4%bb%b6%e6%b5%8b%e8%af%95&#34;&gt;#&lt;/a&gt;
+    软件测试
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;熟悉软件测试流程、测试设计方法，能够独立进行测试策略以及方案编写&lt;/li&gt;
+&lt;li&gt;独立设计和执行测试方案和测试用例&lt;/li&gt;
+&lt;li&gt;了解linux并可以搭建和维护测试环境&lt;/li&gt;
+&lt;li&gt;掌握自动化测试工具&lt;/li&gt;
+&lt;li&gt;有较强的沟通表达、独立分析和解决问题的能力&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;自动化测试&#34;&gt;
+    &lt;a href=&#34;#%e8%87%aa%e5%8a%a8%e5%8c%96%e6%b5%8b%e8%af%95&#34;&gt;#&lt;/a&gt;
+    自动化测试
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;了解软件测试理论、测试流程和相关测试方法&lt;/li&gt;
+&lt;li&gt;能独立制定测试计划、测试用例编写测试报告&lt;/li&gt;
+&lt;li&gt;熟悉linux环境，能进行shell编程&lt;/li&gt;
+&lt;li&gt;熟悉python，具备自动化测试框架的设计和独立开发能力&lt;/li&gt;
+&lt;li&gt;掌握SQL语句&lt;/li&gt;
+&lt;li&gt;熟悉Appium，selenium，Junit，Tesing等自动化测试框架&lt;/li&gt;
+&lt;li&gt;熟悉LoadRunner，Jmeter等性能测试工具，能自主设计性能测试场景，分析测试结果&lt;/li&gt;
+&lt;li&gt;熟悉测试中持续集成的流程，熟练运用Jenkins等工具&lt;/li&gt;
+&lt;li&gt;熟悉软件研发流程，掌握软件测试理论和方法，有开发测试工具或者编写辅助测试脚本的成功实践&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;测试开发&#34;&gt;
+    &lt;a href=&#34;#%e6%b5%8b%e8%af%95%e5%bc%80%e5%8f%91&#34;&gt;#&lt;/a&gt;
+    测试开发
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;熟悉Linux/Unix操作系统&lt;/li&gt;
+&lt;li&gt;熟悉Python、Java、C++/C等任意一门编程语言&lt;/li&gt;
+&lt;li&gt;熟悉MySQL/SQL Server/PostgreSQL/Oracle任何至少一种数据库&lt;/li&gt;
+&lt;li&gt;熟悉前端技术，包括HTML(5)/css(3)/JavaScript等，并有相关的项目开发经验或成果&lt;/li&gt;
+&lt;li&gt;深刻理解web标准，对可用性、可访问性等相关知识有实际的了解&lt;/li&gt;
+&lt;li&gt;有基于Ajax应用的开发经验，有NodeJS/Java开发经验，或者有移动端开发经验&lt;/li&gt;
+&lt;li&gt;在web、android、ios，接口等自动化领域有较深的造诣和见解&lt;/li&gt;
+&lt;li&gt;有相关自动化工具/平台（web/app/api接口/测试相关平台工具）开发经验&lt;/li&gt;
+&lt;li&gt;了解设计模式、微服务框架等优先&lt;/li&gt;
+&lt;li&gt;对算法、数据结构、建模有一定了解&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>

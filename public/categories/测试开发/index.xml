@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>测试开发 on Yotom的博客</title>
+        <link>https://yotom131.github.io/categories/%E6%B5%8B%E8%AF%95%E5%BC%80%E5%8F%91/</link>
+        <description>Recent content in 测试开发 on Yotom的博客</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>zh-cn</language>
+        <copyright>yotom</copyright>
+        <lastBuildDate>Tue, 09 Apr 2024 13:25:10 +0800</lastBuildDate><atom:link href="https://yotom131.github.io/categories/%E6%B5%8B%E8%AF%95%E5%BC%80%E5%8F%91/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>软件开发模型</title>
+        <link>https://yotom131.github.io/p/%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91%E6%A8%A1%E5%9E%8B/</link>
+        <pubDate>Tue, 09 Apr 2024 13:25:10 +0800</pubDate>
+        
+        <guid>https://yotom131.github.io/p/%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91%E6%A8%A1%E5%9E%8B/</guid>
+        <description>&lt;h1 id=&#34;软件生命周期&#34;&gt;
+    &lt;a href=&#34;#%e8%bd%af%e4%bb%b6%e7%94%9f%e5%91%bd%e5%91%a8%e6%9c%9f&#34;&gt;#&lt;/a&gt;
+    软件生命周期
+&lt;/h1&gt;&lt;div style=&#34;text-align: center&#34;&gt;
+    &lt;img src=&#34;https://yotom131.github.io/img/software_1.png&#34; alt&#34;s1&#34; style=&#34;max-width: 100%; height: auto;&#34;&gt;
+&lt;/div&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;软件开发模型&#34;&gt;
+    &lt;a href=&#34;#%e8%bd%af%e4%bb%b6%e5%bc%80%e5%8f%91%e6%a8%a1%e5%9e%8b&#34;&gt;#&lt;/a&gt;
+    软件开发模型
+&lt;/h1&gt;&lt;h2 id=&#34;瀑布开发模型&#34;&gt;
+    &lt;a href=&#34;#%e7%80%91%e5%b8%83%e5%bc%80%e5%8f%91%e6%a8%a1%e5%9e%8b&#34;&gt;#&lt;/a&gt;
+    瀑布开发模型
+&lt;/h2&gt;&lt;div style=&#34;text-align: center&#34;&gt;
+    &lt;img src=&#34;https://yotom131.github.io/img/software_2.png&#34; alt&#34;s2&#34; style=&#34;max-width: 60%; height: auto;&#34;&gt;
+&lt;/div&gt;
+&lt;h3 id=&#34;简介&#34;&gt;
+    &lt;a href=&#34;#%e7%ae%80%e4%bb%8b&#34;&gt;#&lt;/a&gt;
+    简介
+&lt;/h3&gt;&lt;p&gt;瀑布模型如同工地里的建造盖房流程，使用里程碑式的方式，严格定义了各阶段的输入和输出。如果不达到这个阶段的要求输出，那下一个阶段的工作就不开展。很强调前期调研。&lt;/p&gt;
+&lt;p&gt;银行体系用的最多，一个需求可以做很久，直到完善，变化很少。印度开发者也是瀑布模型的重度使用者。&lt;/p&gt;
+&lt;p&gt;流程：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;问题的定义及规划&lt;/p&gt;
+&lt;p&gt;确定软甲开发目的及可行性，制定开发计划&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;需求分析&lt;/p&gt;
+&lt;p&gt;在确定软件开发可行性正确后，对软件所需的功能进行详细分析，明确客户需求，输出原型图。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;软件设计&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;概要设计：框架的实现，表述各模块功能、模块接口和数据传递等事务。&lt;/li&gt;
+&lt;li&gt;详细设计：对表述的各模块深入分析，要求达到代码级别，将程序具体的实现描述出来，以及数据库设计。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;软件编码&lt;/p&gt;
+&lt;p&gt;按照详细的模块功能表，程序人员面写出计算机可运行代码。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;优点&#34;&gt;
+    &lt;a href=&#34;#%e4%bc%98%e7%82%b9&#34;&gt;#&lt;/a&gt;
+    优点
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;明确划分了软件生命周期的各个环节&lt;/li&gt;
+&lt;li&gt;强调早期软件计划，需求分析重要性&lt;/li&gt;
+&lt;li&gt;清晰的工作流程，便于分工协作&lt;/li&gt;
+&lt;li&gt;适合需求稳定的产品开发&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;缺点&#34;&gt;
+    &lt;a href=&#34;#%e7%bc%ba%e7%82%b9&#34;&gt;#&lt;/a&gt;
+    缺点
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;线性的开发流程，存在巨大风险&lt;/li&gt;
+&lt;li&gt;依赖于早期的需求调查，不适应需求变化，单一流程不可逆&lt;/li&gt;
+&lt;li&gt;风险后期可能才暴露，且基本无法纠正&lt;/li&gt;
+&lt;li&gt;需保证用户产品需求不变，开发过程不更改&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;快速原型模型&#34;&gt;
+    &lt;a href=&#34;#%e5%bf%ab%e9%80%9f%e5%8e%9f%e5%9e%8b%e6%a8%a1%e5%9e%8b&#34;&gt;#&lt;/a&gt;
+    快速原型模型
+&lt;/h2&gt;&lt;div style=&#34;text-align: center&#34;&gt;
+    &lt;img src=&#34;https://yotom131.github.io/img/software_3.png&#34; alt&#34;s3&#34; style=&#34;max-width: 60%; height: auto;&#34;&gt;
+&lt;/div&gt;
+&lt;h3 id=&#34;简介-1&#34;&gt;
+    &lt;a href=&#34;#%e7%ae%80%e4%bb%8b-1&#34;&gt;#&lt;/a&gt;
+    简介
+&lt;/h3&gt;&lt;p&gt;客户与开发公司紧密联系，开发周期较长，开发收到需求经常变更的影响。&lt;/p&gt;
+&lt;p&gt;根据用户的主要需求，创立一个软件原型，然后让用户评价，再根据用户的评价提出更多的需求来开发出相应的软件产品。通过逐步调整原型使其满足客户需求。&lt;/p&gt;
+&lt;p&gt;快速原型的关键在于尽可能快速的构造出软件原型，一旦确定了客户的真正需求，所建造的原型将被丢弃。因此原型系统的内部结构并不重要，重要的是必须迅速建立原型，随之迅速修改原型，以反映客户的需求。&lt;/p&gt;
+&lt;h3 id=&#34;优点-1&#34;&gt;
+    &lt;a href=&#34;#%e4%bc%98%e7%82%b9-1&#34;&gt;#&lt;/a&gt;
+    优点
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;快速原型方法可以克服瀑布模型的缺点，减少由于软件需求不明确带来的开发风险，有显著效果&lt;/li&gt;
+&lt;li&gt;提供学习手段，通过开发原型和演示原型对开发者和使用者对整个系统了解有积极作用&lt;/li&gt;
+&lt;li&gt;匹配客户需求&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;缺点-1&#34;&gt;
+    &lt;a href=&#34;#%e7%bc%ba%e7%82%b9-1&#34;&gt;#&lt;/a&gt;
+    缺点
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;快速建立的系统结构可能产品质量低下&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;螺旋模型&#34;&gt;
+    &lt;a href=&#34;#%e8%9e%ba%e6%97%8b%e6%a8%a1%e5%9e%8b&#34;&gt;#&lt;/a&gt;
+    螺旋模型
+&lt;/h2&gt;&lt;div style=&#34;text-align: center&#34;&gt;
+    &lt;img src=&#34;https://yotom131.github.io/img/software_4.png&#34; alt&#34;s4&#34; style=&#34;max-width: 80%; height: auto;&#34;&gt;
+&lt;/div&gt;
+&lt;h3 id=&#34;简介-2&#34;&gt;
+    &lt;a href=&#34;#%e7%ae%80%e4%bb%8b-2&#34;&gt;#&lt;/a&gt;
+    简介
+&lt;/h3&gt;&lt;p&gt;螺旋模型结合了瀑布模型和快速原型。&lt;/p&gt;
+&lt;p&gt;将开发过程分为螺旋周期，每个螺旋周期和瀑布模型相符，沿着螺旋线旋转，四个象限表示四个活动。&lt;/p&gt;
+&lt;p&gt;其核心在于不需要在刚开始的时候就把所有事情定义的清清楚楚。定义最重要的功能先实现它，然后听取客户的意见，之后再进入下一个阶段，如此不断重复。&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;制定计划：确定软件目标，选定实施方案，弄清项目开发的限制条件&lt;/li&gt;
+&lt;li&gt;风险分析：分析评估所选方案，考虑如何识别和消除风险&lt;/li&gt;
+&lt;li&gt;实施工程：实施软件开发和验证&lt;/li&gt;
+&lt;li&gt;客户评估：评估开发工作，提出修正建议，制定下一步计划&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;螺旋模型很大程度是一种风险驱动的方法体系，因为在每个阶段之前及经常发生的玄幻之前，都必须先进行风险评估。&lt;/p&gt;
+&lt;h3 id=&#34;优点-2&#34;&gt;
+    &lt;a href=&#34;#%e4%bc%98%e7%82%b9-2&#34;&gt;#&lt;/a&gt;
+    优点
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;引入了其他模型不具备的风险分析，遇到风险可以停止，减少损失&lt;/li&gt;
+&lt;li&gt;要求每个迭代阶段都需要构建原型，进行软件测试以减小项目开发风险&lt;/li&gt;
+&lt;li&gt;整个过程有较高灵活性，开发过程的任意阶段自由应对变化&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;缺点-2&#34;&gt;
+    &lt;a href=&#34;#%e7%bc%ba%e7%82%b9-2&#34;&gt;#&lt;/a&gt;
+    缺点
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;需要测试人员有丰富的风险评估经验和专业知识才能及时标识风险，减少软件缺陷损失，过多的评审迭代会造成开销。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;敏捷开发模式scrum&#34;&gt;
+    &lt;a href=&#34;#%e6%95%8f%e6%8d%b7%e5%bc%80%e5%8f%91%e6%a8%a1%e5%bc%8fscrum&#34;&gt;#&lt;/a&gt;
+    敏捷开发模式（Scrum）
+&lt;/h2&gt;&lt;div style=&#34;text-align: center&#34;&gt;
+    &lt;img src=&#34;https://yotom131.github.io/img/software_5.png&#34; alt&#34;s5&#34; style=&#34;max-width: 80%; height: auto;&#34;&gt;
+&lt;/div&gt;
+&lt;h3 id=&#34;简介-3&#34;&gt;
+    &lt;a href=&#34;#%e7%ae%80%e4%bb%8b-3&#34;&gt;#&lt;/a&gt;
+    简介
+&lt;/h3&gt;&lt;ol&gt;
+&lt;li&gt;技术团队和业务专家之间紧密协作和面对面沟通&lt;/li&gt;
+&lt;li&gt;频繁交付新的软件版本，自动化测试为核心&lt;/li&gt;
+&lt;li&gt;紧凑的团队组织&lt;/li&gt;
+&lt;li&gt;更好适应需求变化的代码编写方式和团队管理&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;核心是&lt;code&gt;产品负责人&lt;/code&gt;、&lt;code&gt;敏捷主管&lt;/code&gt;、&lt;code&gt;技术团队&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;产品负责人采集用户需求，放入产品列表，通过计划会议讨论要实现哪些功能&lt;/p&gt;
+&lt;p&gt;敏捷开发不强调一次性就确定软件需求，完成开发，二是通过短期内的多次迭代，完成开发&lt;/p&gt;
+&lt;p&gt;软件是在逐步的改进增减的过程中，最终达到客户满意&lt;/p&gt;
+&lt;p&gt;敏捷开发就是迭代+增量，其对于自动化测试的要求较高，开发人员注重开发，测试人员注重测试质量&lt;/p&gt;
+&lt;p&gt;传统瀑布模型要求写好诸多文件，敏捷开发不需要太多的文件，测试人员就要更好的掌握自动化技能。&lt;/p&gt;
+&lt;hr&gt;
+</description>
+        </item>
+        <item>
+        <title>软件测试杂谈</title>
+        <link>https://yotom131.github.io/p/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95%E6%9D%82%E8%B0%88/</link>
+        <pubDate>Tue, 09 Apr 2024 12:36:10 +0800</pubDate>
+        
+        <guid>https://yotom131.github.io/p/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95%E6%9D%82%E8%B0%88/</guid>
+        <description>&lt;h1 id=&#34;测试杂谈&#34;&gt;
+    &lt;a href=&#34;#%e6%b5%8b%e8%af%95%e6%9d%82%e8%b0%88&#34;&gt;#&lt;/a&gt;
+    测试杂谈
+&lt;/h1&gt;&lt;h2 id=&#34;测试是什么&#34;&gt;
+    &lt;a href=&#34;#%e6%b5%8b%e8%af%95%e6%98%af%e4%bb%80%e4%b9%88&#34;&gt;#&lt;/a&gt;
+    测试是什么？
+&lt;/h2&gt;&lt;p&gt;一般把IT技术流程化的话，人员工作分为三类：开发、测试、运维。&lt;/p&gt;
+&lt;p&gt;测试在这个IT技术类中担任的作用就是作为软件质量检测的人员。&lt;/p&gt;
+&lt;p&gt;一般可以根据测试水平的高低把工作分为三个层次：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;人工软件测试（主要是功能测试）&lt;/li&gt;
+&lt;li&gt;自动化测试&lt;/li&gt;
+&lt;li&gt;测试开发（可能涉及到性能测试）&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;三个层次越往下的测试工作效率越高，技术门槛也会越高。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;软件测试需要的技能&#34;&gt;
+    &lt;a href=&#34;#%e8%bd%af%e4%bb%b6%e6%b5%8b%e8%af%95%e9%9c%80%e8%a6%81%e7%9a%84%e6%8a%80%e8%83%bd&#34;&gt;#&lt;/a&gt;
+    软件测试需要的技能
+&lt;/h2&gt;&lt;h3 id=&#34;软件测试&#34;&gt;
+    &lt;a href=&#34;#%e8%bd%af%e4%bb%b6%e6%b5%8b%e8%af%95&#34;&gt;#&lt;/a&gt;
+    软件测试
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;熟悉软件测试流程、测试设计方法，能够独立进行测试策略以及方案编写&lt;/li&gt;
+&lt;li&gt;独立设计和执行测试方案和测试用例&lt;/li&gt;
+&lt;li&gt;了解linux并可以搭建和维护测试环境&lt;/li&gt;
+&lt;li&gt;掌握自动化测试工具&lt;/li&gt;
+&lt;li&gt;有较强的沟通表达、独立分析和解决问题的能力&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;自动化测试&#34;&gt;
+    &lt;a href=&#34;#%e8%87%aa%e5%8a%a8%e5%8c%96%e6%b5%8b%e8%af%95&#34;&gt;#&lt;/a&gt;
+    自动化测试
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;了解软件测试理论、测试流程和相关测试方法&lt;/li&gt;
+&lt;li&gt;能独立制定测试计划、测试用例编写测试报告&lt;/li&gt;
+&lt;li&gt;熟悉linux环境，能进行shell编程&lt;/li&gt;
+&lt;li&gt;熟悉python，具备自动化测试框架的设计和独立开发能力&lt;/li&gt;
+&lt;li&gt;掌握SQL语句&lt;/li&gt;
+&lt;li&gt;熟悉Appium，selenium，Junit，Tesing等自动化测试框架&lt;/li&gt;
+&lt;li&gt;熟悉LoadRunner，Jmeter等性能测试工具，能自主设计性能测试场景，分析测试结果&lt;/li&gt;
+&lt;li&gt;熟悉测试中持续集成的流程，熟练运用Jenkins等工具&lt;/li&gt;
+&lt;li&gt;熟悉软件研发流程，掌握软件测试理论和方法，有开发测试工具或者编写辅助测试脚本的成功实践&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;测试开发&#34;&gt;
+    &lt;a href=&#34;#%e6%b5%8b%e8%af%95%e5%bc%80%e5%8f%91&#34;&gt;#&lt;/a&gt;
+    测试开发
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;熟悉Linux/Unix操作系统&lt;/li&gt;
+&lt;li&gt;熟悉Python、Java、C++/C等任意一门编程语言&lt;/li&gt;
+&lt;li&gt;熟悉MySQL/SQL Server/PostgreSQL/Oracle任何至少一种数据库&lt;/li&gt;
+&lt;li&gt;熟悉前端技术，包括HTML(5)/css(3)/JavaScript等，并有相关的项目开发经验或成果&lt;/li&gt;
+&lt;li&gt;深刻理解web标准，对可用性、可访问性等相关知识有实际的了解&lt;/li&gt;
+&lt;li&gt;有基于Ajax应用的开发经验，有NodeJS/Java开发经验，或者有移动端开发经验&lt;/li&gt;
+&lt;li&gt;在web、android、ios，接口等自动化领域有较深的造诣和见解&lt;/li&gt;
+&lt;li&gt;有相关自动化工具/平台（web/app/api接口/测试相关平台工具）开发经验&lt;/li&gt;
+&lt;li&gt;了解设计模式、微服务框架等优先&lt;/li&gt;
+&lt;li&gt;对算法、数据结构、建模有一定了解&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>

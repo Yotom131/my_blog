@@ -8,7 +8,7 @@ tags = [
     "计算机网络",
     "八股文",
     "面试",
-    "RUL",
+    "URL",
 
 ]
 categories = [
