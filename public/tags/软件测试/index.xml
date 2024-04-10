@@ -7,7 +7,79 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>yotom</copyright>
-        <lastBuildDate>Tue, 09 Apr 2024 13:25:10 +0800</lastBuildDate><atom:link href="https://yotom131.github.io/tags/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Wed, 10 Apr 2024 12:50:10 +0800</lastBuildDate><atom:link href="https://yotom131.github.io/tags/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>软件测试方法</title>
+        <link>https://yotom131.github.io/p/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95%E6%96%B9%E6%B3%95/</link>
+        <pubDate>Wed, 10 Apr 2024 12:50:10 +0800</pubDate>
+        
+        <guid>https://yotom131.github.io/p/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95%E6%96%B9%E6%B3%95/</guid>
+        <description>&lt;h1 id=&#34;软件测试方法&#34;&gt;
+    &lt;a href=&#34;#%e8%bd%af%e4%bb%b6%e6%b5%8b%e8%af%95%e6%96%b9%e6%b3%95&#34;&gt;#&lt;/a&gt;
+    软件测试方法
+&lt;/h1&gt;&lt;h2 id=&#34;软件测试模型v模型&#34;&gt;
+    &lt;a href=&#34;#%e8%bd%af%e4%bb%b6%e6%b5%8b%e8%af%95%e6%a8%a1%e5%9e%8bv%e6%a8%a1%e5%9e%8b&#34;&gt;#&lt;/a&gt;
+    软件测试模型——V模型
+&lt;/h2&gt;&lt;div style=&#34;text-align: center&#34;&gt;
+    &lt;img src=&#34;https://yotom131.github.io/img/test_1.png&#34; alt&#34;t1&#34; style=&#34;max-width: 100%; height: auto;&#34;&gt;
+&lt;/div&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;软件测试分类&#34;&gt;
+    &lt;a href=&#34;#%e8%bd%af%e4%bb%b6%e6%b5%8b%e8%af%95%e5%88%86%e7%b1%bb&#34;&gt;#&lt;/a&gt;
+    软件测试分类
+&lt;/h2&gt;&lt;p&gt;按照测试方向划分&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;功能测试：测试人员通过鼠标去手动测试功能（测试GUI）&lt;/li&gt;
+&lt;li&gt;自动化测试：用程序测试程序（测试API）&lt;/li&gt;
+&lt;li&gt;性能测试：定位系统瓶颈，保证系统良好性能和稳定性&lt;/li&gt;
+&lt;li&gt;黑盒测试：测试应用程序的功能，验证结果是否正确&lt;/li&gt;
+&lt;li&gt;白盒测试：测试程序内部结构，以编程语言角度设计测试方案&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;按照测试阶段划分&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;单元测试：一个功能小模块（函数、类），针对于基本单元内部（数据结构、逻辑控制、异常处理）进行正确性检测，属于白盒范畴&lt;/li&gt;
+&lt;li&gt;集成测试：基于单元测试，将单元组装成一个子系统验证各个模块之间的数据传输，属于灰盒测试&lt;/li&gt;
+&lt;li&gt;系统测试：对整个完成系统进行测试工作，验证软件是否满足了需求，属于黑盒测试&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;回归测试&#34;&gt;
+    &lt;a href=&#34;#%e5%9b%9e%e5%bd%92%e6%b5%8b%e8%af%95&#34;&gt;#&lt;/a&gt;
+    回归测试
+&lt;/h2&gt;&lt;div style=&#34;text-align: center&#34;&gt;
+    &lt;img src=&#34;https://yotom131.github.io/img/test_2.png&#34; alt&#34;t2&#34; style=&#34;max-width: 100%; height: auto;&#34;&gt;
+&lt;/div&gt;
+&lt;p&gt;软件在测试或者其他活动中发现了缺陷经过修复之后，应该进行回归测试。目的在于验证缺陷是否正确的被修复，并且是否影响到其他的功能。&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;制定测试策略，回归测试策略&lt;/li&gt;
+&lt;li&gt;确定回归测试版本&lt;/li&gt;
+&lt;li&gt;根据回归测试策略执行回归测试&lt;/li&gt;
+&lt;li&gt;回归测试通过，关闭缺陷跟踪单(禅道)&lt;/li&gt;
+&lt;li&gt;回归不通过，缺陷跟踪单返回给开发人员，重新修复问题，再次回归&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;回归测试策略设计&#34;&gt;
+    &lt;a href=&#34;#%e5%9b%9e%e5%bd%92%e6%b5%8b%e8%af%95%e7%ad%96%e7%95%a5%e8%ae%be%e8%ae%a1&#34;&gt;#&lt;/a&gt;
+    回归测试策略设计
+&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;完全重复测试&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;重新执行所有先前定义的测试用例，来确认问题修改的正确性，以及软件修改后可能造成的影响
+扩散。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;选择性重复测试&lt;/strong&gt;
+有选择性的重新执行部分测试用例。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;覆盖修改法，针对被修改的部分，重新构造测试用例验证已经没有缺陷&lt;/li&gt;
+&lt;li&gt;影响扩散法，再覆盖已修改的部分之上，分析其由于修改后是否间接造成了其他的额外缺陷&lt;/li&gt;
+&lt;li&gt;指标达成法，确定要达成的测试目标，例如测试用例覆盖率的百分比&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;测试对比&#34;&gt;
+    &lt;a href=&#34;#%e6%b5%8b%e8%af%95%e5%af%b9%e6%af%94&#34;&gt;#&lt;/a&gt;
+    测试对比
+&lt;/h2&gt;&lt;div style=&#34;text-align: center&#34;&gt;
+    &lt;img src=&#34;https://yotom131.github.io/img/test_3.png&#34; alt&#34;t3&#34; style=&#34;max-width: 100%; height: auto;&#34;&gt;
+    &lt;img src=&#34;https://yotom131.github.io/img/test_4.png&#34; alt&#34;t4&#34; style=&#34;max-width: 100%; height: auto;&#34;&gt;
+&lt;/div&gt;
+&lt;hr&gt;
+</description>
+        </item>
+        <item>
         <title>软件开发模型</title>
         <link>https://yotom131.github.io/p/%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91%E6%A8%A1%E5%9E%8B/</link>
         <pubDate>Tue, 09 Apr 2024 13:25:10 +0800</pubDate>
