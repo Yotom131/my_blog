@@ -7,7 +7,34 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>yotom</copyright>
-        <lastBuildDate>Mon, 08 Apr 2024 23:14:46 +0800</lastBuildDate><atom:link href="https://yotom131.github.io/tags/%E8%85%BE%E5%A8%B1%E4%BA%92%E5%8A%A8/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Wed, 10 Apr 2024 20:45:46 +0800</lastBuildDate><atom:link href="https://yotom131.github.io/tags/%E8%85%BE%E5%A8%B1%E4%BA%92%E5%8A%A8/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>2024.4.10</title>
+        <link>https://yotom131.github.io/p/2024.4.10/</link>
+        <pubDate>Wed, 10 Apr 2024 20:45:46 +0800</pubDate>
+        
+        <guid>https://yotom131.github.io/p/2024.4.10/</guid>
+        <description>&lt;h1 id=&#34;410&#34;&gt;
+    &lt;a href=&#34;#410&#34;&gt;#&lt;/a&gt;
+    4.10
+&lt;/h1&gt;&lt;h2 id=&#34;今日事项&#34;&gt;
+    &lt;a href=&#34;#%e4%bb%8a%e6%97%a5%e4%ba%8b%e9%a1%b9&#34;&gt;#&lt;/a&gt;
+    今日事项
+&lt;/h2&gt;&lt;ol&gt;
+&lt;li&gt;学习软件测试理论&lt;/li&gt;
+&lt;li&gt;学习pytest&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;总结&#34;&gt;
+    &lt;a href=&#34;#%e6%80%bb%e7%bb%93&#34;&gt;#&lt;/a&gt;
+    总结
+&lt;/h2&gt;&lt;p&gt;昨天因为头疼的原因早早睡去了，来不及写日志非常遗憾。&lt;/p&gt;
+&lt;p&gt;今天的事项主要是学习了软件测试理论部分的测试流程（需求分析、测试计划、测试设计、测试执行、测试评估），测试模型（v模型、w模型）以及测试的分类。&lt;/p&gt;
+&lt;p&gt;下午学习了pytest框架，简单了解了pytest的命名规则、用例规范以及命令行参数，为后续的web自动化和接口自动化做一个铺垫。&lt;/p&gt;
+&lt;p&gt;毕竟目前面试的方向是测试开发，那就得把测试开发的即能掌握到一定的程度，否则在后续的面试、工作的过程中想必会遇到许多难题。&lt;/p&gt;
+&lt;p&gt;目前这周的规划和任务是将pytest和web自动化初步掌握。然后再下一周继续进行golang相关的云原生、云开发，做一个新的项目出来。此外漫长等待HR的消息。&lt;/p&gt;
+&lt;p&gt;在面试方面有一个好消息和一个坏消息。好消息是收到了美团的面试，坏消息是难得进入腾讯云部门复试流程，但是因为HC不够了流程被终止。哎，希望在五一前能够有好消息。&lt;/p&gt;
+</description>
+        </item>
+        <item>
         <title>2024.4.8</title>
         <link>https://yotom131.github.io/p/2024.4.8/</link>
         <pubDate>Mon, 08 Apr 2024 23:14:46 +0800</pubDate>
