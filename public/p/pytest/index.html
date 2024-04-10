@@ -239,7 +239,13 @@
             <li><a href="#示例-2">示例</a></li>
           </ol>
         </li>
-        <li><a href="#运行用例">运行用例</a></li>
+        <li><a href="#运行用例">运行用例</a>
+          <ol>
+            <li><a href="#示例-3">示例</a></li>
+            <li><a href="#运行结果">运行结果</a></li>
+            <li><a href="#命令行参数-使用缓存状态">命令行参数-使用缓存状态</a></li>
+          </ol>
+        </li>
       </ol>
     </li>
   </ol>
@@ -697,7 +703,51 @@
 <h2 id="运行用例">
     <a href="#%e8%bf%90%e8%a1%8c%e7%94%a8%e4%be%8b">#</a>
     运行用例
-</h2><p>待完成（4.10 17：39）</p>
+</h2><div style="text-align: center">
+    <img src="/img/pytest_3.png" alt"t3" style="max-width: 100%; height: auto;">
+</div>
+<h3 id="示例-3">
+    <a href="#%e7%a4%ba%e4%be%8b-3">#</a>
+    示例
+</h3><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">pytest</span><span class="c1"># 整个目录</span>
+</span></span><span class="line"><span class="cl"><span class="n">pytest</span> <span class="n">test</span><span class="o">.</span><span class="n">py</span><span class="c1"># 整个文件</span>
+</span></span><span class="line"><span class="cl"><span class="n">pytest</span> <span class="n">test</span><span class="o">.</span><span class="n">py</span><span class="p">::</span><span class="n">TestDemo</span><span class="c1"># 整个类</span>
+</span></span><span class="line"><span class="cl"><span class="n">pytest</span> <span class="n">test</span><span class="o">.</span><span class="n">py</span><span class="p">::</span><span class="n">test_func</span><span class="c1"># 类外的函数</span>
+</span></span><span class="line"><span class="cl"><span class="n">pytest</span> <span class="n">test</span><span class="o">.</span><span class="n">py</span><span class="p">::</span><span class="n">TestDemo</span><span class="p">::</span><span class="n">test_method</span><span class="c1"># 类中的方法</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="运行结果">
+    <a href="#%e8%bf%90%e8%a1%8c%e7%bb%93%e6%9e%9c">#</a>
+    运行结果
+</h3><ul>
+<li>常用的：fail/error/pass</li>
+<li>特殊的结果：warning/deselect</li>
+</ul>
+<h3 id="命令行参数-使用缓存状态">
+    <a href="#%e5%91%bd%e4%bb%a4%e8%a1%8c%e5%8f%82%e6%95%b0-%e4%bd%bf%e7%94%a8%e7%bc%93%e5%ad%98%e7%8a%b6%e6%80%81">#</a>
+    命令行参数-使用缓存状态
+</h3><ul>
+<li><code>--lf</code> 只重新运行故障</li>
+<li><code>--ff</code> 先运行故障然后再运行其他测试</li>
+<li><code>-help</code></li>
+<li><code>-x</code>用例一旦失败（fail/error），立刻停止执行</li>
+<li><code>--maxfail=num</code>用例达到num</li>
+<li><code>-m</code>标记用例</li>
+<li><code>-k</code>执行包含某个关键字的测试用例</li>
+<li><code>-v</code>打印详细日志</li>
+<li><code>-s</code>打印输出日志（一般<code>-vs</code>一块使用）</li>
+<li><code>collect-only</code>（测试平台，pytest 自动导入功能）</li>
+</ul>
+<hr>
 
 </section>
 

@@ -232,4 +232,39 @@ assert 1 == 1
 
 ## 运行用例
 
-待完成（4.10 17：39）
+<div style="text-align: center">
+    <img src="/img/pytest_3.png" alt"t3" style="max-width: 100%; height: auto;">
+</div>
+
+### 示例
+
+```python
+pytest# 整个目录
+pytest test.py# 整个文件
+pytest test.py::TestDemo# 整个类
+pytest test.py::test_func# 类外的函数
+pytest test.py::TestDemo::test_method# 类中的方法
+```
+
+### 运行结果
+
++ 常用的：fail/error/pass
++ 特殊的结果：warning/deselect
+
+### 命令行参数-使用缓存状态
+
++ `--lf` 只重新运行故障
++ `--ff` 先运行故障然后再运行其他测试
++ `-help`
++ `-x`用例一旦失败（fail/error），立刻停止执行
++ `--maxfail=num`用例达到num
++ `-m`标记用例
++ `-k`执行包含某个关键字的测试用例
++ `-v`打印详细日志
++ `-s`打印输出日志（一般`-vs`一块使用）
++ `collect-only`（测试平台，pytest 自动导入功能）
+
+
+
+---
+
