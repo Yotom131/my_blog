@@ -255,16 +255,76 @@ pytest test.py::TestDemo::test_method# 类中的方法
 
 + `--lf` 只重新运行故障
 + `--ff` 先运行故障然后再运行其他测试
-+ `-help`
++ `--help`
 + `-x`用例一旦失败（fail/error），立刻停止执行
 + `--maxfail=num`用例达到num
 + `-m`标记用例
 + `-k`执行包含某个关键字的测试用例
 + `-v`打印详细日志
 + `-s`打印输出日志（一般`-vs`一块使用）
-+ `collect-only`（测试平台，pytest 自动导入功能）
++ `--collect-only`（测试平台，pytest 自动导入功能）
 
 
+
+---
+
+## python代码执行pytest
+
+```python
+if __name__ == '__main__':
+	# 运行当前目录下所有符合规则的用例，包括子目录（test_*.py和*_test.py）
+    pytest.main()
+    # 运行test_mark1.py::test_dkej模块中的某一条用例
+    pytest.main(['test_mark1.py::test_dkej', '-vs'])
+    # 运行某个标签
+    pytest.main(['test_mark1.py', '-vs', '-,', 'dkej'])
+```
+
+通过终端使用`python 文件名`语句即可执行
+
+或者通过终端输入`python -m pytest`调用pytest（jenkins持续集成会用到）
+
+---
+
+## 异常处理方法
+
+```python
+try:
+	# 可能产生异常的代码块
+except [(Error1, Error2, ... )[as e]]:
+    # 处理异常的代码块1
+except [(Error3, Error4, ... )[as e]]:
+    # 处理异常的代码块2    
+except [Exception]:
+    # 处理其他异常
+```
+
+### 示例
+
+```python
+# 使用try……except
+try:
+    a = int(input("输入被除数："))
+    b = int(input("输入除数："))
+    c = a / b
+    print("您输入的两个数相除的结果是：", c)
+except (ValueError, ArithmeicError):
+    print("程序发生了数字格式异常、算数异常之一")
+except :
+	print("未知异常")
+print("程序继续运行")
+
+# 使用pytest.raise()
+def test_raise():
+	with pytest.raises(ValueError, ZeroDivisionError):
+        raise ZeroDivisionError("除数为0")
+
+def test_raise1():
+    with pytest.raises(ValueError) as exc_info:
+        raise ValueError("value must be 42")
+	assert exc_info.type is ValueError
+    assert exc_info.value.args[0] == "value must be 42"
+```
 
 ---
 

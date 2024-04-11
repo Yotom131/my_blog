@@ -246,6 +246,12 @@
             <li><a href="#命令行参数-使用缓存状态">命令行参数-使用缓存状态</a></li>
           </ol>
         </li>
+        <li><a href="#python代码执行pytest">python代码执行pytest</a></li>
+        <li><a href="#异常处理方法">异常处理方法</a>
+          <ol>
+            <li><a href="#示例-4">示例</a></li>
+          </ol>
+        </li>
       </ol>
     </li>
   </ol>
@@ -738,16 +744,121 @@
 </h3><ul>
 <li><code>--lf</code> 只重新运行故障</li>
 <li><code>--ff</code> 先运行故障然后再运行其他测试</li>
-<li><code>-help</code></li>
+<li><code>--help</code></li>
 <li><code>-x</code>用例一旦失败（fail/error），立刻停止执行</li>
 <li><code>--maxfail=num</code>用例达到num</li>
 <li><code>-m</code>标记用例</li>
 <li><code>-k</code>执行包含某个关键字的测试用例</li>
 <li><code>-v</code>打印详细日志</li>
 <li><code>-s</code>打印输出日志（一般<code>-vs</code>一块使用）</li>
-<li><code>collect-only</code>（测试平台，pytest 自动导入功能）</li>
+<li><code>--collect-only</code>（测试平台，pytest 自动导入功能）</li>
 </ul>
 <hr>
+<h2 id="python代码执行pytest">
+    <a href="#python%e4%bb%a3%e7%a0%81%e6%89%a7%e8%a1%8cpytest">#</a>
+    python代码执行pytest
+</h2><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">	<span class="c1"># 运行当前目录下所有符合规则的用例，包括子目录（test_*.py和*_test.py）</span>
+</span></span><span class="line"><span class="cl">    <span class="n">pytest</span><span class="o">.</span><span class="n">main</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">    <span class="c1"># 运行test_mark1.py::test_dkej模块中的某一条用例</span>
+</span></span><span class="line"><span class="cl">    <span class="n">pytest</span><span class="o">.</span><span class="n">main</span><span class="p">([</span><span class="s1">&#39;test_mark1.py::test_dkej&#39;</span><span class="p">,</span> <span class="s1">&#39;-vs&#39;</span><span class="p">])</span>
+</span></span><span class="line"><span class="cl">    <span class="c1"># 运行某个标签</span>
+</span></span><span class="line"><span class="cl">    <span class="n">pytest</span><span class="o">.</span><span class="n">main</span><span class="p">([</span><span class="s1">&#39;test_mark1.py&#39;</span><span class="p">,</span> <span class="s1">&#39;-vs&#39;</span><span class="p">,</span> <span class="s1">&#39;-,&#39;</span><span class="p">,</span> <span class="s1">&#39;dkej&#39;</span><span class="p">])</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>通过终端使用<code>python 文件名</code>语句即可执行</p>
+<p>或者通过终端输入<code>python -m pytest</code>调用pytest（jenkins持续集成会用到）</p>
+<hr>
+<h2 id="异常处理方法">
+    <a href="#%e5%bc%82%e5%b8%b8%e5%a4%84%e7%90%86%e6%96%b9%e6%b3%95">#</a>
+    异常处理方法
+</h2><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">try</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">	<span class="c1"># 可能产生异常的代码块</span>
+</span></span><span class="line"><span class="cl"><span class="k">except</span> <span class="p">[(</span><span class="n">Error1</span><span class="p">,</span> <span class="n">Error2</span><span class="p">,</span> <span class="o">...</span> <span class="p">)[</span><span class="k">as</span> <span class="n">e</span><span class="p">]]:</span>
+</span></span><span class="line"><span class="cl">    <span class="c1"># 处理异常的代码块1</span>
+</span></span><span class="line"><span class="cl"><span class="k">except</span> <span class="p">[(</span><span class="n">Error3</span><span class="p">,</span> <span class="n">Error4</span><span class="p">,</span> <span class="o">...</span> <span class="p">)[</span><span class="k">as</span> <span class="n">e</span><span class="p">]]:</span>
+</span></span><span class="line"><span class="cl">    <span class="c1"># 处理异常的代码块2    </span>
+</span></span><span class="line"><span class="cl"><span class="k">except</span> <span class="p">[</span><span class="ne">Exception</span><span class="p">]:</span>
+</span></span><span class="line"><span class="cl">    <span class="c1"># 处理其他异常</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="示例-4">
+    <a href="#%e7%a4%ba%e4%be%8b-4">#</a>
+    示例
+</h3><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1"># 使用try……except</span>
+</span></span><span class="line"><span class="cl"><span class="k">try</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="n">a</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&#34;输入被除数：&#34;</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">    <span class="n">b</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&#34;输入除数：&#34;</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">    <span class="n">c</span> <span class="o">=</span> <span class="n">a</span> <span class="o">/</span> <span class="n">b</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">print</span><span class="p">(</span><span class="s2">&#34;您输入的两个数相除的结果是：&#34;</span><span class="p">,</span> <span class="n">c</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="k">except</span> <span class="p">(</span><span class="ne">ValueError</span><span class="p">,</span> <span class="n">ArithmeicError</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">print</span><span class="p">(</span><span class="s2">&#34;程序发生了数字格式异常、算数异常之一&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="k">except</span> <span class="p">:</span>
+</span></span><span class="line"><span class="cl">	<span class="nb">print</span><span class="p">(</span><span class="s2">&#34;未知异常&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="s2">&#34;程序继续运行&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 使用pytest.raise()</span>
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">test_raise</span><span class="p">():</span>
+</span></span><span class="line"><span class="cl">	<span class="k">with</span> <span class="n">pytest</span><span class="o">.</span><span class="n">raises</span><span class="p">(</span><span class="ne">ValueError</span><span class="p">,</span> <span class="ne">ZeroDivisionError</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">        <span class="k">raise</span> <span class="ne">ZeroDivisionError</span><span class="p">(</span><span class="s2">&#34;除数为0&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">test_raise1</span><span class="p">():</span>
+</span></span><span class="line"><span class="cl">    <span class="k">with</span> <span class="n">pytest</span><span class="o">.</span><span class="n">raises</span><span class="p">(</span><span class="ne">ValueError</span><span class="p">)</span> <span class="k">as</span> <span class="n">exc_info</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&#34;value must be 42&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">	<span class="k">assert</span> <span class="n">exc_info</span><span class="o">.</span><span class="n">type</span> <span class="ow">is</span> <span class="ne">ValueError</span>
+</span></span><span class="line"><span class="cl">    <span class="k">assert</span> <span class="n">exc_info</span><span class="o">.</span><span class="n">value</span><span class="o">.</span><span class="n">args</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&#34;value must be 42&#34;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><hr>
 
 </section>
 
@@ -791,6 +902,19 @@
     <h2 class="section-title">相关文章</h2>
     <div class="related-content">
         <div class="flex article-list--tile">
+            
+                
+<article class="">
+    <a href="/p/%E6%95%B0%E6%8D%AE%E9%A9%B1%E5%8A%A8/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">数据驱动</h2>
+        </div>
+    </a>
+</article>
+
             
                 
 <article class="">
@@ -839,19 +963,6 @@
 
         <div class="article-details">
             <h2 class="article-title">一些常见排序的梳理</h2>
-        </div>
-    </a>
-</article>
-
-            
-                
-<article class="">
-    <a href="/p/15.%E4%B8%89%E6%95%B0%E4%B9%8B%E5%92%8C/">
-        
-        
-
-        <div class="article-details">
-            <h2 class="article-title">15.三数之和</h2>
         </div>
     </a>
 </article>
