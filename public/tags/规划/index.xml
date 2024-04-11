@@ -7,7 +7,33 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>yotom</copyright>
-        <lastBuildDate>Wed, 10 Apr 2024 20:45:46 +0800</lastBuildDate><atom:link href="https://yotom131.github.io/tags/%E8%A7%84%E5%88%92/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Thu, 11 Apr 2024 21:44:46 +0800</lastBuildDate><atom:link href="https://yotom131.github.io/tags/%E8%A7%84%E5%88%92/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>2024.4.11</title>
+        <link>https://yotom131.github.io/p/2024.4.11/</link>
+        <pubDate>Thu, 11 Apr 2024 21:44:46 +0800</pubDate>
+        
+        <guid>https://yotom131.github.io/p/2024.4.11/</guid>
+        <description>&lt;h1 id=&#34;411&#34;&gt;
+    &lt;a href=&#34;#411&#34;&gt;#&lt;/a&gt;
+    4.11
+&lt;/h1&gt;&lt;h2 id=&#34;今日事项&#34;&gt;
+    &lt;a href=&#34;#%e4%bb%8a%e6%97%a5%e4%ba%8b%e9%a1%b9&#34;&gt;#&lt;/a&gt;
+    今日事项
+&lt;/h2&gt;&lt;ol&gt;
+&lt;li&gt;学习pytest自动化测试框架中数据驱动的几种情况&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://yotom131.github.io/p/108.%E6%9C%89%E5%BA%8F%E6%95%B0%E7%BB%84%E5%8C%96%E4%B8%BA%E4%BA%8C%E5%8F%89%E6%90%9C%E7%B4%A2%E6%A0%91/&#34; &gt;打卡题目：有序数组化为二叉搜索树&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;总结&#34;&gt;
+    &lt;a href=&#34;#%e6%80%bb%e7%bb%93&#34;&gt;#&lt;/a&gt;
+    总结
+&lt;/h2&gt;&lt;p&gt;今天把pytest数据驱动内容学习了一遍，对于软件测试的方面有了更深的认识。&lt;/p&gt;
+&lt;p&gt;明天开始的打算是把web自动化的内容进行学习。不过明天下午两点有一个会议需要返回学校去参加，所以中午就得赶回学校去，加上后天的蓝桥杯比赛，可能日志更新临时会中断。&lt;/p&gt;
+&lt;p&gt;但是中断只是一时的，人是需要自驱力来前进的。目前已约的面试只剩下美团了，周末好好做准备，争取一鼓作气拿下！&lt;/p&gt;
+&lt;p&gt;今天没有太多需要唠叨的内容，依然是劳逸结合的一天，希望这样的状态能够一直保持下去，既有危机感，又不至于压力太大，一步一个脚印扎实提升自我。&lt;/p&gt;
+</description>
+        </item>
+        <item>
         <title>2024.4.10</title>
         <link>https://yotom131.github.io/p/2024.4.10/</link>
         <pubDate>Wed, 10 Apr 2024 20:45:46 +0800</pubDate>
