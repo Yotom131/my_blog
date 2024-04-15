@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html lang="zh-cn" dir="ltr">
-    <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="title = &lsquo;23.合并K个升序链表&rsquo; date = 2024-04-14T18:36:10+08:00 author = &ldquo;Yotom&rdquo; description = &ldquo;力扣hot100的一道题目&rdquo; tags = [ &ldqu">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="title = &ldquo;2024.4.15&rdquo; description = &ldquo;2024.4.15日志&rdquo; date = 2024-04-15T23:30:46+08:00 author = &ldquo;Yotom&rdquo; tags = [ &ldquo;规划&rdquo;, &ldquo;美团测开一面&">
 <title></title>
 
-<link rel='canonical' href='http://localhost:1313/p/'>
+<link rel='canonical' href='https://yotom131.github.io/p/'>
 
 <link rel="stylesheet" href="/scss/style.min.8e60baf4cd3fc55968717a6e39762f4d28ed7ef6007566b6c7970ad0fe907198.css"><meta property='og:title' content="">
-<meta property='og:description' content="title = &lsquo;23.合并K个升序链表&rsquo; date = 2024-04-14T18:36:10+08:00 author = &ldquo;Yotom&rdquo; description = &ldquo;力扣hot100的一道题目&rdquo; tags = [ &ldqu">
-<meta property='og:url' content='http://localhost:1313/p/'>
+<meta property='og:description' content="title = &ldquo;2024.4.15&rdquo; description = &ldquo;2024.4.15日志&rdquo; date = 2024-04-15T23:30:46+08:00 author = &ldquo;Yotom&rdquo; tags = [ &ldquo;规划&rdquo;, &ldquo;美团测开一面&">
+<meta property='og:url' content='https://yotom131.github.io/p/'>
 <meta property='og:site_name' content='Yotom的博客'>
 <meta property='og:type' content='article'><meta property='article:section' content='Post' />
 <meta name="twitter:title" content="">
-<meta name="twitter:description" content="title = &lsquo;23.合并K个升序链表&rsquo; date = 2024-04-14T18:36:10+08:00 author = &ldquo;Yotom&rdquo; description = &ldquo;力扣hot100的一道题目&rdquo; tags = [ &ldqu">
+<meta name="twitter:description" content="title = &ldquo;2024.4.15&rdquo; description = &ldquo;2024.4.15日志&rdquo; date = 2024-04-15T23:30:46+08:00 author = &ldquo;Yotom&rdquo; tags = [ &ldquo;规划&rdquo;, &ldquo;美团测开一面&">
     </head>
     <body class="
     article-page
@@ -214,12 +214,10 @@
         <div class="widget--toc">
             <nav id="TableOfContents">
   <ol>
-    <li><a href="#合并k个升序链表">合并K个升序链表</a>
+    <li><a href="#415">4.15</a>
       <ol>
-        <li><a href="#题目链接">题目链接</a></li>
-        <li><a href="#解题代码">解题代码</a></li>
-        <li><a href="#思路">思路</a></li>
-        <li><a href="#优化">优化</a></li>
+        <li><a href="#今日事项">今日事项</a></li>
+        <li><a href="#总结">总结</a></li>
       </ol>
     </li>
   </ol>
@@ -280,227 +278,40 @@
     <section class="article-content">
     
     
-    <p>title = &lsquo;23.合并K个升序链表&rsquo;
-date = 2024-04-14T18:36:10+08:00
+    <p>title = &ldquo;2024.4.15&rdquo;
+description = &ldquo;2024.4.15日志&rdquo;
+date = 2024-04-15T23:30:46+08:00
 author = &ldquo;Yotom&rdquo;
-description = &ldquo;力扣hot100的一道题目&rdquo;
 tags = [
-&ldquo;力扣&rdquo;,
-&ldquo;hot100&rdquo;,
-&ldquo;链表&rdquo;,
-&ldquo;困难&rdquo;,</p>
-<p>]
+&ldquo;规划&rdquo;,
+&ldquo;美团测开一面&rdquo;,
+&ldquo;腾讯初始&rdquo;,
+]
 categories = [
-&ldquo;学习记录&rdquo;,
-&ldquo;算法&rdquo;,
-&ldquo;力扣hot100&rdquo;,
+&ldquo;个人日志&rdquo;,
+&ldquo;求职中&rdquo;,
 ]</p>
 <p>+++</p>
-<h1 id="合并k个升序链表">
-    <a href="#%e5%90%88%e5%b9%b6k%e4%b8%aa%e5%8d%87%e5%ba%8f%e9%93%be%e8%a1%a8">#</a>
-    合并K个升序链表
-</h1><p>合并2个升序链表的进阶版，其实更像是中等题。</p>
+<h1 id="415">
+    <a href="#415">#</a>
+    4.15
+</h1><h2 id="今日事项">
+    <a href="#%e4%bb%8a%e6%97%a5%e4%ba%8b%e9%a1%b9">#</a>
+    今日事项
+</h2><ol>
+<li>链表题目攻略</li>
+<li>美团面试</li>
+</ol>
 <hr>
-<h2 id="题目链接">
-    <a href="#%e9%a2%98%e7%9b%ae%e9%93%be%e6%8e%a5">#</a>
-    题目链接
-</h2><p><a class="link" href="https://leetcode.cn/problems/merge-k-sorted-lists/"  target="_blank" rel="noopener"
-    >23. 合并 K 个升序链表</a></p>
-<hr>
-<h2 id="解题代码">
-    <a href="#%e8%a7%a3%e9%a2%98%e4%bb%a3%e7%a0%81">#</a>
-    解题代码
-</h2><div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span><span class="lnt">14
-</span><span class="lnt">15
-</span><span class="lnt">16
-</span><span class="lnt">17
-</span><span class="lnt">18
-</span><span class="lnt">19
-</span><span class="lnt">20
-</span><span class="lnt">21
-</span><span class="lnt">22
-</span><span class="lnt">23
-</span><span class="lnt">24
-</span><span class="lnt">25
-</span><span class="lnt">26
-</span><span class="lnt">27
-</span><span class="lnt">28
-</span><span class="lnt">29
-</span><span class="lnt">30
-</span><span class="lnt">31
-</span><span class="lnt">32
-</span><span class="lnt">33
-</span><span class="lnt">34
-</span><span class="lnt">35
-</span><span class="lnt">36
-</span><span class="lnt">37
-</span><span class="lnt">38
-</span><span class="lnt">39
-</span><span class="lnt">40
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="line"><span class="cl"><span class="cm">/**
-</span></span></span><span class="line"><span class="cl"><span class="cm"> * Definition for singly-linked list.
-</span></span></span><span class="line"><span class="cl"><span class="cm"> * struct ListNode {
-</span></span></span><span class="line"><span class="cl"><span class="cm"> *     int val;
-</span></span></span><span class="line"><span class="cl"><span class="cm"> *     ListNode *next;
-</span></span></span><span class="line"><span class="cl"><span class="cm"> *     ListNode() : val(0), next(nullptr) {}
-</span></span></span><span class="line"><span class="cl"><span class="cm"> *     ListNode(int x) : val(x), next(nullptr) {}
-</span></span></span><span class="line"><span class="cl"><span class="cm"> *     ListNode(int x, ListNode *next) : val(x), next(next) {}
-</span></span></span><span class="line"><span class="cl"><span class="cm"> * };
-</span></span></span><span class="line"><span class="cl"><span class="cm"> */</span>
-</span></span><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">Solution</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl"><span class="k">public</span><span class="o">:</span>
-</span></span><span class="line"><span class="cl">    <span class="n">ListNode</span><span class="o">*</span> <span class="n">mergeTwoLists</span><span class="p">(</span><span class="n">ListNode</span><span class="o">*</span> <span class="n">a</span><span class="p">,</span> <span class="n">ListNode</span><span class="o">*</span> <span class="n">b</span><span class="p">){</span>
-</span></span><span class="line"><span class="cl">        <span class="k">if</span><span class="p">(</span><span class="o">!</span><span class="n">a</span> <span class="o">&amp;&amp;</span> <span class="o">!</span><span class="n">b</span><span class="p">)</span> <span class="k">return</span> <span class="k">nullptr</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">        <span class="n">ListNode</span> <span class="n">head</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">        <span class="n">ListNode</span> <span class="o">*</span><span class="n">p</span> <span class="o">=</span> <span class="o">&amp;</span><span class="n">head</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">        <span class="k">while</span><span class="p">(</span><span class="n">a</span> <span class="o">&amp;&amp;</span> <span class="n">b</span><span class="p">){</span>
-</span></span><span class="line"><span class="cl">            <span class="k">if</span><span class="p">(</span><span class="n">a</span><span class="o">-&gt;</span><span class="n">val</span> <span class="o">&lt;</span> <span class="n">b</span><span class="o">-&gt;</span><span class="n">val</span><span class="p">){</span>
-</span></span><span class="line"><span class="cl">                <span class="n">p</span><span class="o">-&gt;</span><span class="n">next</span> <span class="o">=</span> <span class="n">a</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">                <span class="n">a</span> <span class="o">=</span> <span class="n">a</span><span class="o">-&gt;</span><span class="n">next</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">            <span class="p">}</span>
-</span></span><span class="line"><span class="cl">            <span class="k">else</span><span class="p">{</span>
-</span></span><span class="line"><span class="cl">                <span class="n">p</span><span class="o">-&gt;</span><span class="n">next</span> <span class="o">=</span> <span class="n">b</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">                <span class="n">b</span> <span class="o">=</span> <span class="n">b</span><span class="o">-&gt;</span><span class="n">next</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">            <span class="p">}</span>
-</span></span><span class="line"><span class="cl">            <span class="n">p</span> <span class="o">=</span> <span class="n">p</span><span class="o">-&gt;</span><span class="n">next</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">        <span class="p">}</span>
-</span></span><span class="line"><span class="cl">        <span class="k">if</span><span class="p">(</span><span class="n">a</span><span class="p">)</span> <span class="n">p</span><span class="o">-&gt;</span><span class="n">next</span> <span class="o">=</span> <span class="n">a</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">        <span class="k">else</span> <span class="n">p</span><span class="o">-&gt;</span><span class="n">next</span> <span class="o">=</span> <span class="n">b</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">head</span><span class="p">.</span><span class="n">next</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">    <span class="p">}</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">    <span class="n">ListNode</span><span class="o">*</span> <span class="nf">mergeKLists</span><span class="p">(</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">ListNode</span><span class="o">*&gt;&amp;</span> <span class="n">lists</span><span class="p">)</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">        <span class="k">if</span><span class="p">(</span><span class="n">lists</span><span class="p">.</span><span class="n">empty</span><span class="p">())</span> <span class="k">return</span> <span class="k">nullptr</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">        <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;=</span><span class="n">lists</span><span class="p">.</span><span class="n">size</span><span class="p">()</span><span class="o">-</span><span class="mi">1</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">){</span>
-</span></span><span class="line"><span class="cl">        <span class="n">lists</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">=</span><span class="n">mergeTwoLists</span><span class="p">(</span><span class="n">lists</span><span class="p">[</span><span class="n">i</span><span class="p">],</span><span class="n">lists</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">]);</span>
-</span></span><span class="line"><span class="cl"><span class="p">}</span>
-</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">lists</span><span class="p">[</span><span class="n">lists</span><span class="p">.</span><span class="n">size</span><span class="p">()</span><span class="o">-</span><span class="mi">1</span><span class="p">];</span>
-</span></span><span class="line"><span class="cl">    <span class="p">}</span>
-</span></span></code></pre></td></tr></table>
-</div>
-</div><hr>
-<h2 id="思路">
-    <a href="#%e6%80%9d%e8%b7%af">#</a>
-    思路
-</h2><p>根据两个链表的合并依次遍历链表并合并每次遍历的链表和已合并的链表。</p>
-<hr>
-<h2 id="优化">
-    <a href="#%e4%bc%98%e5%8c%96">#</a>
-    优化
-</h2><div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span><span class="lnt">14
-</span><span class="lnt">15
-</span><span class="lnt">16
-</span><span class="lnt">17
-</span><span class="lnt">18
-</span><span class="lnt">19
-</span><span class="lnt">20
-</span><span class="lnt">21
-</span><span class="lnt">22
-</span><span class="lnt">23
-</span><span class="lnt">24
-</span><span class="lnt">25
-</span><span class="lnt">26
-</span><span class="lnt">27
-</span><span class="lnt">28
-</span><span class="lnt">29
-</span><span class="lnt">30
-</span><span class="lnt">31
-</span><span class="lnt">32
-</span><span class="lnt">33
-</span><span class="lnt">34
-</span><span class="lnt">35
-</span><span class="lnt">36
-</span><span class="lnt">37
-</span><span class="lnt">38
-</span><span class="lnt">39
-</span><span class="lnt">40
-</span><span class="lnt">41
-</span><span class="lnt">42
-</span><span class="lnt">43
-</span><span class="lnt">44
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="line"><span class="cl"><span class="cm">/**
-</span></span></span><span class="line"><span class="cl"><span class="cm"> * Definition for singly-linked list.
-</span></span></span><span class="line"><span class="cl"><span class="cm"> * struct ListNode {
-</span></span></span><span class="line"><span class="cl"><span class="cm"> *     int val;
-</span></span></span><span class="line"><span class="cl"><span class="cm"> *     ListNode *next;
-</span></span></span><span class="line"><span class="cl"><span class="cm"> *     ListNode() : val(0), next(nullptr) {}
-</span></span></span><span class="line"><span class="cl"><span class="cm"> *     ListNode(int x) : val(x), next(nullptr) {}
-</span></span></span><span class="line"><span class="cl"><span class="cm"> *     ListNode(int x, ListNode *next) : val(x), next(next) {}
-</span></span></span><span class="line"><span class="cl"><span class="cm"> * };
-</span></span></span><span class="line"><span class="cl"><span class="cm"> */</span>
-</span></span><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">Solution</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl"><span class="k">public</span><span class="o">:</span>
-</span></span><span class="line"><span class="cl">    <span class="n">ListNode</span><span class="o">*</span> <span class="n">mergeTwoLists</span><span class="p">(</span><span class="n">ListNode</span><span class="o">*</span> <span class="n">a</span><span class="p">,</span> <span class="n">ListNode</span><span class="o">*</span> <span class="n">b</span><span class="p">){</span>
-</span></span><span class="line"><span class="cl">        <span class="k">if</span><span class="p">((</span><span class="o">!</span><span class="n">a</span><span class="p">)</span><span class="o">||</span><span class="p">(</span><span class="o">!</span><span class="n">b</span><span class="p">))</span> <span class="k">return</span> <span class="n">a</span> <span class="o">?</span> <span class="nl">a</span> <span class="p">:</span> <span class="n">b</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">        <span class="n">ListNode</span> <span class="n">head</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">        <span class="n">ListNode</span> <span class="o">*</span><span class="n">p</span> <span class="o">=</span> <span class="o">&amp;</span><span class="n">head</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">        <span class="k">while</span><span class="p">(</span><span class="n">a</span> <span class="o">&amp;&amp;</span> <span class="n">b</span><span class="p">){</span>
-</span></span><span class="line"><span class="cl">            <span class="k">if</span><span class="p">(</span><span class="n">a</span><span class="o">-&gt;</span><span class="n">val</span> <span class="o">&lt;</span> <span class="n">b</span><span class="o">-&gt;</span><span class="n">val</span><span class="p">){</span>
-</span></span><span class="line"><span class="cl">                <span class="n">p</span><span class="o">-&gt;</span><span class="n">next</span> <span class="o">=</span> <span class="n">a</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">                <span class="n">a</span> <span class="o">=</span> <span class="n">a</span><span class="o">-&gt;</span><span class="n">next</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">            <span class="p">}</span>
-</span></span><span class="line"><span class="cl">            <span class="k">else</span><span class="p">{</span>
-</span></span><span class="line"><span class="cl">                <span class="n">p</span><span class="o">-&gt;</span><span class="n">next</span> <span class="o">=</span> <span class="n">b</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">                <span class="n">b</span> <span class="o">=</span> <span class="n">b</span><span class="o">-&gt;</span><span class="n">next</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">            <span class="p">}</span>
-</span></span><span class="line"><span class="cl">            <span class="n">p</span> <span class="o">=</span> <span class="n">p</span><span class="o">-&gt;</span><span class="n">next</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">        <span class="p">}</span>
-</span></span><span class="line"><span class="cl">        <span class="k">if</span><span class="p">(</span><span class="n">a</span><span class="p">)</span> <span class="n">p</span><span class="o">-&gt;</span><span class="n">next</span> <span class="o">=</span> <span class="n">a</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">        <span class="k">else</span> <span class="n">p</span><span class="o">-&gt;</span><span class="n">next</span> <span class="o">=</span> <span class="n">b</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">head</span><span class="p">.</span><span class="n">next</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">    <span class="p">}</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">    <span class="n">ListNode</span><span class="o">*</span> <span class="nf">mergeKLists</span><span class="p">(</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">ListNode</span><span class="o">*&gt;&amp;</span> <span class="n">lists</span><span class="p">)</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">        <span class="k">if</span><span class="p">(</span><span class="n">lists</span><span class="p">.</span><span class="n">empty</span><span class="p">())</span> <span class="k">return</span> <span class="k">nullptr</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">merge</span><span class="p">(</span><span class="n">lists</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">lists</span><span class="p">.</span><span class="n">size</span><span class="p">()</span><span class="o">-</span><span class="mi">1</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">    <span class="p">}</span>
-</span></span><span class="line"><span class="cl">    
-</span></span><span class="line"><span class="cl">    <span class="n">ListNode</span><span class="o">*</span> <span class="nf">merge</span><span class="p">(</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">ListNode</span><span class="o">*&gt;&amp;</span> <span class="n">lists</span><span class="p">,</span> <span class="kt">int</span> <span class="n">l</span><span class="p">,</span> <span class="kt">int</span> <span class="n">r</span><span class="p">){</span>
-</span></span><span class="line"><span class="cl">        <span class="k">if</span><span class="p">(</span><span class="n">l</span><span class="o">&gt;</span><span class="n">r</span><span class="p">)</span> <span class="k">return</span> <span class="k">nullptr</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">        <span class="k">if</span><span class="p">(</span><span class="n">l</span><span class="o">==</span><span class="n">r</span><span class="p">)</span> <span class="k">return</span> <span class="n">lists</span><span class="p">[</span><span class="n">l</span><span class="p">];</span>
-</span></span><span class="line"><span class="cl">        <span class="kt">int</span> <span class="n">mid</span> <span class="o">=</span> <span class="p">(</span><span class="n">l</span><span class="o">+</span><span class="n">r</span><span class="p">)</span><span class="o">/</span><span class="mi">2</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">mergeTwoLists</span><span class="p">(</span><span class="n">merge</span><span class="p">(</span><span class="n">lists</span><span class="p">,</span> <span class="n">l</span><span class="p">,</span> <span class="n">mid</span><span class="p">),</span> <span class="n">merge</span><span class="p">(</span><span class="n">lists</span><span class="p">,</span> <span class="n">mid</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="n">r</span><span class="p">));</span>
-</span></span><span class="line"><span class="cl">    <span class="p">}</span>
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>思路与之前一致，但是通过归并的思路进行合并每个升序链表。</p>
-<hr>
+<h2 id="总结">
+    <a href="#%e6%80%bb%e7%bb%93">#</a>
+    总结
+</h2><p>今天从学校回到了出租屋，整个人的学习状态有所好转。</p>
+<p>白天主要是攻克了一些链表的题目，主要是涉及到反转（通过设置pre、cur、nxt三个指针依次改变.next来操作）和快慢指针找到链表中点以及合并链表，在这一块短时间内应该是不太会遇到问题，可以从其他算法进行刷题练练手。</p>
+<p>晚上进行了美团的一面，面试官脾气非常好，在考到的技术栈中，我在管道和列表推导式上卡住了，列表推导式主要是有一定时间没有使用过了，即<code>squares = [i**2 for i in range(10)]</code>这样的形式，虽然有印象，但是害怕写错了，还是跟面试官说记不得了。管道的话是linux中常用的进程间通信方式，我有印象使用过，但因为没有经常使用，所以在这方面的提问中确实没有印象了，之后先将这两块缺点补充一下。</p>
+<p>另一方面，面试官告诉我岗位主要使用java，当时比较心惊胆战的，因为害怕我语言没有那么匹配所以给我刷下去，我还是挺想从事这份工作，如果有机会入职的话，转语言我也是可以接受的。</p>
+<p>在其他方面，八股文我没有系统性背过，偶尔可以看看这方面的知识，然后就是golang的项目争取能够在5.5之前做出来，这对于自我提升也有着一定的帮助。</p>
+<p>总而言之，加油吧，为自己第一份工作努力奋斗！</p>
 
 </section>
 
