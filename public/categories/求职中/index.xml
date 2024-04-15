@@ -7,7 +7,35 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>yotom</copyright>
-        <lastBuildDate>Fri, 12 Apr 2024 23:03:46 +0800</lastBuildDate><atom:link href="https://yotom131.github.io/categories/%E6%B1%82%E8%81%8C%E4%B8%AD/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Mon, 15 Apr 2024 23:30:46 +0800</lastBuildDate><atom:link href="https://yotom131.github.io/categories/%E6%B1%82%E8%81%8C%E4%B8%AD/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>2024.4.15</title>
+        <link>https://yotom131.github.io/p/2024.4.15/</link>
+        <pubDate>Mon, 15 Apr 2024 23:30:46 +0800</pubDate>
+        
+        <guid>https://yotom131.github.io/p/2024.4.15/</guid>
+        <description>&lt;h1 id=&#34;415&#34;&gt;
+    &lt;a href=&#34;#415&#34;&gt;#&lt;/a&gt;
+    4.15
+&lt;/h1&gt;&lt;h2 id=&#34;今日事项&#34;&gt;
+    &lt;a href=&#34;#%e4%bb%8a%e6%97%a5%e4%ba%8b%e9%a1%b9&#34;&gt;#&lt;/a&gt;
+    今日事项
+&lt;/h2&gt;&lt;ol&gt;
+&lt;li&gt;链表题目攻略&lt;/li&gt;
+&lt;li&gt;美团面试&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;总结&#34;&gt;
+    &lt;a href=&#34;#%e6%80%bb%e7%bb%93&#34;&gt;#&lt;/a&gt;
+    总结
+&lt;/h2&gt;&lt;p&gt;今天从学校回到了出租屋，整个人的学习状态有所好转。&lt;/p&gt;
+&lt;p&gt;白天主要是攻克了一些链表的题目，主要是涉及到反转（通过设置pre、cur、nxt三个指针依次改变.next来操作）和快慢指针找到链表中点以及合并链表，在这一块短时间内应该是不太会遇到问题，可以从其他算法进行刷题练练手。&lt;/p&gt;
+&lt;p&gt;晚上进行了美团的一面，面试官脾气非常好，在考到的技术栈中，我在管道和列表推导式上卡住了，列表推导式主要是有一定时间没有使用过了，即&lt;code&gt;squares = [i**2 for i in range(10)]&lt;/code&gt;这样的形式，虽然有印象，但是害怕写错了，还是跟面试官说记不得了。管道的话是linux中常用的进程间通信方式，我有印象使用过，但因为没有经常使用，所以在这方面的提问中确实没有印象了，之后先将这两块缺点补充一下。&lt;/p&gt;
+&lt;p&gt;另一方面，面试官告诉我岗位主要使用java，当时比较心惊胆战的，因为害怕我语言没有那么匹配所以给我刷下去，我还是挺想从事这份工作，如果有机会入职的话，转语言我也是可以接受的。&lt;/p&gt;
+&lt;p&gt;在其他方面，八股文我没有系统性背过，偶尔可以看看这方面的知识，然后就是golang的项目争取能够在5.5之前做出来，这对于自我提升也有着一定的帮助。&lt;/p&gt;
+&lt;p&gt;总而言之，加油吧，为自己第一份工作努力奋斗！&lt;/p&gt;
+</description>
+        </item>
+        <item>
         <title>2024.4.12</title>
         <link>https://yotom131.github.io/p/2024.4.12/</link>
         <pubDate>Fri, 12 Apr 2024 23:03:46 +0800</pubDate>
